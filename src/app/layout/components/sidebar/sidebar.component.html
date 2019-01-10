@@ -1,151 +1,90 @@
-<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
-    <div class="list-group">
-        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-dashboard"></i>&nbsp;
-            <span>{{ 'Dashboard' | translate }}</span>
-        </a>
-        <a [routerLink]="['/charts']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i>&nbsp;
-            <span>{{ 'Charts' | translate }}</span>
-        </a>
-        <a [routerLink]="['/tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i>&nbsp;
-            <span>{{ 'Tables' | translate }}</span>
-        </a>
-        <a [routerLink]="['/forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-edit"></i>&nbsp;
-            <span>{{ 'Forms' | translate }}</span>
-        </a>
-        <a [routerLink]="['/bs-element']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-desktop"></i>&nbsp;
-            <span>{{ 'Bootstrap Element' | translate }}</span>
-        </a>
-        <a [routerLink]="['/grid']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-wrench"></i>&nbsp;
-            <span>{{ 'Bootstrap Grid' | translate }}</span>
-        </a>
-        <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-th-list"></i>&nbsp;
-            <span>{{ 'Component' | translate }}</span>
-        </a>
-        <div class="nested-menu">
-            <a class="list-group-item" (click)="addExpandClass('pages')">
-                <i class="fa fa-plus"></i>&nbsp;
-                <span>{{ 'Menu' | translate }}</span>
-            </a>
-            <li class="nested" [class.expand]="showMenu === 'pages'">
-                <ul class="submenu">
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="fa fa-monument"></i>&nbsp;
-                            <span>{{ 'Submenu' | translate }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="fa fa-monument"></i>&nbsp;
-                            <span>{{ 'Submenu' | translate }}</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:void(0)">
-                            <i class="fa fa-monument"></i>&nbsp;
-                            <span>{{ 'Submenu' | translate }}</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </div>
-        <a [routerLink]="['/blank-page']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-file-o"></i>&nbsp;
-            <span>{{ 'Blank Page' | translate }}</span>
-        </a>
-        <a href="http://www.strapui.com/" class="list-group-item">
-            <i class="fa fa-caret-down"></i>&nbsp;
-            <span>{{ 'More Themes' | translate }}</span>
-        </a>
+<div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<nav class="main-menu ">
 
-        <div class="header-fields">
-            <a (click)="rltAndLtr()" class="list-group-item">
-                <span><i class="fa fa-arrows-h"></i>&nbsp; RTL/LTR</span>
-            </a>
-            <div class="nested-menu">
-                <a class="list-group-item" (click)="addExpandClass('languages')">
-                    <span><i class="fa fa-language"></i>&nbsp; {{ 'Language' | translate }} <b class="caret"></b></span>
+<ul class="nav-menu">
+    <li *ngFor="let menumain of mainmenu"  class="nav-item">
+        <a href={{menumain.href}}>
+            <i class={{menumain.iclass}} ></i>
+            <span class="nav-text">
+                {{menumain.text_span}}
+            </span>
+        </a>
+        <ul *ngIf="menumain.text_span == 'Telemercadeo' ">
+            <li *ngFor="let menutmk of tmkmenu"  class="nav-item">
+                <a href={{menutmk.href}}>
+                    <i class={{menutmk.iclass}} ></i>
+                    <span class="nav-text">
+                        {{menutmk.text_span}}
+                    </span>
                 </a>
-                <li class="nested" [class.expand]="showMenu === 'languages'">
-                    <ul class="submenu">
-                        <li>
-                            <a href="javascript:void(0)" (click)="changeLang('en')">
-                                {{ 'English' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" (click)="changeLang('fr')">
-                                {{ 'French' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" (click)="changeLang('ur')">
-                                {{ 'Urdu' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" (click)="changeLang('es')">
-                                {{ 'Spanish' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" (click)="changeLang('it')">
-                                {{ 'Italian' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" (click)="changeLang('fa')">
-                                {{ 'Farsi' | translate }}
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)" (click)="changeLang('de')">
-                                {{ 'German' | translate }}
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </div>
-            <div class="nested-menu">
-                <a class="list-group-item" (click)="addExpandClass('profile')">
-                    <span><i class="fa fa-user"></i>&nbsp; John Smith</span>
+            </li>
+        </ul>
+        <ul *ngIf="menumain.text_span == 'Reportes' ">
+            <li *ngFor="let menureportes of reportesmenu"  class="nav-item">
+                <a href={{menureportes.href}}>
+                    <i class={{menureportes.iclass}} ></i>
+                    <span class="nav-text">
+                        {{menureportes.text_span}}
+                    </span>
                 </a>
-                <li class="nested" [class.expand]="showMenu === 'profile'">
-                    <ul class="submenu">
-                        <li>
-                            <a href="javascript:void(0)">
-                                <span><i class="fa fa-fw fa-user"></i> {{ 'Profile' | translate }}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <span><i class="fa fa-fw fa-envelope"></i> {{ 'Inbox' | translate }}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)">
-                                <span><i class="fa fa-fw fa-gear"></i> {{ 'Settings' | translate }}</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a [routerLink]="['/login']" (click)="onLoggedout()">
-                                <span><i class="fa fa-fw fa-power-off"></i> {{ 'Log Out' | translate }}</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-            </div>
-        </div>
-    </div>
-    <div class="toggle-button" [ngClass]="{collapsed: collapsed}" (click)="toggleCollapsed()">
-        <i class="fa fa-fw fa-angle-double-left"></i>&nbsp;
-        <span>{{ 'Collapse Sidebar' | translate }}</span>
-    </div>
+            </li>
+        </ul>
+        <ul *ngIf="menumain.text_span == 'BackOffice' ">
+            <li *ngFor="let menubackoffice of backofficemenu"  class="nav-item">
+                <a href={{menubackoffice.href}}>
+                    <i class={{menubackoffice.iclass}} ></i>
+                    <span class="nav-text">
+                        {{menubackoffice.text_span}}
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <ul *ngIf="menumain.text_span == 'Administrador' ">
+            <li *ngFor="let menuadmin of adminmenu"  class="nav-item">
+                <a href={{menuadmin.href}}>
+                    <i class={{menuadmin.iclass}} ></i>
+                    <span class="nav-text">
+                        {{menuadmin.text_span}}
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <ul *ngIf="menumain.text_span == 'Auditoria' ">
+            <li *ngFor="let menuauditoria of auditoriamenu"  class="nav-item">
+                <a href={{menuauditoria.href}}>
+                    <i class={{menuauditoria.iclass}} ></i>
+                    <span class="nav-text">
+                        {{menuauditoria.text_span}}
+                    </span>
+                </a>
+            </li>
+        </ul>
+        <ul *ngIf="menumain.text_span == 'A3bpo' ">
+            <li *ngFor="let menuabpo of abpomenu"  class="nav-item">
+                <a href={{menuabpo.href}}>
+                    <i class={{menuabpo.iclass}} ></i>
+                    <span class="nav-text">
+                        {{menuabpo.text_span}}
+                    </span>
+                </a>
+            </li>
+        </ul>
+
+    </li>
+</ul>
+
+<ul class="logout">
+    <li>
+        <a  (click)="logout()">
+            <i class="fa fa-power-off fa-2x"></i>
+                <span class="nav-text">
+                    Salir
+                </span>
+        </a>
+    </li>  
+</ul>
+            
 </nav>
+
+</div>

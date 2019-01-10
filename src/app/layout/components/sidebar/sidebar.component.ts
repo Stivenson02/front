@@ -2,12 +2,31 @@ import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
+import { MAINMENU } from '../../../menus/MainMenu';
+import { TMKMENU } from '../../../menus/TmkMenu';
+import { REPORTESMENU } from '../../../menus/ReportesMenu';
+import { BACKOFFICEMENU} from '../../../menus/BackOffMenu';
+import { ADMINMENU } from '../../../menus/AdminMenu';
+import { AUDITORIAMENU } from '../../../menus/AuditoriaMenu';
+import { ABPOMENU } from '../../../menus/A3bpoMenu';
+
+import { CookieService } from 'ngx-cookie-service';
+
 @Component({
     selector: 'app-sidebar',
     templateUrl: './sidebar.component.html',
-    styleUrls: ['./sidebar.component.scss']
+    styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+    
+    mainmenu= MAINMENU;
+    tmkmenu= TMKMENU;
+    reportesmenu= REPORTESMENU;
+    backofficemenu=BACKOFFICEMENU;
+    adminmenu=ADMINMENU;
+    auditoriamenu=AUDITORIAMENU;
+    abpomenu=ABPOMENU;
+
     isActive: boolean;
     collapsed: boolean;
     showMenu: string;
