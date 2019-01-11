@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { routerTransition } from '../router.animations';
+import { environment } from '../../environments/environment';
 
 @Component({
     selector: 'app-login',
@@ -20,9 +21,9 @@ export class LoginComponent implements OnInit {
             this.translate.use(browserLang.match(/en|fr|ur|es|it|fa|de|zh-CHS/) ? browserLang : 'en');
     }
 
-    ngOnInit() {}
+    ngOnInit() {
 
-    onLoggedin() {
-        localStorage.setItem('isLoggedin', 'true');
+      location.replace(environment.LOGOUT);
     }
+
 }
