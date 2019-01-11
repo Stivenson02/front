@@ -53,7 +53,7 @@ export class SidebarComponent implements OnInit {
 
     ngOnInit() {
         this.isActive = false;
-        this.collapsed = false;
+        this.collapsed = true;
         this.showMenu = '';
         this.pushRightClass = 'push-right';
     }
@@ -72,7 +72,7 @@ export class SidebarComponent implements OnInit {
     }
 
     toggleCollapsed() {
-        this.collapsed = !this.collapsed;
+        this.collapsed = true;
         this.collapsedEvent.emit(this.collapsed);
     }
 
