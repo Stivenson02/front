@@ -58,7 +58,6 @@ export class SidebarComponent implements OnInit {
     this.pushRightClass = 'push-right';
   }
 
-
   eventCalled() {
     this.isActive = !this.isActive;
   }
