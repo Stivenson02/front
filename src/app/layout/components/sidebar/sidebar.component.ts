@@ -58,7 +58,6 @@ export class SidebarComponent implements OnInit {
     this.pushRightClass = 'push-right';
   }
 
-
   eventCalled() {
     this.isActive = !this.isActive;
   }
@@ -72,7 +71,7 @@ export class SidebarComponent implements OnInit {
   }
 
   toggleCollapsed() {
-    this.collapsed = true;
+    this.collapsed = !this.collapsed;
     this.collapsedEvent.emit(this.collapsed);
   }
 
