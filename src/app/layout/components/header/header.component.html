@@ -1,4 +1,8 @@
 <nav class="navbar navbar-expand-lg fixed-top">
+  <div class="nav-link">
+  <img class="perfil img-circle" src="http://i.huffpost.com/gadgets/slideshows/461162/slide_461162_6224974_sq50.jpg" alt="">
+  </div>
+  <b class="caret"></b>
   <a class="navbar-brand" href="#">{{ client.substring(0,1) | uppercase}}{{ client.substring(1) | lowercase}}</a>
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav ml-auto">
@@ -18,8 +22,8 @@
             </li>-->
       <li class="nav-item" ngbDropdown>
         <a href="javascript:void(0)" class="nav-link" ngbDropdownToggle>
-          <img class="perfil" src="http://i.huffpost.com/gadgets/slideshows/461162/slide_461162_6224974_sq50.jpg" alt="">
           <b class="caret"></b>
+          <img class="perfil img-circle" src="http://i.huffpost.com/gadgets/slideshows/461162/slide_461162_6224974_sq50.jpg" alt="">
         </a>
         <div class="dropdown-menu-right" ngbDropdownMenu>
           <a class="dropdown-item" href="javascript:void(0)">
