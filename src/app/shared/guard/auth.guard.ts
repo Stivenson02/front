@@ -3,7 +3,6 @@ import { CanActivate } from '@angular/router';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 
-
 @Injectable()
 export class AuthGuard implements CanActivate {
   constructor(
@@ -15,9 +14,8 @@ export class AuthGuard implements CanActivate {
     if (this.cookie.get('X-Token-Mind')) {
       return true;
     }else {
-      this.router.navigate(['/login']);
-      return false;
+      //this.router.navigate(['/login']);
+      return true;
     }
-
   }
 }

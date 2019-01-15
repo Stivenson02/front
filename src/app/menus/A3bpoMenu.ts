@@ -1,8 +1,8 @@
 import { PropertyList } from '../propertylist';
 
 export const ABPOMENU: PropertyList[] = [
-	{href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Agentes por Campaña"},
-	{href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Datos Margen"},
-	{href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Generar Margen"},
-	{href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Gestion Brm"}
+	{routerlink: "['/reg_aleatorio']", 	href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Agentes por Campaña"},
+	{routerlink: "['/reg_aleatorio']",	href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Datos Margen"},
+	{routerlink: "['/reg_aleatorio']",	href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Generar Margen"},
+	{routerlink: "['/reg_aleatorio']",	href: "", iclass:"fa fa-sitemap fa-2x", text_span:"Gestion Brm"}
 ]
