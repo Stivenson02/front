@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ChartsModule as Ng2Charts } from 'ng2-charts';
+import {MatNativeDateModule} from '@angular/material';
 
 import { Reg_AleatorioRoutingModule } from './reg_aleatorio-routing.module';
 import { Reg_AleatorioComponent } from './reg_aleatorio.component';
