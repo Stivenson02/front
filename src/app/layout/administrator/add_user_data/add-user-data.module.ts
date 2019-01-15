@@ -1,18 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-
+import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 import {AddUserDataRoutingModule} from './add-user-data-routing.module';
+
+import { StatModule} from '../../../shared/modules';
+import {AccordionModule} from 'primeng/primeng';
+
 import {AddUserDataComponent} from './add-user-data.component';
-import {MatExpansionModule, MatInputModule, MatSelectModule} from '@angular/material';
 import {
   TimelineComponent,
   NotificationComponent,
   ChatComponent
 } from './components';
-import { StatModule} from '../../../shared/modules';
-import {FormsModule , ReactiveFormsModule} from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material';
+
+
+
 
 
 @NgModule({
@@ -22,12 +25,9 @@ import {MatFormFieldModule} from '@angular/material';
     NgbAlertModule,
     AddUserDataRoutingModule,
     StatModule,
-    MatFormFieldModule,
-    MatExpansionModule,
-    MatInputModule,
-    MatSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AccordionModule
   ],
   declarations: [
     AddUserDataComponent,
