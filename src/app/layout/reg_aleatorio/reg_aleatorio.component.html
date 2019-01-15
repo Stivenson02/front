@@ -1,8 +1,34 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Registro Aleatorio'" [icon]="'fa-bar-chart-o'"></app-page-header>
-    	
-	
-	<div class="row">
-	   <h4> Registro aleatorio en construcción</h4>	
-  </div>    
+   	
+    <label><h4>Búsqueda Automática de registros para telemercadeo</h4></label>
+    <form>
+          <h5></h5>
+          <mat-form-field class="row">
+          <mat-select placeholder="Campaña" [(ngModel)]="selectedCampana" name="campana">
+            <mat-option *ngFor="let campana of campanas" [value]="campana.value">
+              {{campana.viewValue}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+
+          <h5></h5>
+          <mat-form-field class="row">
+          <mat-select placeholder="Etapa" [(ngModel)]="selectedEtapa" name="etapa">
+            <mat-option *ngFor="let etapa of etapas" [value]="etapa.value">
+              {{etapa.viewValue}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+          
+          <h5></h5>
+          <mat-form-field class="row">
+          <mat-select placeholder="Base" [(ngModel)]="selectedBase" name="base">
+            <mat-option *ngFor="let base of bases" [value]="base.value">
+              {{base.viewValue}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+    
+    </form>
 </div>
