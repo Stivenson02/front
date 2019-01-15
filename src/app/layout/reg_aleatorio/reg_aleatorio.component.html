@@ -1,8 +1,33 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Registro Aleatorio'" [icon]="'fa-bar-chart-o'"></app-page-header>
-    	
-	
-	<div class="row">
+   	<div class="row">
 	   <h4> Registro aleatorio en construcción</h4>	
-  </div>    
+  	</div>
+	<div>
+		<form>
+  		<h4>mat-select</h4>
+		  <mat-form-field>
+		    <mat-select placeholder="Favorite food" [(ngModel)]="selectedValue" name="food">
+		      <mat-option *ngFor="let food of foods" [value]="food.value">
+		        {{food.viewValue}}
+		      </mat-option>
+		    </mat-select>
+		  </mat-form-field>
+		  <p> Selected food: {{selectedValue}} </p>
+		  <h4>native html select</h4>
+		  <mat-form-field>
+		    <select matNativeControl placeholder="Favorite car" [(ngModel)]="selectedCar" name="car">
+		      <option value="" selected></option>
+		      <option *ngFor="let car of cars" [value]="car.value">
+		        {{car.viewValue}}
+		      </option>
+		    </select>
+		  </mat-form-field>
+  <p> Selecte
+
+
+	</div>
+
+
+
 </div>
