@@ -5,7 +5,7 @@ import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 import {AddUserDataRoutingModule} from './add-user-data-routing.module';
 
 import { StatModule} from '../../../shared/modules';
-import {AccordionModule} from 'primeng/primeng';
+import {AccordionModule, InputTextModule} from 'primeng/primeng';
 
 import {AddUserDataComponent} from './add-user-data.component';
 import {
@@ -27,7 +27,8 @@ import {
     StatModule,
     FormsModule,
     ReactiveFormsModule,
-    AccordionModule
+    AccordionModule,
+    InputTextModule
   ],
   declarations: [
     AddUserDataComponent,
