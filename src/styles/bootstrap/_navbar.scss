@@ -73,6 +73,8 @@
   .dropdown-menu {
     position: static;
     float: none;
+/*    width: 15%;
+    margin: 0% 0%;*/
   }
 }
 
@@ -159,7 +161,9 @@
           flex-direction: row;
 
           .dropdown-menu {
-            position: absolute;
+            position: fixed;
+            width: 20%;
+            margin: 0% 80%;
           }
 
           .dropdown-menu-right {

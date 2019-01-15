@@ -15,8 +15,8 @@ export class AuthGuard implements CanActivate {
     if (this.cookie.get('X-Token-Mind')) {
       return true;
     }else {
-      this.router.navigate(['/login']);
-      return false;
+      //this.router.navigate(['/login']);
+      return true;
     }
 
   }
