@@ -11,7 +11,7 @@ const routes: Routes = [
       {
         path: 'davivienda',
         children: [
-          { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
+          { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           {path: 'administration',
             children: [
               { path: 'add_user_data', loadChildren: './administrator/add_user_data/add-user-data.module#AddUserDataModule'},
