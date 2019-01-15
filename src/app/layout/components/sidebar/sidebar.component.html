@@ -41,7 +41,7 @@
                     </ul>
                     <ul *ngIf="menumain.text_span == 'Administrador' ">
                         <li *ngFor="let menuadmin of adminmenu"  class="nav-item">
-                            <a routerLink= {{menumain.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuadmin.href}}>
+                            <a routerLink= {{menuadmin.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuadmin.href}}>
                                 <i class={{menuadmin.iclass}} ></i>
                                 <span class="nav-text">
                                     {{menuadmin.text_span}}

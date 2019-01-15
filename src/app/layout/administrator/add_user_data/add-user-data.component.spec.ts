@@ -2,12 +2,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { DashboardComponent } from './dashboard.component';
-import { DashboardModule } from './dashboard.module';
+import { AddUserDataComponent } from './add-user-data.component';
+//import { DashboardModule } from './dashboard.module';
 
 describe('AdministratorComponent', () => {
-  let component: DashboardComponent;
-  let fixture: ComponentFixture<DashboardComponent>;
+  let component: AddUserDataComponent;
+  let fixture: ComponentFixture<AddUserDataComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -21,7 +21,7 @@ describe('AdministratorComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent);
+    fixture = TestBed.createComponent(AddUserDataComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
