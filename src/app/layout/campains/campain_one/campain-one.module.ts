@@ -12,7 +12,7 @@ import {CampainOneComponent} from './campain-one.component';
 import {
   TimelineComponent,
   NotificationComponent,
-  ChatComponent
+  ChatComponent, PersonalDataComponent
 } from './components';
 import {environment} from '../../../../environments/environment';
 
@@ -36,7 +36,8 @@ import {environment} from '../../../../environments/environment';
     CampainOneComponent,
     TimelineComponent,
     NotificationComponent,
-    ChatComponent
+    ChatComponent,
+    PersonalDataComponent
   ]
 })
 export class CampainOneModule{
