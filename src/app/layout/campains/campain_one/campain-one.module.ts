@@ -1,19 +1,20 @@
 
-import { NgModule } from '@angular/core';
+import {NgModule} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 import {CampainOneRoutingModule} from './campain-one-routing.module';
 
 import { StatModule} from '../../../shared/modules';
-import {AccordionModule, InputTextModule} from 'primeng/primeng';
+import {AccordionModule, InputTextModule, MenuItem, ScrollPanelModule, TabMenuModule, TabViewModule} from 'primeng/primeng';
 
 import {CampainOneComponent} from './campain-one.component';
 import {
   TimelineComponent,
   NotificationComponent,
-  ChatComponent
+  ChatComponent, PersonalDataComponent
 } from './components';
+import {environment} from '../../../../environments/environment';
 
 
 @NgModule({
@@ -26,14 +27,20 @@ import {
     FormsModule,
     ReactiveFormsModule,
     AccordionModule,
-    InputTextModule
+    InputTextModule,
+    TabMenuModule,
+    TabViewModule,
+    ScrollPanelModule
   ],
   declarations: [
     CampainOneComponent,
     TimelineComponent,
     NotificationComponent,
-    ChatComponent
+    ChatComponent,
+    PersonalDataComponent
   ]
 })
-export class CampainOneModule {}
+export class CampainOneModule{
+
+}
 
