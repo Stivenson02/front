@@ -9,8 +9,11 @@ import { BACKOFFICEMENU} from '../../../menus/BackOffMenu';
 import { ADMINMENU } from '../../../menus/AdminMenu';
 import { AUDITORIAMENU } from '../../../menus/AuditoriaMenu';
 import { ABPOMENU } from '../../../menus/A3bpoMenu';
+import {AREAWORKMENU} from '../../../menus/AreaWorkMenu';
 
 import { CookieService } from 'ngx-cookie-service';
+
+
 
 @Component({
   selector: 'app-sidebar',
@@ -19,7 +22,7 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class SidebarComponent implements OnInit {
 
-  mainmenu= MAINMENU;
+  mainmenu= null;
   tmkmenu= TMKMENU;
   reportesmenu= REPORTESMENU;
   backofficemenu=BACKOFFICEMENU;
@@ -52,6 +55,13 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
+    var url =  this.router.url.split('workspace');
+    if (url.length <= 1){
+      this.mainmenu = MAINMENU;
+    } else {
+      this.mainmenu = AREAWORKMENU;
+    }
+
     this.isActive = false;
     this.collapsed = true;
     this.showMenu = '';

@@ -16,6 +16,10 @@ const routes: Routes = [
             children: [
               { path: 'add_user_data', loadChildren: './administrator/add_user_data/add-user-data.module#AddUserDataModule'},
             ]},
+          {path: 'workspace',
+            children: [
+              { path: '', loadChildren: './administrator/add_user_data/add-user-data.module#AddUserDataModule'},
+            ]},
           { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
           { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
           { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },
