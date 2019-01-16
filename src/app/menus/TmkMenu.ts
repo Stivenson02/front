@@ -1,7 +1,7 @@
 import { PropertyList } from '../propertylist';
 
 export const TMKMENU: PropertyList[] = [
-	{routerlink: '/davivienda/reg_aleatorio',	href: "", iclass:"fa fa-headphones fa-2x", text_span:"Registro Aleatorio"},
+	{routerlink: "/davivienda/gestion-manual",	href: "", iclass:"fa fa-headphones fa-2x", text_span:"Gestión Manual"},
 	{routerlink: "['/reg_aleatorio']",	href: "", iclass:"fa fa-headphones fa-2x", text_span:"Búsqueda Registros"},
 	{routerlink: "['/reg_aleatorio']",	href: "", iclass:"fa fa-headphones fa-2x", text_span:"Desocupar Registro"},
 	{routerlink: "['/reg_aleatorio']",	href: "", iclass:"fa fa-headphones fa-2x", text_span:"Asignación de Bases"},
