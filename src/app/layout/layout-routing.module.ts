@@ -12,13 +12,15 @@ const routes: Routes = [
         path: 'davivienda',
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-          {path: 'administration',
+          {
+            path: 'administration',
             children: [
               { path: 'add_user_data', loadChildren: './administrator/add_user_data/add-user-data.module#AddUserDataModule'},
             ]},
-          {path: 'workspace',
+          {
+            path: 'workspace',
             children: [
-              { path: '', loadChildren: './administrator/add_user_data/add-user-data.module#AddUserDataModule'},
+              { path: '', loadChildren: './campains/campain.module#CampainModule'},
             ]},
           { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
           { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
