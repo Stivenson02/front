@@ -55,12 +55,8 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit() {
-    var url =  this.router.url.split('workspace');
-    if (url.length <= 1){
-      this.mainmenu = MAINMENU;
-    } else {
-      this.mainmenu = AREAWORKMENU;
-    }
+
+    this.mainmenu = MAINMENU;
 
     this.isActive = false;
     this.collapsed = true;

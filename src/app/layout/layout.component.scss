@@ -15,6 +15,17 @@
     position: relative;
     overflow: hidden;
 }
+.main-workspace {
+  margin-left: 20px;
+  margin-right: 10px;
+  margin-top: 56px;
+  padding: 10px;
+  -ms-overflow-x: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+  overflow: hidden;
+}
 .collapsed {
     margin-left: 100px;
 }
