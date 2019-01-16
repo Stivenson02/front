@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  LOGOUT: 'http://localhost:4200/logout',
+  API_URL: 'https://10.130.51.54/api/v2/',
+  API_KEY_LDAP: '70b16962e328547500f1fc7c78b1ce40754cbe9b632956df112b5be2d71a8e61'
 };
 
 /*

@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LayoutComponent } from './layout.component';
 import { LayoutModule } from './layout.module';
 
-describe('LayoutComponent', () => {
+describe('CampainComponent', () => {
   let component: LayoutComponent;
   let fixture: ComponentFixture<LayoutComponent>;
 

@@ -22,10 +22,10 @@ overflow:visible;
 .main-menu {
 background:#212121;
 border-right:1px solid #e5e5e5;
-position:absolute;
+position:fixed;
 top:0;
 bottom:0;
-height:100%;
+height:auto;
 left:0;
 width:60px;
 overflow:hidden;
@@ -33,8 +33,8 @@ overflow:hidden;
 transition:width .05s linear;
 -webkit-transform:translateZ(0) scale(1,1);
 z-index:1000;
+top: 56px;
 }
-
 .main-menu>ul {
 margin:7px 0;
 }
@@ -231,3 +231,34 @@ height: 100%;
 .fa{
   line-height: 2;
 }
+
+
+/*  estilo del template */
+
+@media screen and (max-width: 992px) {
+  .main-menu {
+    top: 54px;
+    left: 0px;
+  }
+}
+@media print {
+  .main-menu {
+    display: none !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 0px rgba(255, 255, 255, 1);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 3px rgba(255, 255, 255, 1);
+}
+
+
+
+
