@@ -13,6 +13,7 @@ import {
   ChatComponent, PersonalDataComponent
 } from './components';
 import {environment} from '../../../../environments/environment';
+import {PhonesComponent} from './components/phones/phones.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {environment} from '../../../../environments/environment';
   declarations: [
     CampainOneComponent,
     ChatComponent,
-    PersonalDataComponent
+    PersonalDataComponent,
+    PhonesComponent
   ]
 })
 export class CampainOneModule{
