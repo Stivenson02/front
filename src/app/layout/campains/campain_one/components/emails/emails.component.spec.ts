@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PersonalDataComponent } from './personal-data.component';
+import { EmailsComponent } from './emails.component';
 
 describe('AddressComponent', () => {
-  let component: PersonalDataComponent;
-  let fixture: ComponentFixture<PersonalDataComponent>;
+  let component: EmailsComponent;
+  let fixture: ComponentFixture<EmailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PersonalDataComponent ]
+      declarations: [ EmailsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PersonalDataComponent);
+    fixture = TestBed.createComponent(EmailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
