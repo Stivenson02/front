@@ -4,5 +4,5 @@ export * from './sub_menu/address/address.component';
 export * from './sub_menu/emails/emails.component';
 export * from './sub_menu/history_tmk/history-tmk.component';
 
-//Guiones
+//Scrips
 export * from './script/chat/chat.component';
