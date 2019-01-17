@@ -10,7 +10,8 @@ import {AccordionModule, InputTextModule, MenuItem, ScrollPanelModule, TabMenuMo
 
 import {CampainOneComponent} from './campain-one.component';
 import {
-  ChatComponent, PersonalDataComponent
+  AddressComponent,
+  ChatComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent
 } from './components';
 import {environment} from '../../../../environments/environment';
 import {PhonesComponent} from './components/phones/phones.component';
@@ -35,7 +36,10 @@ import {PhonesComponent} from './components/phones/phones.component';
     CampainOneComponent,
     ChatComponent,
     PersonalDataComponent,
-    PhonesComponent
+    PhonesComponent,
+    AddressComponent,
+    EmailsComponent,
+    HistoryTmkComponent
   ]
 })
 export class CampainOneModule{
