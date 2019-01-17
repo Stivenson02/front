@@ -26,6 +26,7 @@ export class BusquedaRegistroComponent implements OnInit {
     selectedEtapa: string;
     labelPosition = 'consumidor_id';
     checkVisibility: boolean = false;
+    inputQuery: boolean = false;
 
     campanas: Campanas[] = [
         {value: 'campana-1', viewValue: 'Davivienda - Bienvenida'},
@@ -43,13 +44,14 @@ export class BusquedaRegistroComponent implements OnInit {
     ngOnInit() {
         
     }
-
-    changeVisibility(){
-        if (this.checkVisibility) {
-          
-        }else{
-          this.checkVisibility = true;
-        }
-        return true;
+    changeCheckVisibility(){
+      if (!this.checkVisibility) {
+        this.checkVisibility = true;
+      }
+    }
+    changeInputVisibility(){
+      if (!this.inputQuery) {
+        this.inputQuery = true;
+      }
     }
 }
