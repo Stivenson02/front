@@ -3,53 +3,70 @@
 
 <label>Búsqueda dirigida de registros para telemercadeo</label>
     <hr>
-    <div class="row">
-      <div class="col-lg-4">
-        <form class="">
          
-          <div class="row justify-content-md-center">           
-            <mat-form-field class="col-sm-6 col-md-6">
-            <mat-select placeholder="Campaña" [(ngModel)]="selectedCampana" name="campana">
-              <mat-option *ngFor="let campana of campanas" [value]="campana.value">
-                {{campana.viewValue}}
-              </mat-option>
-            </mat-select>
-            </mat-form-field>
-          </div>
+          <div class="row">
+                       
+              <div class="col-12 col-md-4">
+                <mat-card >
+                  <mat-card-header>
+                    <mat-card-title>Búsqueda dirigida de registros para telemercadeo</mat-card-title>
+                  </mat-card-header>
+                  <form class="">
+                 
+                  <div class="row justify-content-md-center">           
+                    <mat-form-field class="col-sm-6 col-md-8">
+                    <mat-select placeholder="Campaña" [(ngModel)]="selectedCampana" name="campana">
+                      <mat-option *ngFor="let campana of campanas" [value]="campana.value">
+                        {{campana.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                    </mat-form-field>
+                  </div>
 
-          <div class="row justify-content-md-center">
-            <mat-form-field class="col-sm-6 col-md-6">
-            <mat-select placeholder="Etapa" [(ngModel)]="selectedEtapa" name="etapa">
-              <mat-option *ngFor="let etapa of etapas" [value]="etapa.value">
-                {{etapa.viewValue}}
-              </mat-option>
-            </mat-select>
-            </mat-form-field>
-          </div>
+                  <div class="row justify-content-md-center">
+                    <mat-form-field class="col-sm-6 col-md-8">
+                    <mat-select placeholder="Etapa" [(ngModel)]="selectedEtapa" name="etapa" (selectionChange)="changeCheckVisibility()">
+                      <mat-option *ngFor="let etapa of etapas" [value]="etapa.value">
+                        {{etapa.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                    </mat-form-field>
+                  </div>
+                  
+                  <div class="row justify-content-md-center d-flex flex-row" *ngIf = "checkVisibility">
+                      <h6 class="m-md-2">Campo de consulta</h6>
+                      <mat-radio-group class="" (click)="changeInputVisibility()" name="rb-radio-group" >
+                        <mat-radio-button class="m-1 m-md-2" value="telemercadeo_id" >telemercadeo_id</mat-radio-button>
+                        <mat-radio-button class="m-1 m-md-2" value="documento">documento</mat-radio-button>
+                        <mat-radio-button class="m-1 m-md-2" value="consumidor_id">consumidor_id</mat-radio-button>
+                      </mat-radio-group> 
+                  </div>
+                  
+                  <div class="row justify-content-md-center" *ngIf = "inputQuery">
+                    <mat-form-field>
+                      <input matInput placeholder="Valor para consultar" >
+                    </mat-form-field>
+                  </div>
+                
+                  <div class="row justify-content-md-center">
+                    <button mat-button>Buscar</button>
+                  </div>
 
-          <div class="row justify-content-md-center">
-            <mat-form-field>
-              <input matInput placeholder="Favorite food" value="Sushi">
-            </mat-form-field>
-          </div>
+                </form>
+                </mat-card>
 
-          <div class="row justify-content-md-center">
+                
+              </div>
             
-              <mat-radio-group [(ngModel)]="labelPosition">
-                <mat-radio-button class="example-margin" value="telemercadeo_id">telemercadeo_id</mat-radio-button>
-                <mat-radio-button class="example-margin" value="documento">documento</mat-radio-button>
-                <mat-radio-button class="example-margin" value="consumidor_id">consumidor_id</mat-radio-button>
-              </mat-radio-group> 
+            <div class="col-12 col-md-8">
+                        
+            </div>
             
           </div>
-         
-          <div class="row justify-content-md-center">
-            <button mat-button>Buscar</button>
-          </div>  
-        </form>
-      </div>
-      <div class="col-lg-8">
         
-      </div>
-    </div>
+        
+
+    
+    
+    <hr>
 </div>  
