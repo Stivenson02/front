@@ -10,8 +10,6 @@ import {AccordionModule, InputTextModule, MenuItem, ScrollPanelModule, TabMenuMo
 
 import {CampainOneComponent} from './campain-one.component';
 import {
-  TimelineComponent,
-  NotificationComponent,
   ChatComponent, PersonalDataComponent
 } from './components';
 import {environment} from '../../../../environments/environment';
@@ -34,8 +32,6 @@ import {environment} from '../../../../environments/environment';
   ],
   declarations: [
     CampainOneComponent,
-    TimelineComponent,
-    NotificationComponent,
     ChatComponent,
     PersonalDataComponent
   ]

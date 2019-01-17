@@ -1,30 +1,38 @@
 <div [@routerTransition]>
   <div class="row">
-    <div class="col-md-12">
-      <p-tabView>
-        <p-tabPanel class="success" [selected]="true" leftIcon="fa fa-address-card-o"  header="Informacion Personal">
-          <app-personal-data></app-personal-data>
-        </p-tabPanel>
-        <p-tabPanel leftIcon="fa fa-volume-control-phone" header="Telefonos">
-          Contenido 2
-        </p-tabPanel>
-        <p-tabPanel leftIcon="fa fa-book" header="Direcciones">
-          Content 3
-        </p-tabPanel>
-        <p-tabPanel leftIcon="fa fa-envelope-o" header="e-Mails">
-          Content 4
-        </p-tabPanel>
-        <p-tabPanel leftIcon="fa fa-history" header="Historial Telemercadeo">
-          Content 5
-        </p-tabPanel>
-        <p-tabPanel leftIcon="fa fa-check-square-o" header="Calificacion">
-          Content 6
-        </p-tabPanel>
-      </p-tabView>
+    <div class="col-md-10">
+      <div class="screen-data">
+        <p-tabView  [style]="{width: '100%', height: '100%'}">
+          <p-tabPanel class="success" [selected]="true" leftIcon="fa fa-address-card-o"  header="Informacion Personal">
+            <app-personal-data></app-personal-data>
+          </p-tabPanel>
+          <p-tabPanel leftIcon="fa fa-volume-control-phone" header="Telefonos">
+            <app-personal-data></app-personal-data>
+          </p-tabPanel>
+          <p-tabPanel leftIcon="fa fa-book" header="Direcciones">
+            Content 3
+          </p-tabPanel>
+          <p-tabPanel leftIcon="fa fa-envelope-o" header="e-Mails">
+            Content 4
+          </p-tabPanel>
+          <p-tabPanel leftIcon="fa fa-history" header="Historial Telemercadeo">
+            Content 5
+          </p-tabPanel>
+          <p-tabPanel leftIcon="fa fa-check-square-o" header="Calificacion">
+            Content 6
+          </p-tabPanel>
+        </p-tabView>
+      </div>
+      <hr>
+      <div class="screen-guion">
+        <p-scrollPanel [style]="{width: '100%', height: '100%'}">
+          <router-outlet></router-outlet>
+        </p-scrollPanel>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <h2>HOLA</h2>
     </div>
   </div>
-  <p-scrollPanel [style]="{width: '100%', height: '580px'}">
-    <router-outlet></router-outlet>
-  </p-scrollPanel>
 </div>
 
