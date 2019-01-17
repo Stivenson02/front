@@ -1,20 +1,22 @@
 
-import {NgModule} from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormsModule , ReactiveFormsModule} from '@angular/forms';
-import {CampainOneRoutingModule} from './campain-one-routing.module';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { CampainOneRoutingModule } from './campain-one-routing.module';
+import { environment } from '../../../../environments/environment';
 
-import { StatModule} from '../../../shared/modules';
-import {AccordionModule, InputTextModule, MenuItem, ScrollPanelModule, TabMenuModule, TabViewModule} from 'primeng/primeng';
+import { StatModule } from '../../../shared/modules';
+import { AccordionModule, InputTextModule, MenuItem, ScrollPanelModule, TabMenuModule, TabViewModule } from 'primeng/primeng';
 
-import {CampainOneComponent} from './campain-one.component';
+import { CampainOneComponent } from './campain-one.component';
+import { AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent } from './components';
+
+//guiones
 import {
-  AddressComponent,
-  ChatComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent
+  ChatComponent
 } from './components';
-import {environment} from '../../../../environments/environment';
-import {PhonesComponent} from './components/phones/phones.component';
+
 
 
 @NgModule({
@@ -42,7 +44,7 @@ import {PhonesComponent} from './components/phones/phones.component';
     HistoryTmkComponent
   ]
 })
-export class CampainOneModule{
+export class CampainOneModule {
 
 }
 
