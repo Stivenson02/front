@@ -12,12 +12,10 @@ import { AccordionModule, InputTextModule, MenuItem, ScrollPanelModule, TabMenuM
 import { CampainOneComponent } from './campain-one.component';
 import { AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent } from './components';
 
-//guiones
+//Scrips
 import {
   ChatComponent
 } from './components';
-
-
 
 @NgModule({
   imports: [
