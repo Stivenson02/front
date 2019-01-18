@@ -9,7 +9,7 @@ import { environment } from '../../../../environments/environment';
 import { StatModule } from '../../../shared/modules';
 import {
   AccordionModule, DialogModule,
-  InputTextModule, MessageModule, MessagesModule,
+  InputTextModule, ListboxModule, MessageModule, MessagesModule,
   ScrollPanelModule,
   SplitButtonModule,
   TabMenuModule,
@@ -43,7 +43,8 @@ import {ToastModule} from 'primeng/toast';
     MessagesModule,
     MessageModule,
     ToastModule,
-    DialogModule
+    DialogModule,
+    ListboxModule
   ],
   declarations: [
     CampainOneComponent,
