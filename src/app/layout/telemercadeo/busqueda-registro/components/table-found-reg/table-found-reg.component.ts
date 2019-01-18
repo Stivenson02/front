@@ -3,10 +3,17 @@ import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
 
 export interface UserData {
-  id: string;
-  name: string;
-  progress: string;
-  color: string;
+  telemercadeo: string;
+  etapa: string;
+  base: string;
+  consumidor: string;
+  nombre: string;
+  grupo_causal: string;
+  causal: string;
+  fecha_tmk: string;
+  usuario: string;
+  telefono: string;
+  
 }
 
 /** Constants used to fill up our data base. */
@@ -27,7 +34,7 @@ const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
 })
 export class TableFoundRegComponent implements OnInit {
     
-  displayedColumns: string[] = ['id', 'name', 'progress', 'color'];
+  displayedColumns: string[] = ['telemercadeo', 'etapa', 'base', 'consumidor', 'nombre', 'grupo_causal', 'causal', 'fecha_tmk', 'usuario', 'teléfono'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -40,7 +47,7 @@ export class TableFoundRegComponent implements OnInit {
 	    // Assign the data to the data source for the table to render
 	    this.dataSource = new MatTableDataSource(users);
      }
-    ngOnInit() { 
+    ngOnInit() {
     	this.dataSource.paginator = this.paginator;
     	this.dataSource.sort = this.sort;
     }
