@@ -2,72 +2,16 @@
     <app-page-header [heading]="'Búsqueda de Registros'" [icon]="'fa-bar-chart-o'"></app-page-header>
     
     <hr>  
-          <div class="row justify-content-md-center mt-1">
-                       
-            <div class="col-12 col-md-4">
-                <mat-card class="rb-form-mat-card">
-                  <mat-card-header>
-                    <mat-card-title><h6>Búsqueda dirigida de registros para telemercadeo</h6></mat-card-title>
-                  </mat-card-header>
-                  <form class="">
-                 
-                  <div class="row justify-content-md-center">           
-                    <mat-form-field class="col-sm-6 col-md-6 mt-1 mt-md-2">
-                    <mat-select placeholder="Campaña" [(ngModel)]="selectedCampana" name="campana">
-                      <mat-option *ngFor="let campana of campanas" [value]="campana.value">
-                        {{campana.viewValue}}
-                      </mat-option>
-                    </mat-select>
-                    </mat-form-field>
-                  </div>
-
-                  <div class="row justify-content-md-center">
-                    <mat-form-field class="col-sm-6 col-md-6">
-                    <mat-select placeholder="Etapa" [(ngModel)]="selectedEtapa" name="etapa" (selectionChange)="changeCheckVisibility()">
-                      <mat-option *ngFor="let etapa of etapas" [value]="etapa.value">
-                        {{etapa.viewValue}}
-                      </mat-option>
-                    </mat-select>
-                    </mat-form-field>
-                  </div>
-                  
-                  <div class="row justify-content-md-center d-flex flex-row" *ngIf = "checkVisibility">
-                      <h6 class="m-md-2">Campo de consulta</h6>
-                      <mat-radio-group class="" (click)="changeInputVisibility()" name="rb-radio-group" >
-                        <mat-radio-button class="m-1 m-md-2" value="telemercadeo_id" >telemercadeo_id</mat-radio-button>
-                        <mat-radio-button class="m-1 m-md-2" value="documento">documento</mat-radio-button>
-                        <mat-radio-button class="m-1 m-md-2" value="consumidor_id">consumidor_id</mat-radio-button>
-                      </mat-radio-group> 
-                  </div>
-                  
-                  <div class="row justify-content-md-center" *ngIf = "inputQuery">
-                    <mat-form-field>
-                      <input matInput placeholder="Valor para consultar" >
-                    </mat-form-field>
-                  </div>
-                
-                  <div class="row justify-content-md-center">
-                    <button mat-button>Buscar</button>
-                  </div>
-
-                </form>
-                </mat-card>
-
+          <div class="row justify-content-md-center">
+            <div class="col-12 col-md-4 rb-form-mat-card">
+              <app-form-search-set></app-form-search-set>
             </div>
           </div>
 
           <div class="row justify-content-md-center mt-1">
-            
             <div class="col-12 col-md-12">
-              <mat-card >
-                  <mat-card-header>
-                    <mat-card-title><h6>Registros encontrados</h6></mat-card-title>
-                  </mat-card-header>
-                  <app-table-found-reg></app-table-found-reg>
-              </mat-card>
-                        
+              <app-table-found-reg></app-table-found-reg>
             </div>
-            
           </div>
     <hr>
 </div>  

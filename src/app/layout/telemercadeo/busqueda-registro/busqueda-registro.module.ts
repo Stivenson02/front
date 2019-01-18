@@ -16,7 +16,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
 //components
-import { TableFoundRegComponent } from './components';
+import { TableFoundRegComponent, FormSearchSetComponent } from './components';
 
 @NgModule({
     imports: [CommonModule,
@@ -34,7 +34,7 @@ import { TableFoundRegComponent } from './components';
     		ReactiveFormsModule,
             MatPaginatorModule
     		],
-    declarations: [BusquedaRegistroComponent, TableFoundRegComponent],
+    declarations: [BusquedaRegistroComponent, TableFoundRegComponent, FormSearchSetComponent],
     exports: []
 })
 export class BusquedaRegistroModule {}

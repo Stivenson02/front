@@ -1,3 +1,7 @@
+<mat-card class="mt-2">
+  <mat-card-header>
+    <mat-card-title><h6>Registros encontrados</h6></mat-card-title>
+  </mat-card-header>
 <mat-form-field>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
 </mat-form-field>
@@ -36,3 +40,4 @@
 
   <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
 </div>
+</mat-card>
