@@ -1,5 +1,6 @@
 <div [@routerTransition]>
     <app-page-header [heading]="'Búsqueda de Registros'" [icon]="'fa-bar-chart-o'"></app-page-header>
+    
     <hr>  
           <div class="row">
                        
@@ -55,6 +56,12 @@
             </div>
             
             <div class="col-12 col-md-8">
+              <mat-card >
+                  <mat-card-header>
+                    <mat-card-title><h6>Registros encontrados</h6></mat-card-title>
+                  </mat-card-header>
+                  <app-table-found-reg></app-table-found-reg>
+              </mat-card>
                         
             </div>
             
