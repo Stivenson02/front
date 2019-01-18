@@ -1,4 +1,8 @@
-export * from './timeline/timeline.component';
-export * from './notification/notification.component';
-export * from './chat/chat.component';
-export * from './personal_data/personal-data.component';
+export * from './sub_menu/personal_data/personal-data.component';
+export * from './sub_menu/phones/phones.component';
+export * from './sub_menu/address/address.component';
+export * from './sub_menu/emails/emails.component';
+export * from './sub_menu/history_tmk/history-tmk.component';
+
+//Scrips
+export * from './script/chat/chat.component';
