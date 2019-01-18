@@ -7,15 +7,23 @@ import { CampainOneRoutingModule } from './campain-one-routing.module';
 import { environment } from '../../../../environments/environment';
 
 import { StatModule } from '../../../shared/modules';
-import { AccordionModule, InputTextModule, MenuItem, ScrollPanelModule, TabMenuModule, TabViewModule } from 'primeng/primeng';
+import {
+  AccordionModule, DialogModule,
+  InputTextModule, ListboxModule, MessageModule, MessagesModule,
+  ScrollPanelModule,
+  SplitButtonModule,
+  TabMenuModule,
+  TabViewModule
+} from 'primeng/primeng';
 
 import { CampainOneComponent } from './campain-one.component';
-import { AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent } from './components';
+import {AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent, ScoreComponent} from './components';
 
 //Scrips
 import {
   ChatComponent
 } from './components';
+import {ToastModule} from 'primeng/toast';
 
 @NgModule({
   imports: [
@@ -30,7 +38,13 @@ import {
     InputTextModule,
     TabMenuModule,
     TabViewModule,
-    ScrollPanelModule
+    ScrollPanelModule,
+    SplitButtonModule,
+    MessagesModule,
+    MessageModule,
+    ToastModule,
+    DialogModule,
+    ListboxModule
   ],
   declarations: [
     CampainOneComponent,
@@ -39,7 +53,8 @@ import {
     PhonesComponent,
     AddressComponent,
     EmailsComponent,
-    HistoryTmkComponent
+    HistoryTmkComponent,
+    ScoreComponent
   ]
 })
 export class CampainOneModule {
