@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
 
+import { SEARCHREGISTER } from '../../tables/SearchRegister';
+
 export interface UserData {
   telemercadeo: string;
   etapa: string;
@@ -12,21 +14,19 @@ export interface UserData {
   causal: string;
   fecha_tmk: string;
   usuario: string;
-  telefono: string;
-  
+  telefono: number;
 }
 
 /** Constants used to fill up our data base. */
-const COLORS: string[] = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
+/**const COLORS: string[] = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
   'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
 const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
   'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
+  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth']; */
 
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
-
 @Component({
     selector: 'app-table-found-reg',
     templateUrl: './table-found-reg.component.html',
@@ -34,7 +34,8 @@ const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
 })
 export class TableFoundRegComponent implements OnInit {
     
-  displayedColumns: string[] = ['telemercadeo', 'etapa', 'base', 'consumidor', 'nombre', 'grupo_causal', 'causal', 'fecha_tmk', 'usuario', 'teléfono'];
+  searchregister = SEARCHREGISTER;
+  displayedColumns: string[] = ['telemercadeo', 'etapa', 'base', 'consumidor', 'nombre', 'grupo_causal', 'causal', 'fecha_tmk', 'usuario', 'telefono'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -42,8 +43,8 @@ export class TableFoundRegComponent implements OnInit {
 
     constructor() {
 	    // Create 100 users
-	    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-
+	    // const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+      const users = this.searchregister;
 	    // Assign the data to the data source for the table to render
 	    this.dataSource = new MatTableDataSource(users);
      }
@@ -60,6 +61,7 @@ export class TableFoundRegComponent implements OnInit {
  	}
 }
 /** Builds and returns a new User. */
+/**
 function createNewUser(id: number): UserData {
   const name =
       NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
@@ -72,3 +74,4 @@ function createNewUser(id: number): UserData {
     color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
   };
 }
+*/
