@@ -24,6 +24,10 @@ import {
   ChatComponent
 } from './components';
 import {ToastModule} from 'primeng/toast';
+import {MatNativeDateModule, MatTableModule} from '@angular/material';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material';
 
 @NgModule({
   imports: [
@@ -45,7 +49,12 @@ import {ToastModule} from 'primeng/toast';
     ToastModule,
     DialogModule,
     ListboxModule,
-    InputTextareaModule
+    InputTextareaModule,
+    MatNativeDateModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   declarations: [
     CampainOneComponent,
