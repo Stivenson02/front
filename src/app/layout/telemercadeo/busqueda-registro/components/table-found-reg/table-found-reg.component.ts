@@ -6,14 +6,6 @@ import { DataSource } from '@angular/cdk/table';
 import { SEARCHREGISTER } from '../../tables/SearchRegister';  //objeto con los datos para la tabla
 import { TableFoundReg } from '../../fieldsInterface/table-found-reg'; //Interface que define las columnas y el tipo de dato de las mismas
 
-
-/** Constants used to fill up our data base. */
-/**const COLORS: string[] = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
-  'fuchsia', 'lime', 'teal', 'aqua', 'blue', 'navy', 'black', 'gray'];
-const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
-  'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
-  'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth']; */
-
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -25,13 +17,13 @@ const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
 })
 export class TableFoundRegComponent implements OnInit {
     
-    constructor() {
+  constructor() {
 
-      // load users with searchregister
-      const users = this.searchregister;
-      // Assign the data to the data source for the table to render
-      this.dataSource = new MatTableDataSource(users);
-     }
+    // load users with searchregister
+    const users = this.searchregister;
+    // Assign the data to the data source for the table to render
+    this.dataSource = new MatTableDataSource(users);
+  }
 
   searchregister = SEARCHREGISTER;
   // displayedColumns: arreglo con los id de cada campo (matColumnDef) del archivo html. 
@@ -54,18 +46,3 @@ export class TableFoundRegComponent implements OnInit {
     	}
  	}
 }
-/** Builds and returns a new User. */
-/**
-function createNewUser(id: number): UserData {
-  const name =
-      NAMES[Math.round(Math.random() * (NAMES.length - 1))] + ' ' +
-      NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) + '.';
-
-  return {
-    id: id.toString(),
-    name: name,
-    progress: Math.round(Math.random() * 100).toString(),
-    color: COLORS[Math.round(Math.random() * (COLORS.length - 1))]
-  };
-}
-*/
