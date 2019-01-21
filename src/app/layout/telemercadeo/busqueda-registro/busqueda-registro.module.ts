@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule, MatTableModule } from '@angular/material';
+import { MatNativeDateModule, MatTableModule, MatSortModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 
 import { BusquedaRegistroRoutingModule } from './busqueda-registro-routing.module';
@@ -15,6 +15,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+
 //components
 import { TableFoundRegComponent, FormSearchSetComponent } from './components';
 
@@ -24,6 +25,7 @@ import { TableFoundRegComponent, FormSearchSetComponent } from './components';
     		MatNativeDateModule,
     		PageHeaderModule,
             MatTableModule,
+            MatSortModule,
     		MatFormFieldModule,
     		MatSelectModule,
             MatInputModule,
