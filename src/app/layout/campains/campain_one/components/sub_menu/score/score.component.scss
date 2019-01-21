@@ -1,3 +1,24 @@
 .listSelect {
   width: 100%;
 }
+.selected {
+  color: #17a2b8;
+  background-color: #DDD;
+}
+.heroes {
+  list-style-type: none;
+}
+.heroes ul.selected:hover {
+  background-color: #007bff !important;
+}
+.heroes:hover {
+  color: #17a2b8;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.heroes .text {
+  position: relative;
+  top: -3px;
+}
+
