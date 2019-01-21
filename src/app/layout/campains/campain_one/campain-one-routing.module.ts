@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {CampainOneComponent} from './campain-one.component';
-import {ChatComponent} from './components';
+import {
+  ChatComponent,
+} from './components';
 
 
 const routes: Routes = [
