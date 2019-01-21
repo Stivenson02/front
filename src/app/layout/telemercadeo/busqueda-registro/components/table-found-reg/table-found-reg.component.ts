@@ -2,20 +2,10 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { DataSource } from '@angular/cdk/table';
 
-import { SEARCHREGISTER } from '../../tables/SearchRegister';
 
-export interface UserData {
-  telemercadeo: string;
-  etapa: string;
-  base: string;
-  consumidor: string;
-  nombre: string;
-  grupo_causal: string;
-  causal: string;
-  fecha_tmk: string;
-  usuario: string;
-  telefono: number;
-}
+import { SEARCHREGISTER } from '../../tables/SearchRegister';  //objeto con los datos para la tabla
+import { TableFoundReg } from '../../fieldsInterface/table-found-reg'; //Interface que define las columnas y el tipo de dato de las mismas
+
 
 /** Constants used to fill up our data base. */
 /**const COLORS: string[] = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
@@ -27,6 +17,7 @@ const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
+
 @Component({
     selector: 'app-table-found-reg',
     templateUrl: './table-found-reg.component.html',
@@ -34,20 +25,23 @@ const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
 })
 export class TableFoundRegComponent implements OnInit {
     
+    constructor() {
+
+      // load users with searchregister
+      const users = this.searchregister;
+      // Assign the data to the data source for the table to render
+      this.dataSource = new MatTableDataSource(users);
+     }
+
   searchregister = SEARCHREGISTER;
+  // displayedColumns: arreglo con los id de cada campo (matColumnDef) del archivo html. 
   displayedColumns: string[] = ['telemercadeo', 'etapa', 'base', 'consumidor', 'nombre', 'grupo_causal', 'causal', 'fecha_tmk', 'usuario', 'telefono'];
-  dataSource: MatTableDataSource<UserData>;
+  dataSource: MatTableDataSource<TableFoundReg>;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-    constructor() {
-	    // Create 100 users
-	    // const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-      const users = this.searchregister;
-	    // Assign the data to the data source for the table to render
-	    this.dataSource = new MatTableDataSource(users);
-     }
+    
     ngOnInit() {
     	this.dataSource.paginator = this.paginator;
     	this.dataSource.sort = this.sort;

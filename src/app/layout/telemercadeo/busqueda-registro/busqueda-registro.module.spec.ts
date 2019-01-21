@@ -1,13 +1,13 @@
-import { ChartsModule } from './charts.module';
+import { BusquedaRegistroModule } from './busqueda-registro.module';
 
-describe('ChartsModule', () => {
-    let chartsModule: ChartsModule;
+describe('BusquedaRegistroModule', () => {
+    let busquedaRegistroModule: BusquedaRegistroModule;
 
     beforeEach(() => {
-        chartsModule = new ChartsModule();
+        busquedaRegistroModule = new BusquedaRegistroModule();
     });
 
     it('should create an instance', () => {
-        expect(chartsModule).toBeTruthy();
+        expect(busquedaRegistroModule).toBeTruthy();
     });
 });
