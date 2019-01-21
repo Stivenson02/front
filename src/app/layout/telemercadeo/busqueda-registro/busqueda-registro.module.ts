@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule } from '@angular/material';
+import { MatNativeDateModule, MatTableModule } from '@angular/material';
 import { CommonModule } from '@angular/common';
 
 import { BusquedaRegistroRoutingModule } from './busqueda-registro-routing.module';
@@ -13,12 +13,17 @@ import { MatInputModule } from '@angular/material';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+//components
+import { TableFoundRegComponent, FormSearchSetComponent } from './components';
 
 @NgModule({
     imports: [CommonModule,
     		BusquedaRegistroRoutingModule,
     		MatNativeDateModule,
     		PageHeaderModule,
+            MatTableModule,
     		MatFormFieldModule,
     		MatSelectModule,
             MatInputModule,
@@ -27,8 +32,9 @@ import { MatCardModule } from '@angular/material/card';
             MatCardModule,
     		FormsModule,
     		ReactiveFormsModule,
+            MatPaginatorModule
     		],
-    declarations: [BusquedaRegistroComponent],
+    declarations: [BusquedaRegistroComponent, TableFoundRegComponent, FormSearchSetComponent],
     exports: []
 })
 export class BusquedaRegistroModule {}
