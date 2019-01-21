@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import { MenuItem, SelectItem } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
@@ -18,6 +18,10 @@ const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
   'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
   'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
 
+interface ngDoCheck {
+  ngDoCheck(): void
+}
+
 /**
  * @title Data table with sorting, pagination, and filtering.
  */
@@ -27,7 +31,7 @@ const NAMES: string[] = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
   styleUrls: ['./score.component.scss'],
   providers: [ MessageService ]
 })
-export class ScoreComponent implements OnInit {
+export class ScoreComponent implements  OnInit, ngDoCheck {
   searchregister = SEARCHREGISTER;
   display: boolean;
   calificate: string;
@@ -36,6 +40,7 @@ export class ScoreComponent implements OnInit {
   colorBoton: string;
   observations: string;
   show: boolean;
+  campFilter = "";
 
   showDialog() {
     this.display = true;
@@ -52,6 +57,14 @@ export class ScoreComponent implements OnInit {
     const users = this.searchregister;
     this.dataSource = new MatTableDataSource(users);
   }
+  ngDoCheck(){
+
+    if (this.display == false){
+      this.campFilter = undefined;
+      this.applyFilter(" ");
+    }
+  }
+
 
   ngOnInit() {
     this.dataSource.sort = this.sort;

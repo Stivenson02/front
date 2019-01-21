@@ -4,17 +4,16 @@
             [maximizable]="true" [baseZIndex]="10000">
 
     <mat-form-field>
-      <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Busca Causal">
+      <input [(ngModel)]="campFilter"  matInput (keyup)="applyFilter($event.target.value)" placeholder="Busca">
     </mat-form-field>
     <p-scrollPanel [style]="{ height: '300px', minHeight: '100%'}">
-      <table [style]="{ width: '100%'}"  mat-table [dataSource]="dataSource" matSort>
+      <table [style]="{  width: '100%'}"  mat-table [dataSource]="dataSource" matSort>
         <!-- Name Column -->
         <ng-container matColumnDef="calificacion">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
-          <td class="heroes" [class.selected]="selectedCalificate === row.calificacion" mat-cell *matCellDef="let row">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipificacion </th>
+          <td (click)="selectedCalificate = row.calificacion" class="heroes" [class.selected]="selectedCalificate === row.calificacion" mat-cell *matCellDef="let row">
             <ul >
-              <li
-                (click)="selectedCalificate = row.calificacion">
+              <li>
                 {{row.calificacion}}
               </li>
             </ul>
@@ -22,7 +21,7 @@
         </ng-container>
         <!-- Color Column -->
         <ng-container matColumnDef="tipo">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header> Color </th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
           <td mat-cell *matCellDef="let row" [style.color]="row.color"> {{row.tipo}} </td>
         </ng-container>
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
