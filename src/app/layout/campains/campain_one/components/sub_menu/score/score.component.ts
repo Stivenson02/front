@@ -57,14 +57,12 @@ export class ScoreComponent implements  OnInit, ngDoCheck {
     const users = this.searchregister;
     this.dataSource = new MatTableDataSource(users);
   }
-  ngDoCheck(){
-
-    if (this.display == false){
+  ngDoCheck() {
+    if (this.display == false) {
       this.campFilter = undefined;
       this.applyFilter(" ");
     }
   }
-
 
   ngOnInit() {
     this.dataSource.sort = this.sort;
@@ -89,7 +87,7 @@ export class ScoreComponent implements  OnInit, ngDoCheck {
     }
   }
 
-  finishProcess () {
+  finishProcess() {
     this.messageService.add({severity: 'info', summary: 'Proceso', detail: 'Finalizado'});
   }
 }

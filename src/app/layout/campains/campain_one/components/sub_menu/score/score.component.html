@@ -11,7 +11,7 @@
         <!-- Name Column -->
         <ng-container matColumnDef="calificacion">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Tipificacion </th>
-          <td (click)="selectedCalificate = row.calificacion" class="heroes" [class.selected]="selectedCalificate === row.calificacion" mat-cell *matCellDef="let row">
+          <td (click)="selectedCalificate = row.calificacion" class="camp_td" [class.selected]="selectedCalificate === row.calificacion" mat-cell *matCellDef="let row">
             <ul >
               <li>
                 {{row.calificacion}}
