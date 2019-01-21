@@ -1,33 +1,33 @@
-<div class="row">
+<div class="row mt-2">
   <p-toast [style]="{marginTop: '80px'}"></p-toast>
   <p-dialog header="Calificar" [(visible)]="display" [modal]="true" [responsive]="true" [style]="{width: '350px', minWidth: '200px'}" [minY]="70"
             [maximizable]="true" [baseZIndex]="10000">
     <p-scrollPanel [style]="{ height: '300px', minHeight: '100%'}">
-      <p-listbox [style]="{width: '100%'}" [options]="interested" [(ngModel)]="selectedCities">
+      <p-listbox [style]="{width: '100%'}" [options]="interested" [(ngModel)]="selectedCalificate">
         <p-header>
           <i class="fa fa-handshake-o"></i>
           <strong> Interesado</strong>
         </p-header>
       </p-listbox>
-      <p-listbox [style]="{width: '100%'}" [options]="noInterested" [(ngModel)]="selectedCities">
+      <p-listbox [style]="{width: '100%'}" [options]="noInterested" [(ngModel)]="selectedCalificate">
         <p-header>
           <i class="fa fa-user-circle"></i>
           <strong> No Interesado</strong>
         </p-header>
       </p-listbox>
-      <p-listbox [style]="{width: '100%'}" [options]="callback" [(ngModel)]="selectedCities">
+      <p-listbox [style]="{width: '100%'}" [options]="callback" [(ngModel)]="selectedCalificate">
         <p-header>
           <i class="fa fa-phone-square" aria-hidden="true"></i>
           <strong> Callback</strong>
         </p-header>
       </p-listbox>
-      <p-listbox [style]="{width: '100%'}" [options]="noCash" [(ngModel)]="selectedCities">
+      <p-listbox [style]="{width: '100%'}" [options]="noCash" [(ngModel)]="selectedCalificate">
         <p-header>
           <i class="fa fa-exclamation-triangle"></i>
           <strong> No Efectivo</strong>
         </p-header>
       </p-listbox>
-      <p-listbox [style]="{width: '100%'}" [options]="otherDialed" [(ngModel)]="selectedCities">
+      <p-listbox [style]="{width: '100%'}" [options]="otherDialed" [(ngModel)]="selectedCalificate">
         <p-header>
           <i class="fa fa-pencil-square-o"></i>
           <strong> Otras Discadas</strong>
@@ -40,9 +40,12 @@
     </p-footer>
   </p-dialog>
   <div class="col-md-6 col-md-offset-2">
-    <button style="width: 100%" type="button" (click)="showDialog()" pButton icon="pi pi-info-circle" label="{{calificate}}" class="ui-button-info"></button>
+    <button style="width: 100%" type="button" (click)="showDialog()" pButton  label="{{calificate}}" class="{{colorBoton}}"></button>
   </div>
-  <div class="col-md-4">
-    <h2>HOLA</h2>
+  <div class="col-md-4 mt-2">
+    <span class="ui-float-label">
+        <textarea [(ngModel)]="observations" id="float-input" rows="5" cols="60" pInputTextarea autoResize="autoResize"></textarea>
+        <label for="float-input">Observaciones Telemercadeo</label>
+    </span>
   </div>
 </div>

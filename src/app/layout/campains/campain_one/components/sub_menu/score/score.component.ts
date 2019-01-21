@@ -16,8 +16,10 @@ export class ScoreComponent implements OnInit {
   callback: SelectItem[];
   noCash: SelectItem[];
   otherDialed: SelectItem[];
-  selectedCities: string[];
+  selectedCalificate: string[];
   object: any;
+  colorBoton: string;
+  observations: string;
 
   showDialog() {
     this.display = true;
@@ -74,10 +76,12 @@ export class ScoreComponent implements OnInit {
 
   ngOnInit() {
     this.calificate = "Seleccionar Calificacion";
+    this.colorBoton = 'ui-button-info';
   }
 
-  save (severity: string) {
-    this.object = this.selectedCities;
+  save () {
+    this.colorBoton = 'btn btn-success';
+    this.object = this.selectedCalificate;
     this.display = false;
     this.calificate = this.object.name;
     this.messageService.add({severity: 'success', summary: 'Calificacion', detail: this.object.name});
