@@ -31,8 +31,8 @@ const routes: Routes = [
           { path: 'components', loadChildren: './bs-component/bs-component.module#BsComponentModule' },
           { path: 'gestion-manual', loadChildren: './reg_aleatorio/reg_aleatorio.module#Reg_AleatorioModule'},
           { path: 'blank-page', loadChildren: './blank-page/blank-page.module#BlankPageModule' },
-          { path: 'busqueda-registro', loadChildren: './telemercadeo/busqueda-registro/busqueda-registro.module#BusquedaRegistroModule' }
-
+          { path: 'busqueda-registro', loadChildren: './telemercadeo/busqueda-registro/busqueda-registro.module#BusquedaRegistroModule' },
+          { path: 'crear-nuevo-consumidor', loadChildren: './telemercadeo/crear-nuevo-consumidor/crear-nuevo-consumidor.module#CrearNuevoConsumidorModule'}
         ]
       }
     ]
