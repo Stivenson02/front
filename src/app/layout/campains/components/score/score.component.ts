@@ -81,6 +81,7 @@ export class ScoreComponent implements  OnInit, ngDoCheck {
 
   finishProcess() {
     this.messageService.add({severity: 'info', summary: 'Proceso', detail: 'Finalizado'});
+    location.reload();
   }
 }
 
