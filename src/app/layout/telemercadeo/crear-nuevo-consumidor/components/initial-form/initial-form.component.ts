@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { routerTransition } from '../../router.animations';
+//import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
+//import { DataSource } from '@angular/cdk/table';
+import { routerTransition } from '../../../../../router.animations';
 
 export interface Campanas {
   value: string;
@@ -15,16 +17,24 @@ export interface Bases {
 }
 
 @Component({
-    selector: 'app-reg_aleatorio',
-    templateUrl: './reg_aleatorio.component.html',
-    styleUrls: ['./reg_aleatorio.component.scss'],
+    selector: 'app-initial-form',
+    templateUrl: './initial-form.component.html',
+    styleUrls: ['./initial-form.component.scss'],
     animations: [routerTransition()]
 })
-export class Reg_AleatorioComponent implements OnInit {
+export class InitialFormComponent implements OnInit {
+
+    constructor() {
+          
+    }
+	
+    public showFormNewClient: boolean = true;
+    public showInitialFrom: boolean = false;
+
     selectedCampana: string;
     selectedEtapa: string;
     selectedBase: string;
-
+    
     campanas: Campanas[] = [
         {value: 'campana-1', viewValue: 'Davivienda - Bienvenida'},
         {value: 'campana-2', viewValue: 'Davivienda - Rediferidos'},
@@ -40,9 +50,14 @@ export class Reg_AleatorioComponent implements OnInit {
         {value: 'base-2', viewValue: 'Davivienda - Base2'},
         {value: 'base-3', viewValue: 'Davivienda - Base3'}
     ];
-    constructor() {}
 
-    ngOnInit() {
-        
+    ngOnInit() { 
+    	
+    }
+    
+    changeViewForm(){
+        console.log("ssdfgsdgfsdfg");
+        this.showFormNewClient = false;
+        this.showInitialFrom = true;
     }
 }
