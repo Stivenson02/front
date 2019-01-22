@@ -33,7 +33,21 @@
       </div>
     </div>
     <div class="col-md-2">
-      <h2>HOLA</h2>
+      <textarea class="mt-2"  name="" id="" cols="30" rows="10"></textarea>
+      <div class="row">
+        <div class="col col-sm-12">
+          <div class="card mb-3">
+            <div class="card-header">
+              Estado
+            </div>
+            <div class="card-body">
+              <canvas baseChart height="500px" [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+              </canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
