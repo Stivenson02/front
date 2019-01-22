@@ -19,7 +19,7 @@ export class CampainOneComponent implements OnInit, ngDoCheck {
 
   constructor() {
     this.data = {
-      labels: ['Ventas','No Ventas','Perdidas'],
+      labels: ['V','No V','Prd'],
       datasets: [
         {
           data: [300, 80, 100],
