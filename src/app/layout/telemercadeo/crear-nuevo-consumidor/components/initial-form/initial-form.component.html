@@ -1,0 +1,42 @@
+<mat-card class="rb-form-mat-card">
+  <mat-card-header>
+    <mat-card-title><h6>Campaña nuevo consumidor</h6></mat-card-title>
+  </mat-card-header>
+    <div class="row justify-content-md-center">
+      <form class="col-12">
+          
+        <div class="row justify-content-md-center">           
+          <mat-form-field class="col-sm-6 col-md-6 mt-md-3">
+          <mat-select placeholder="Campaña" [(ngModel)]="selectedCampana" name="campana">
+            <mat-option *ngFor="let campana of campanas" [value]="campana.value">
+              {{campana.viewValue}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+        </div>
+        
+        <div class="row justify-content-md-center">
+          <mat-form-field class="col-sm-6 col-md-6">
+          <mat-select placeholder="Etapa" [(ngModel)]="selectedEtapa" name="etapa">
+            <mat-option *ngFor="let etapa of etapas" [value]="etapa.value">
+              {{etapa.viewValue}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="row justify-content-md-center">
+          <mat-form-field class="col-sm-6 col-md-6">
+          <mat-select placeholder="Base" [(ngModel)]="selectedBase" name="base">
+            <mat-option *ngFor="let base of bases" [value]="base.value">
+              {{base.viewValue}}
+            </mat-option>
+          </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="row justify-content-md-center">
+          <button mat-button>Crear</button>
+        </div>  
+      </form>  
+    </div>
+</mat-card>
