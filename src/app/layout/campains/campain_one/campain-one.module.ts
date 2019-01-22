@@ -6,11 +6,11 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { CampainOneRoutingModule } from './campain-one-routing.module';
 import { environment } from '../../../../environments/environment';
 
-import { ChartsModule as Ng2Charts } from 'ng2-charts';
+
 
 import { StatModule } from '../../../shared/modules';
 import {
-  AccordionModule, DialogModule, InputTextareaModule,
+  AccordionModule, ChartModule, DialogModule, InputTextareaModule,
   InputTextModule, ListboxModule, MessageModule, MessagesModule,
   ScrollPanelModule,
   SplitButtonModule,
@@ -57,7 +57,7 @@ import {MatInputModule} from '@angular/material';
     MatPaginatorModule,
     MatFormFieldModule,
     MatInputModule,
-    Ng2Charts
+    ChartModule
   ],
   declarations: [
     CampainOneComponent,
