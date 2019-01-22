@@ -1,8 +1,7 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
 <div class="row mt-2">
-  <p-toast [style]="{marginTop: '80px'}"></p-toast>
   <p-dialog header="Calificar" [(visible)]="display" [modal]="true" [responsive]="true" [style]="{width: '450px', minWidth: '200px'}" [minY]="70"
             [maximizable]="true" [baseZIndex]="10000">
-
     <mat-form-field>
       <input [(ngModel)]="campFilter"  matInput (keyup)="applyFilter($event.target.value)" placeholder="Busca">
     </mat-form-field>
@@ -40,9 +39,6 @@
     <button *ngIf="show"  style="width: 100%" type="button" (click)="finishProcess()" pButton  label="Finalizar" class="ui-button-info"></button>
   </div>
   <div class="col-md-4 mt-2">
-    <span class="ui-float-label">
-        <textarea [(ngModel)]="observations" id="float-input" rows="5" cols="60" pInputTextarea autoResize="autoResize"></textarea>
-        <label for="float-input">Observaciones Telemercadeo</label>
-    </span>
+    <textarea [(ngModel)]="observations" ></textarea>
   </div>
 </div>

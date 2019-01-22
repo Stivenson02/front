@@ -1,3 +1,24 @@
+.selected {
+  color: #17a2b8;
+  background-color: #DDD;
+}
+.camp_td {
+  list-style-type: none;
+}
+.camp_td ul.selected:hover {
+  background-color: #007bff !important;
+}
+.camp_td:hover {
+  color: #17a2b8;
+  background-color: #DDD;
+  left: .1em;
+}
+
+.camp_td .text {
+  position: relative;
+  top: -3px;
+}
+
 .chat-panel{
     .chat-dropdown{
         margin-top: -3px;

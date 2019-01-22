@@ -6,9 +6,11 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
 import { CampainOneRoutingModule } from './campain-one-routing.module';
 import { environment } from '../../../../environments/environment';
 
+
+
 import { StatModule } from '../../../shared/modules';
 import {
-  AccordionModule, DialogModule, InputTextareaModule,
+  AccordionModule, ChartModule, DialogModule, InputTextareaModule,
   InputTextModule, ListboxModule, MessageModule, MessagesModule,
   ScrollPanelModule,
   SplitButtonModule,
@@ -17,7 +19,7 @@ import {
 } from 'primeng/primeng';
 
 import { CampainOneComponent } from './campain-one.component';
-import {AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent, ScoreComponent} from './components';
+import {AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent, ScoreComponent} from '../components';
 
 //Scrips
 import {
@@ -54,7 +56,8 @@ import {MatInputModule} from '@angular/material';
     MatTableModule,
     MatPaginatorModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    ChartModule
   ],
   declarations: [
     CampainOneComponent,
