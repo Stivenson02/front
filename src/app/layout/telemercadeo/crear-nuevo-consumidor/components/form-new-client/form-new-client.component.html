@@ -7,30 +7,30 @@
           
         <div class="row justify-content-md-center">           
           <mat-form-field class="col-sm-6 col-md-6 mt-md-3">
-            <input matInput placeholder="Nombre" >
+            <input matInput placeholder="Nombre" required>
           </mat-form-field>
         </div>
         
         <div class="row justify-content-md-center">
           <mat-form-field class="col-sm-6 col-md-6">
-            <input matInput placeholder="Documento" >
+            <input matInput placeholder="Documento" required >
           </mat-form-field>
         </div>
 
         <div class="row justify-content-md-center">
           <mat-form-field class="col-sm-6 col-md-6">
-            <input matInput placeholder="Número móvil" >
+            <input matInput placeholder="Número móvil" required>
           </mat-form-field>
         </div>
 
         <div class="row justify-content-md-center">           
           <mat-form-field class="col-sm-6 col-md-6 mt-md-3">
-            <input matInput placeholder="NIP" >
+            <input matInput placeholder="NIP" required>
           </mat-form-field>
         </div>
 
         <div class="row justify-content-md-center">
-          <button mat-button>Guardar</button>
+          <button mat-button (click)="changeViewForm()">Guardar</button>
         </div>  
       </form>  
     </div>

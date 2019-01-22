@@ -27,7 +27,11 @@ export class InitialFormComponent implements OnInit {
     constructor() {
           
     }
-	  selectedCampana: string;
+	
+    public showFormNewClient: boolean = true;
+    public showInitialFrom: boolean = false;
+
+    selectedCampana: string;
     selectedEtapa: string;
     selectedBase: string;
     
@@ -49,5 +53,11 @@ export class InitialFormComponent implements OnInit {
 
     ngOnInit() { 
     	
+    }
+    
+    changeViewForm(){
+        console.log("ssdfgsdgfsdfg");
+        this.showFormNewClient = false;
+        this.showInitialFrom = true;
     }
 }
