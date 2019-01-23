@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 //import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 //import { DataSource } from '@angular/cdk/table';
 import { routerTransition } from '../../../../../router.animations';
@@ -28,8 +28,11 @@ export class InitialFormComponent implements OnInit {
           
     }
 	
-    public showFormNewClient: boolean = true;
-    public showInitialFrom: boolean = false;
+    showFormNewClient: boolean = true;
+    showInitialFrom: boolean = true;
+
+    @Output() showFormNewClientEvent = new EventEmitter<boolean>();
+    @Output() showInitialFromEvent = new EventEmitter<boolean>();
 
     selectedCampana: string;
     selectedEtapa: string;
@@ -54,10 +57,12 @@ export class InitialFormComponent implements OnInit {
     ngOnInit() { 
     	
     }
-    
+
     changeViewForm(){
-        console.log("ssdfgsdgfsdfg");
-        this.showFormNewClient = false;
-        this.showInitialFrom = true;
+        console.log("ssdfgsdgfsdfg", this.showInitialFrom, this.showFormNewClient);
+        this.showInitialFrom = false;
+        this.showFormNewClient = true;        
+        this.showFormNewClientEvent.emit(this.showFormNewClient);
+        this.showInitialFromEvent.emit(this.showInitialFrom);
     }
 }

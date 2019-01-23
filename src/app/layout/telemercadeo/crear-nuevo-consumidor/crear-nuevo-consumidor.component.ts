@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { routerTransition } from '../../../router.animations';
 
 @Component({
@@ -9,17 +9,22 @@ import { routerTransition } from '../../../router.animations';
 })
 export class CrearNuevoConsumidor implements OnInit {
     
-    showFormNewClient: boolean = false;
     showInitialFrom: boolean = true;
-
+    showFormNewClient: boolean = false;
+    
     // bar chart
     constructor() {}
+
+    receiveShowFormNewClient($event){
+        this.showFormNewClient = $event;
+    }
+
+    receiveShowInitialFrom($events){
+        this.showInitialFrom = $events;
+    }
 
     ngOnInit() {
         
     }
-    changeViewForm(){
-    	this.showFormNewClient = true;
-    	this.showInitialFrom = false;
-    }
+    
 }
