@@ -9,7 +9,7 @@
                                     {{menumain.text_span}}
                                 </span>
                             </a>
-                        <ul *ngIf="menumain.text_span == 'Telemercadeo' ">
+                        <ul *ngIf="menumain.text_span == 'Telemercadeo' && menuPorPerfil[menumain.menu_item][rol] == true ">
                             <li *ngFor="let menutmk of tmkmenu"  class="nav-item">
                                 <a routerLink= {{menutmk.routerlink}} [routerLinkActive]="['router-link-active']" href={{menutmk.href}}>
                                     <i class={{menutmk.iclass}} ></i>
