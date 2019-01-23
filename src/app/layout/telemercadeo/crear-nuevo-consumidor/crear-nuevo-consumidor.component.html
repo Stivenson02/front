@@ -2,9 +2,9 @@
     <app-page-header [heading]="'Crear Nuevo Consumidor'" [icon]="'fa-bar-chart-o'"></app-page-header>
 </div>
 <div *ngIf=showInitialFrom>
-	<app-initial-form></app-initial-form>
+	<app-initial-form (showFormNewClientEvent)="receiveShowFormNewClient($event)" (showInitialFromEvent)= "receiveShowInitialFrom($events)"></app-initial-form>
 </div >
 <div *ngIf=showFormNewClient>
-	<app-form-new-client></app-form-new-client>	
+	<app-form-new-client></app-form-new-client>
 </div>
 
