@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, HostListener, OnInit, ViewChild} from '@angular/core';
 import { MenuItem, SelectItem } from 'primeng/api';
 import { MessageService } from 'primeng/api';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
@@ -26,13 +26,30 @@ interface ngDoCheck {
 export class ScoreComponent implements  OnInit, ngDoCheck {
   searchregister = SEARCHREGISTER;
   display: boolean;
+  listen: boolean;
   calificate: string;
-  selectedCalificate: string;
   object: any;
   colorBoton: string;
   observations: string;
   show: boolean;
   campFilter = "";
+
+  @HostListener('document:keyup', ['$event'])
+  onKeyUp(ev:KeyboardEvent) {
+    // do something meaningful with it
+    if (ev.key == 'Alt' ){
+      this.listen=true;
+    }
+    if (this.listen){
+      if (ev.key == 'q' ){
+        this.showDialog();
+      }
+
+      if (ev.key != 'Alt'){
+        this.listen = false;
+      }
+    }
+  }
 
   showDialog() {
     this.display = true;
@@ -57,15 +74,16 @@ export class ScoreComponent implements  OnInit, ngDoCheck {
   }
 
   ngOnInit() {
+    this.listen = false;
     this.dataSource.sort = this.sort;
     this.calificate = "Seleccionar Calificacion";
     this.colorBoton = 'ui-button-info';
   }
 
-  save () {
+  save (selectCalificate) {
     this.show = true;
     this.colorBoton = 'btn btn-success';
-    this.object = this.selectedCalificate;
+    this.object = selectCalificate;
     this.display = false;
     this.calificate = this.object;
     this.messageService.add({severity: 'success', summary: 'Calificacion', detail: this.object});
