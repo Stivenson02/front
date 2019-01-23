@@ -4,11 +4,11 @@ import { routerTransition } from '../../../router.animations';
 
 @Component({
   selector: 'app-add-user-data',
-  templateUrl: './add-user-data.component.html',
-  styleUrls: ['./add-user-data.component.scss'],
+  templateUrl: './my-notes.component.html',
+  styleUrls: ['./my-notes.component.scss'],
   animations: [routerTransition()]
 })
-export class AddUserDataComponent implements OnInit {
+export class MyNotesComponent implements OnInit {
   panelOpenState = false;
 
   constructor() {}

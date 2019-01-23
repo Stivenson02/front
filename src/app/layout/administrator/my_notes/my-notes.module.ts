@@ -2,12 +2,12 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule , ReactiveFormsModule} from '@angular/forms';
-import {AddUserDataRoutingModule} from './add-user-data-routing.module';
+import {MyNotesRoutingModule} from './my-notes-routing.module';
 
 import { StatModule} from '../../../shared/modules';
 import {AccordionModule, InputTextModule} from 'primeng/primeng';
 
-import {AddUserDataComponent} from './add-user-data.component';
+import {MyNotesComponent} from './my-notes.component';
 import {
   TimelineComponent,
   NotificationComponent,
@@ -15,15 +15,12 @@ import {
 } from './components';
 
 
-
-
-
 @NgModule({
   imports: [
     CommonModule,
     NgbCarouselModule,
     NgbAlertModule,
-    AddUserDataRoutingModule,
+    MyNotesRoutingModule,
     StatModule,
     FormsModule,
     ReactiveFormsModule,
@@ -31,10 +28,10 @@ import {
     InputTextModule
   ],
   declarations: [
-    AddUserDataComponent,
+    MyNotesComponent,
     TimelineComponent,
     NotificationComponent,
     ChatComponent
   ]
 })
-export class AddUserDataModule {}
+export class MyNotesModule {}
