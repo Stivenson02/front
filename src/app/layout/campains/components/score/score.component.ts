@@ -27,7 +27,6 @@ export class ScoreComponent implements  OnInit, ngDoCheck {
   searchregister = SEARCHREGISTER;
   display: boolean;
   calificate: string;
-  selectedCalificate: string;
   object: any;
   colorBoton: string;
   observations: string;
@@ -62,10 +61,10 @@ export class ScoreComponent implements  OnInit, ngDoCheck {
     this.colorBoton = 'ui-button-info';
   }
 
-  save () {
+  save (selectCalificate) {
     this.show = true;
     this.colorBoton = 'btn btn-success';
-    this.object = this.selectedCalificate;
+    this.object = selectCalificate;
     this.display = false;
     this.calificate = this.object;
     this.messageService.add({severity: 'success', summary: 'Calificacion', detail: this.object});
