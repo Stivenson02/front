@@ -1,0 +1,34 @@
+<div [@routerTransition]>
+  <div class="row">
+    <div class="col col-md-8">
+      <div class="card-header">
+        Tus notas
+      </div>
+      <textarea class="mt-2" ></textarea>
+    </div>
+    <div class="col col-md-4">
+      <div class="card-header">
+        Informacion
+      </div>
+      <div class="card-body">
+        <p-scrollPanel [style]="{width: '100%', height: '500px'}">
+          <p-accordion>
+            <p-accordionTab header="Mi perfil">
+              <app-data-user></app-data-user>
+            </p-accordionTab>
+            <p-accordionTab header="Promedio del mes">
+              <app-average-month></app-average-month>
+            </p-accordionTab>
+            <p-accordionTab header="Promedio del dia">
+              <app-average-day></app-average-day>
+            </p-accordionTab>
+            <p-accordionTab header="Meta de base">
+              <app-aim-base></app-aim-base>
+            </p-accordionTab>
+          </p-accordion>
+        </p-scrollPanel>
+      </div>
+    </div>
+  </div>
+</div>
+
