@@ -30,7 +30,6 @@
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
-              "node_modules/mousetrap/mousetrap.min.js"
             ]
           },
           "configurations": {
