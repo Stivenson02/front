@@ -15,7 +15,7 @@ const routes: Routes = [
           {
             path: 'administration',
             children: [
-              { path: 'my-notes', loadChildren: './administrator/my_notes/my-notes.module#MyNotesModule' },
+              { path: 'my_notes', loadChildren: './administrator/my_notes/my-notes.module#MyNotesModule' },
             ]},
           {
             path: 'workspace',

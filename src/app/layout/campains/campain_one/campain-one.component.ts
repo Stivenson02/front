@@ -87,19 +87,17 @@ export class CampainOneComponent implements OnInit, ngDoCheck {
 
   constructor() {
     this.data = {
-      labels: ['V','No V','Prd'],
+      labels: ['A','B'],
       datasets: [
         {
-          data: [300, 80, 100],
+          data: [50, 100],
           backgroundColor: [
             "#FF6384",
-            "#36A2EB",
-            "#FFCE56"
+            "#36A2EB"
           ],
           hoverBackgroundColor: [
             "#FF6384",
-            "#36A2EB",
-            "#FFCE56"
+            "#36A2EB"
           ]
         }]
     };

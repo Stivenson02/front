@@ -5,15 +5,10 @@ import {FormsModule , ReactiveFormsModule} from '@angular/forms';
 import {MyNotesRoutingModule} from './my-notes-routing.module';
 
 import { StatModule} from '../../../shared/modules';
-import {AccordionModule, InputTextModule} from 'primeng/primeng';
+import {AccordionModule, ChartModule, InputTextModule, ScrollPanelModule} from 'primeng/primeng';
 
 import {MyNotesComponent} from './my-notes.component';
-import {
-  TimelineComponent,
-  NotificationComponent,
-  ChatComponent
-} from './components';
-
+import {AimBaseComponent, AverageDayComponent, AverageMonthComponent, DataUserComponent} from './components';
 
 @NgModule({
   imports: [
@@ -25,13 +20,17 @@ import {
     FormsModule,
     ReactiveFormsModule,
     AccordionModule,
-    InputTextModule
+    InputTextModule,
+    ScrollPanelModule,
+    ChartModule
   ],
   declarations: [
     MyNotesComponent,
-    TimelineComponent,
-    NotificationComponent,
-    ChatComponent
+    AverageMonthComponent,
+    AverageDayComponent,
+    AimBaseComponent,
+    DataUserComponent
+
   ]
 })
 export class MyNotesModule {}

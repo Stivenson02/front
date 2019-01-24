@@ -1,3 +1,5 @@
-export * from './timeline/timeline.component';
-export * from './notification/notification.component';
-export * from './chat/chat.component';
+export * from './average_month/average-month.component';
+export * from './average_day/average-day.component';
+export * from './aim_base/aim-base.component';
+export * from './data_user/data-user.component';
+
