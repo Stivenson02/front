@@ -9,6 +9,7 @@ import { ADMINMENU } from '../../../menus/AdminMenu';
 import { AUDITORIAMENU } from '../../../menus/AuditoriaMenu';
 import { ABPOMENU } from '../../../menus/A3bpoMenu';
 import { AREAWORKMENU } from '../../../menus/AreaWorkMenu';
+import { MENUPORPERFIL } from '../../../menus/MenuPorPerfil';
 
 import { CookieService } from 'ngx-cookie-service';
 
@@ -19,6 +20,9 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class SidebarComponent implements OnInit {
 
+  //arreglo con la asignacion de menu por perfil
+  menuporperfil = MENUPORPERFIL;
+  
   mainmenu= MAINMENU;
   tmkmenu= TMKMENU;
   reportesmenu= REPORTESMENU;
@@ -26,7 +30,7 @@ export class SidebarComponent implements OnInit {
   adminmenu=ADMINMENU;
   auditoriamenu=AUDITORIAMENU;
   abpomenu=ABPOMENU;
-  public menuPorPerfil: boolean[][];
+  
   rol: number = 2;
 
   isActive: boolean;
@@ -34,7 +38,7 @@ export class SidebarComponent implements OnInit {
   showMenu: string;
   pushRightClass: string;
 
-  constructor(public router: Router, public cookie: CookieService ) {
+  constructor(public router: Router, public cookie: CookieService) {
     
     this.router.events.subscribe(val => {
       if (
@@ -46,10 +50,6 @@ export class SidebarComponent implements OnInit {
       }
     });
 
-    this.menuPorPerfil = [
-      [false, true, false],
-      [true, false, true]
-    ];
   }
 
   ngOnInit() {
