@@ -1,19 +1,17 @@
 import { Component, Output, EventEmitter, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-import { TranslateService } from '@ngx-translate/core';
 
 import { MAINMENU } from '../../../menus/MainMenu';
 import { TMKMENU } from '../../../menus/TmkMenu';
 import { REPORTESMENU } from '../../../menus/ReportesMenu';
-import { BACKOFFICEMENU} from '../../../menus/BackOffMenu';
+import { BACKOFFICEMENU } from '../../../menus/BackOffMenu';
 import { ADMINMENU } from '../../../menus/AdminMenu';
 import { AUDITORIAMENU } from '../../../menus/AuditoriaMenu';
 import { ABPOMENU } from '../../../menus/A3bpoMenu';
-import {AREAWORKMENU} from '../../../menus/AreaWorkMenu';
+import { AREAWORKMENU } from '../../../menus/AreaWorkMenu';
+import { MENUPORPERFIL } from '../../../menus/MenuPorPerfil';
 
 import { CookieService } from 'ngx-cookie-service';
-
-
 
 @Component({
   selector: 'app-sidebar',
@@ -22,27 +20,26 @@ import { CookieService } from 'ngx-cookie-service';
 })
 export class SidebarComponent implements OnInit {
 
-  mainmenu= null;
+  //arreglo con la asignacion de menu por perfil
+  menuporperfil = MENUPORPERFIL;
+  
+  mainmenu= MAINMENU;
   tmkmenu= TMKMENU;
   reportesmenu= REPORTESMENU;
   backofficemenu=BACKOFFICEMENU;
   adminmenu=ADMINMENU;
   auditoriamenu=AUDITORIAMENU;
   abpomenu=ABPOMENU;
+  
+  rol: number = 2;
 
   isActive: boolean;
   collapsed: boolean;
   showMenu: string;
   pushRightClass: string;
 
-  @Output() collapsedEvent = new EventEmitter<boolean>();
-
-  constructor(private translate: TranslateService, public router: Router, public cookie: CookieService) {
-    this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de']);
-    this.translate.setDefaultLang('en');
-    const browserLang = this.translate.getBrowserLang();
-    this.translate.use(browserLang.match(/en|fr|ur|es|it|fa|de/) ? browserLang : 'en');
-
+  constructor(public router: Router, public cookie: CookieService) {
+    
     this.router.events.subscribe(val => {
       if (
         val instanceof NavigationEnd &&
@@ -52,11 +49,10 @@ export class SidebarComponent implements OnInit {
         this.toggleSidebar();
       }
     });
+
   }
 
   ngOnInit() {
-
-    this.mainmenu = MAINMENU;
 
     this.isActive = false;
     this.collapsed = true;
@@ -76,11 +72,6 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  toggleCollapsed() {
-    this.collapsed = !this.collapsed;
-    this.collapsedEvent.emit(this.collapsed);
-  }
-
   isToggled(): boolean {
     const dom: Element = document.querySelector('body');
     return dom.classList.contains(this.pushRightClass);
@@ -94,10 +85,6 @@ export class SidebarComponent implements OnInit {
   rltAndLtr() {
     const dom: any = document.querySelector('body');
     dom.classList.toggle('rtl');
-  }
-
-  changeLang(language: string) {
-    this.translate.use(language);
   }
 
   onLoggedout() {
