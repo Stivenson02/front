@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RediferidosComponent } from './rediferidos.component';
+import { PreguionComponent } from './preguion.component';
 
 describe('AddressComponent', () => {
-  let component: RediferidosComponent;
-  let fixture: ComponentFixture<RediferidosComponent>;
+  let component: PreguionComponent;
+  let fixture: ComponentFixture<PreguionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RediferidosComponent ]
+      declarations: [ PreguionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(RediferidosComponent);
+    fixture = TestBed.createComponent(PreguionComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

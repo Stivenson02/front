@@ -19,11 +19,19 @@ import {
 } from 'primeng/primeng';
 
 import { CampainOneComponent } from './campain-one.component';
-import {AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent, ScoreComponent} from '../components';
+import {
+  AddressComponent,
+  PhonesComponent,
+  EmailsComponent,
+  HistoryTmkComponent,
+  PersonalDataComponent,
+  ScoreComponent,
+  PreguionComponent
+} from '../components';
 
 //Scrips
 import {
-  ChatComponent
+  ChatComponent, RediferidoComponent
 } from './components';
 import {ToastModule} from 'primeng/toast';
 import {MatNativeDateModule, MatTableModule} from '@angular/material';
@@ -67,7 +75,9 @@ import {MatInputModule} from '@angular/material';
     AddressComponent,
     EmailsComponent,
     HistoryTmkComponent,
-    ScoreComponent
+    ScoreComponent,
+    PreguionComponent,
+    RediferidoComponent
   ]
 })
 export class CampainOneModule {

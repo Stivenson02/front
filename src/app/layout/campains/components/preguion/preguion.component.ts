@@ -3,11 +3,11 @@ import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-chat',
-  templateUrl: './rediferidos.component.html',
-  styleUrls: ['./rediferidos.component.scss'],
+  templateUrl: './preguion.component.html',
+  styleUrls: ['./preguion.component.scss'],
   providers: [ MessageService ]
 })
-export class RediferidosComponent implements OnInit {
+export class PreguionComponent implements OnInit {
   telefono: string;
   selectedCalificate: string;
   showScript:boolean;
