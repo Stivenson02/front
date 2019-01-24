@@ -42,32 +42,32 @@ export const MENUPORPERFIL: boolean[][] =
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//38 Agregar Cuentas Desembolso
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//39 Seguimiento Fopep
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//40 Administrar Usuarios
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//41
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//42
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//43
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//44
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//45
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//46
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//47
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//48
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//49
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//50
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//51
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//52
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//53
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//54
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//55
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//56
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//57
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//58
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//59
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//60
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//61
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//62
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//63
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//64
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//65
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//66
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//67
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]	//68
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//41 Resetear Password
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//42 Bloc Notas
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//43 Desactivar Usuarios RRHH
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//44 Reglamento A3BPO
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//45 Clientes Asignados
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//46 Queremos Conocerte
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//47 CallMan
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//48 Búsqueda de Registros
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//49 Reporte Gestión Auditoria
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//50 Reporte Resultado Auditoria
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//51 Desbloquear Registros
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//52 Mis Auditorias
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//53 Detalle Mis Auditorias
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//54 Aprobación Masiva
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//55 Aprobación Teléfonos
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//56 Reporte Auditoría Teléfonos
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//57 Teléfonos Cliente
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//58 Crear Item Matriz
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//59 Nota Consolidada Asesor
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//60 Nota Consolidada Campaña
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//61 Aprobación Direcciones
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//62 Aprobación Correos
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//63 Búsqueda Consumidor
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//64 Agregar Palabras Prohibidas
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//65 Agentes Por Campaña
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//66 Datos Margen
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//67 Generar Margen
+	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true]	//68 Gestión BRM
 ];
