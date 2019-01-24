@@ -9,15 +9,17 @@
                                     {{menumain.text_span}}
                                 </span>
                             </a>
-                        <ul *ngIf="menumain.text_span == 'Telemercadeo' ">
-                            <li *ngFor="let menutmk of tmkmenu"  class="nav-item">
-                                <a routerLink= {{menutmk.routerlink}} [routerLinkActive]="['router-link-active']" href={{menutmk.href}}>
-                                    <i class={{menutmk.iclass}} ></i>
-                                    <span class="nav-text">
-                                        {{menutmk.text_span}}
-                                    </span>
-                                </a>
-                            </li>
+                        <ul *ngIf="menumain.text_span == 'Telemercadeo' && menuporperfil[menumain.menu_item][rol] == true ">
+                            <ng-container *ngFor="let menutmk of tmkmenu" >
+                                <li *ngIf="menuporperfil[menutmk.menu_item][rol] == true" class="nav-item">
+                                    <a routerLink= {{menutmk.routerlink}} [routerLinkActive]="['router-link-active']" href={{menutmk.href}}>
+                                        <i class={{menutmk.iclass}} ></i>
+                                        <span class="nav-text">
+                                            {{menutmk.text_span}}
+                                        </span>
+                                    </a>
+                                </li>    
+                            </ng-container>
                         </ul>
                         <ul *ngIf="menumain.text_span == 'Reportes' ">
                             <li *ngFor="let menureportes of reportesmenu"  class="nav-item">
