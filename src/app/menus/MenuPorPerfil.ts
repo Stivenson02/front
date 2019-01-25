@@ -10,9 +10,9 @@ export const MENUPORPERFIL: boolean[][] =
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//6 A3bpo
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//7 Formularios
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//8 Gestion Manual
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//9 Búsqueda Registros
+	    [true, true, false, true, true, true, true, true, true, true, true, true, true, true, true],	//9 Búsqueda Registros
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//10 Desocupar Registro
-	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//11 Asignación Bases
+	    [true, true, false, true, true, true, true, true, true, true, true, true, true, true, true],	//11 Asignación Bases
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//12 Cambio de Causal
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//13 Crear Nuevo Consumidor
 	    [true, true, true, true, true, true, true, true, true, true, true, true, true, true, true],	//14 Cambiar Prioridad Gestión
