@@ -19,17 +19,16 @@ import {
 } from 'primeng/primeng';
 
 import { CampainOneComponent } from './campain-one.component';
-import {AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent, ScoreComponent} from '../components';
 
-//Scrips
 import {
-  ChatComponent
+   RediferidoComponent
 } from './components';
 import {ToastModule} from 'primeng/toast';
 import {MatNativeDateModule, MatTableModule} from '@angular/material';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
+import {PreguionComponent} from '../components';
 
 @NgModule({
   imports: [
@@ -61,13 +60,9 @@ import {MatInputModule} from '@angular/material';
   ],
   declarations: [
     CampainOneComponent,
-    ChatComponent,
-    PersonalDataComponent,
-    PhonesComponent,
-    AddressComponent,
-    EmailsComponent,
-    HistoryTmkComponent,
-    ScoreComponent
+    RediferidoComponent,
+    PreguionComponent
+
   ]
 })
 export class CampainOneModule {

@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {CampainOneComponent} from './campain-one.component';
-import {
-  ChatComponent,
+import {RediferidoComponent
 } from './components';
+import {PreguionComponent} from '../components';
 
 
 const routes: Routes = [
   {
     path: '', component: CampainOneComponent,
     children: [
-      { path:'guion', component: ChatComponent}
+      { path: 'preguion', component: PreguionComponent},
+      { path: 'rediferido', component: RediferidoComponent}
     ]
   }
 ];
