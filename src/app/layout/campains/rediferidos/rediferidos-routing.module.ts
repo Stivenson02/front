@@ -5,7 +5,6 @@ import {Guion1Component
 } from './components';
 import {PreguionComponent} from '../components';
 
-
 const routes: Routes = [
   {
     path: '', component: RediferidosComponent,
