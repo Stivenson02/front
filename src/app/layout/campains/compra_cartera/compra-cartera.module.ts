@@ -9,7 +9,7 @@ import { CompraCarteraComponent } from './compra-cartera.component';
 
 //Scrips
 import {
-  Guion1Component
+  Guion1Component, OfertaInicialComponent
 } from './components';
 import { ToastModule } from 'primeng/toast';
 
@@ -23,7 +23,8 @@ import { ToastModule } from 'primeng/toast';
   ],
   declarations: [
     CompraCarteraComponent,
-    Guion1Component    
+    Guion1Component,
+    OfertaInicialComponent    
   ]
 })
 export class CompraCarteraModule {
