@@ -59,7 +59,6 @@ export class InitialFormComponent implements OnInit {
     }
 
     changeViewForm(){
-        console.log("ssdfgsdgfsdfg", this.showInitialFrom, this.showFormNewClient);
         this.showInitialFrom = false;
         this.showFormNewClient = true;        
         this.showFormNewClientEvent.emit(this.showFormNewClient);
