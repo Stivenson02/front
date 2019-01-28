@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: '', component: CompraCarteraComponent,
     children: [
-      { path:'guion', component: Guion1Component}
+      { path:'guion-1', component: Guion1Component}
     ]
   }
 ];
