@@ -3,11 +3,11 @@ import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-rediferido',
-  templateUrl: './rediferido.component.html',
-  styleUrls: ['./rediferido.component.scss'],
+  templateUrl: './guion-1.component.html',
+  styleUrls: ['./guion-1.component.scss'],
   providers: [ MessageService ]
 })
-export class RediferidoComponent implements OnInit {
+export class Guion1Component implements OnInit {
   telefono: string;
   selectedCalificate: string;
   showScript:boolean;

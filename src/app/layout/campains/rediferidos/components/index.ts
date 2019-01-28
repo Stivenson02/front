@@ -1,1 +1,1 @@
-export * from './rediferido/rediferido.component';
+export * from './guion_1/guion-1.component';
