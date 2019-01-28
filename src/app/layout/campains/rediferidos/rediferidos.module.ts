@@ -21,7 +21,7 @@ import {
 import { RediferidosComponent } from './rediferidos.component';
 
 import {
-   RediferidoComponent
+   Guion1Component
 } from './components';
 import {ToastModule} from 'primeng/toast';
 import {MatNativeDateModule, MatTableModule} from '@angular/material';
@@ -60,7 +60,7 @@ import {PreguionComponent} from '../components';
   ],
   declarations: [
     RediferidosComponent,
-    RediferidoComponent,
+    Guion1Component,
     PreguionComponent
 
   ]
