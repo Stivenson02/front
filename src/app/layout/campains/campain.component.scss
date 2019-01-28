@@ -1,1 +1,13 @@
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+.screen-data{
+  height: 150px; width: 100%; display: inline-block; position: relative;
+}
+.screen-guion{
+  height: 510px; width: 100%; display: inline-block; position: relative;
+}
+textarea{
+  width: 100%;
+  max-height: 300px;
+  min-height: 300px;
+}
