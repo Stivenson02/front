@@ -1,0 +1,68 @@
+<p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
+<div class="chat-panel card card-default">
+  <div class="card-header">
+    <i class="fa fa-paper-plane fa-fw"></i>
+    Contacto
+    <div class=" pull-right" ngbDropdown>
+      <button class="btn btn-secondary btn-sm" ngbDropdownToggle>
+        <span class="caret"></span>
+      </button>
+    </div>
+  </div>
+  <!-- /.panel-heading -->
+  <div class="card-body">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Numero</th>
+        <th scope="col">Extencion</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Resultado Contacto</th>
+        <th scope="col">Estado</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <th (click)="selectNumeber(telefono)" class="camp_td" [class.selected]="selectedCalificate === telefeno" >
+          <ul >
+            <li>
+              {{telefono}}
+            </li>
+          </ul>
+        </th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th (click)="selectNumeber(telefono)" class="camp_td" [class.selected]="selectedCalificate === telefeno" >
+          <ul >
+            <li>
+              {{telefono}}
+            </li>
+          </ul>
+        </th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th (click)="selectNumeber(telefono)" class="camp_td" [class.selected]="selectedCalificate === telefeno" >
+          <ul >
+            <li>
+              {{telefono}}
+            </li>
+          </ul>
+        </th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
