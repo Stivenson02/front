@@ -20,7 +20,7 @@ import {AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent,
 
 //Scrips
 import {
-  ChatComponent
+  Guion1Component
 } from './components';
 import {ToastModule} from 'primeng/toast';
 import {MatNativeDateModule, MatTableModule} from '@angular/material';
@@ -58,7 +58,7 @@ import {MatInputModule} from '@angular/material';
   ],
   declarations: [
     CompraCarteraComponent,
-    ChatComponent,
+    Guion1Component,
     PersonalDataComponent,
     PhonesComponent,
     AddressComponent,
