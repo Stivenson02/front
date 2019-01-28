@@ -1,77 +1,90 @@
         <nav class="main-menu ">
             <div class="list-group">
                 <ul class="nav-menu" [ngClass]="{sidebarPushRight: isActive, collapsed: collapsed}">
-
-                    <li *ngFor="let menumain of mainmenu"  class="nav-item">
-                            <a routerLink= {{menumain.routerlink}} [routerLinkActive]="['router-link-active']"> 
-                                <i class={{menumain.iclass}} ></i>
-                                <span class="nav-text">
-                                    {{menumain.text_span}}
-                                </span>
-                            </a>
-                        <ul *ngIf="menumain.text_span == 'Telemercadeo' && menuporperfil[menumain.menu_item][rol] == true ">
-                            <ng-container *ngFor="let menutmk of tmkmenu" >
-                                <li *ngIf="menuporperfil[menutmk.menu_item][rol] == true" class="nav-item">
-                                    <a routerLink= {{menutmk.routerlink}} [routerLinkActive]="['router-link-active']" href={{menutmk.href}}>
-                                        <i class={{menutmk.iclass}} ></i>
-                                        <span class="nav-text">
-                                            {{menutmk.text_span}}
-                                        </span>
-                                    </a>
-                                </li>    
-                            </ng-container>
-                        </ul>
-                        <ul *ngIf="menumain.text_span == 'Reportes' ">
-                            <li *ngFor="let menureportes of reportesmenu"  class="nav-item">
-                                <a routerLink= {{menumain.routerlink}} [routerLinkActive]="['router-link-active']" href={{menureportes.href}}>
-                                    <i class={{menureportes.iclass}} ></i>
+                    <ng-container *ngFor="let menumain of mainmenu">
+                        <li *ngIf="menuporperfil[menumain.menu_item][rol] == true" class="nav-item">
+                                <a routerLink= {{menumain.routerlink}} [routerLinkActive]="['router-link-active']"> 
+                                    <i class={{menumain.iclass}} ></i>
                                     <span class="nav-text">
-                                        {{menureportes.text_span}}
+                                        {{menumain.text_span}}
                                     </span>
                                 </a>
-                            </li>
-                        </ul>
-                        <ul *ngIf="menumain.text_span == 'BackOffice' ">
-                            <li *ngFor="let menubackoffice of backofficemenu"  class="nav-item">
-                                <a routerLink= {{menumain.routerlink}} [routerLinkActive]="['router-link-active']" href={{menubackoffice.href}}>
-                                    <i class={{menubackoffice.iclass}} ></i>
-                                    <span class="nav-text">
-                                        {{menubackoffice.text_span}}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul *ngIf="menumain.text_span == 'Administrador' ">
-                            <li *ngFor="let menuadmin of adminmenu"  class="nav-item">
-                                <a routerLink= {{menuadmin.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuadmin.href}}>
-                                    <i class={{menuadmin.iclass}} ></i>
-                                    <span class="nav-text">
-                                        {{menuadmin.text_span}}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul *ngIf="menumain.text_span == 'Auditoria' ">
-                            <li *ngFor="let menuauditoria of auditoriamenu"  class="nav-item">
-                                <a routerLink= {{menumain.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuauditoria.href}}>
-                                    <i class={{menuauditoria.iclass}} ></i>
-                                    <span class="nav-text">
-                                        {{menuauditoria.text_span}}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul *ngIf="menumain.text_span == 'A3bpo' ">
-                            <li *ngFor="let menuabpo of abpomenu"  class="nav-item">
-                                <a routerLink= {{menumain.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuabpo.href}}>
-                                    <i class={{menuabpo.iclass}} ></i>
-                                    <span class="nav-text">
-                                        {{menuabpo.text_span}}
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
+                            <ul *ngIf="menumain.text_span == 'Telemercadeo' ">
+                                <ng-container *ngFor="let menutmk of tmkmenu" >
+                                    <li *ngIf="menuporperfil[menutmk.menu_item][rol] == true" class="nav-item">
+                                        <a routerLink= {{menutmk.routerlink}} [routerLinkActive]="['router-link-active']" href={{menutmk.href}}>
+                                            <i class={{menutmk.iclass}} ></i>
+                                            <span class="nav-text">
+                                                {{menutmk.text_span}}
+                                            </span>
+                                        </a>
+                                    </li>    
+                                </ng-container>
+                            </ul>
+                            <ul *ngIf="menumain.text_span == 'Reportes' ">
+                                <ng-container *ngFor="let menureportes of reportesmenu">
+                                    <li *ngIf="menuporperfil[menureportes.menu_item][rol] == true" class="nav-item">
+                                        <a routerLink= {{menureportes.routerlink}} [routerLinkActive]="['router-link-active']" href={{menureportes.href}}>
+                                            <i class={{menureportes.iclass}} ></i>
+                                            <span class="nav-text">
+                                                {{menureportes.text_span}}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ng-container>
+                                
+                            </ul>
+                            <ul *ngIf="menumain.text_span == 'BackOffice' ">
+                                <ng-container *ngFor="let menubackoffice of backofficemenu">
+                                    <li *ngIf="menuporperfil[menubackoffice.menu_item][rol] == true" class="nav-item">
+                                        <a routerLink= {{menubackoffice.routerlink}} [routerLinkActive]="['router-link-active']" href={{menubackoffice.href}}>
+                                            <i class={{menubackoffice.iclass}} ></i>
+                                            <span class="nav-text">
+                                                {{menubackoffice.text_span}}
+                                            </span>
+                                        </a>
+                                    </li>    
+                                </ng-container>
+                                
+                            </ul>
+                            <ul *ngIf="menumain.text_span == 'Administrador' ">
+                                <ng-container *ngFor="let menuadmin of adminmenu">
+                                    <li *ngIf="menuporperfil[menuadmin.menu_item][rol] == true" class="nav-item">
+                                        <a routerLink= {{menuadmin.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuadmin.href}}>
+                                            <i class={{menuadmin.iclass}} ></i>
+                                            <span class="nav-text">
+                                                {{menuadmin.text_span}}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ng-container>
+                            </ul>
+                            <ul *ngIf="menumain.text_span == 'Auditoria' ">
+                                <ng-container *ngFor="let menuauditoria of auditoriamenu">
+                                    <li *ngIf="menuporperfil[menuauditoria.menu_item][rol] == true" class="nav-item">
+                                        <a routerLink= {{menuauditoria.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuauditoria.href}}>
+                                            <i class={{menuauditoria.iclass}} ></i>
+                                            <span class="nav-text">
+                                                {{menuauditoria.text_span}}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ng-container>
+                            </ul>
+                            <ul *ngIf="menumain.text_span == 'A3bpo' ">
+                                <ng-container *ngFor="let menuabpo of abpomenu"> 
+                                    <li *ngIf="menuporperfil[menuabpo.menu_item][rol] == true" class="nav-item">
+                                        <a routerLink= {{menuabpo.routerlink}} [routerLinkActive]="['router-link-active']" href={{menuabpo.href}}>
+                                            <i class={{menuabpo.iclass}} ></i>
+                                            <span class="nav-text">
+                                                {{menuabpo.text_span}}
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ng-container>
+                            </ul>
+                        </li>
+                    </ng-container>
                 </ul>
             </div>
                 <ul class="logout">

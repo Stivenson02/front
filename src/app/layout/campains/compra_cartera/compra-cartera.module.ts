@@ -1,12 +1,9 @@
-
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
-import { CampainOneRoutingModule } from './campain-one-routing.module';
+import { CompraCarteraRoutingModule } from './compra-cartera-routing.module';
 import { environment } from '../../../../environments/environment';
-
-
 
 import { StatModule } from '../../../shared/modules';
 import {
@@ -18,24 +15,25 @@ import {
   TabViewModule
 } from 'primeng/primeng';
 
-import { CampainOneComponent } from './campain-one.component';
+import { CompraCarteraComponent } from './compra-cartera.component';
+import {AddressComponent, PhonesComponent, EmailsComponent, HistoryTmkComponent, PersonalDataComponent, ScoreComponent} from '../components';
 
+//Scrips
 import {
-   RediferidoComponent
+  Guion1Component
 } from './components';
 import {ToastModule} from 'primeng/toast';
 import {MatNativeDateModule, MatTableModule} from '@angular/material';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material';
-import {PreguionComponent} from '../components';
 
 @NgModule({
   imports: [
     CommonModule,
     NgbCarouselModule,
     NgbAlertModule,
-    CampainOneRoutingModule,
+    CompraCarteraRoutingModule,
     StatModule,
     FormsModule,
     ReactiveFormsModule,
@@ -59,13 +57,17 @@ import {PreguionComponent} from '../components';
     ChartModule
   ],
   declarations: [
-    CampainOneComponent,
-    RediferidoComponent,
-    PreguionComponent
-
+    CompraCarteraComponent,
+    Guion1Component,
+    PersonalDataComponent,
+    PhonesComponent,
+    AddressComponent,
+    EmailsComponent,
+    HistoryTmkComponent,
+    ScoreComponent
   ]
 })
-export class CampainOneModule {
+export class CompraCarteraModule {
 
 }
 

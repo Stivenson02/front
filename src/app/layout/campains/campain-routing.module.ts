@@ -8,6 +8,7 @@ const routes: Routes = [
     component: CampainComponent,
     children: [
       { path: 'campain_one', loadChildren: './campain_one/campain-one.module#CampainOneModule'},
+      { path: 'compra-cartera', loadChildren: './compra_cartera/compra-cartera.module#CompraCarteraModule'}
     ]
   }
 ];

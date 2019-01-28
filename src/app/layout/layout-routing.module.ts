@@ -16,12 +16,14 @@ const routes: Routes = [
             path: 'administration',
             children: [
               { path: 'my_notes', loadChildren: './administrator/my_notes/my-notes.module#MyNotesModule' },
-            ]},
+            ]
+          },
           {
             path: 'workspace',
             children: [
               { path: '', loadChildren: './campains/campain.module#CampainModule'},
-            ]},
+            ]
+          },
           { path: 'dashboard', loadChildren: './dashboard/dashboard.module#DashboardModule' },
           { path: 'charts', loadChildren: './charts/charts.module#ChartsModule' },
           { path: 'tables', loadChildren: './tables/tables.module#TablesModule' },

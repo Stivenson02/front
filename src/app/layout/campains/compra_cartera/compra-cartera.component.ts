@@ -1,25 +1,28 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 
+import { routerTransition } from '../../../router.animations';
+
 interface ngDoCheck {
-  ngDoCheck(): void;
+  ngDoCheck(): void
 }
+
 @Component({
-  selector: 'app-layout',
-  templateUrl: './campain.component.html',
-  styleUrls: ['./campain.component.scss']
+  selector: 'app-compra-cartera',
+  templateUrl: './compra-cartera.component.html',
+  styleUrls: ['./compra-cartera.component.scss'],
+  animations: [routerTransition()]
 })
-export class CampainComponent implements OnInit, ngDoCheck {
+export class CompraCarteraComponent implements OnInit, ngDoCheck {
+
   showScritp: string;
   data: any;
-  listen: boolean;
+  listen:boolean;
   selectedItemPhone: boolean;
   selectedItemInfo: boolean;
   selectedItemAddress: boolean;
   selectedItemMail: boolean;
   selectedItemHistory: boolean;
   selectedItemCalificate: boolean;
-
-  collapedSideBar: boolean;
 
   @HostListener('document:keyup', ['$event'])
   onKeyUp(ev:KeyboardEvent) {
@@ -117,3 +120,5 @@ export class CampainComponent implements OnInit, ngDoCheck {
   }
 
 }
+
+
