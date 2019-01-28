@@ -2,18 +2,18 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { CampainOneComponent } from './campain-one.component';
-import { CampainOneModule } from './campain-one.module';
+import { RediferidosComponent } from './rediferidos.component';
+import { RediferidosModule } from './rediferidos.module';
 
 
 describe('AdministratorComponent', () => {
-  let component: CampainOneComponent;
-  let fixture: ComponentFixture<CampainOneComponent>;
+  let component: RediferidosComponent;
+  let fixture: ComponentFixture<RediferidosComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        CampainOneModule,
+        RediferidosModule,
         RouterTestingModule,
         BrowserAnimationsModule,
        ]
@@ -22,7 +22,7 @@ describe('AdministratorComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CampainOneComponent);
+    fixture = TestBed.createComponent(RediferidosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

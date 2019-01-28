@@ -13,7 +13,6 @@ import {
   PreguionComponent,
   ScoreComponent
 } from './components';
-import {CampainOneRoutingModule} from './campain_one/campain-one-routing.module';
 import {StatModule} from '../../shared/modules';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {
