@@ -4,11 +4,11 @@ import { routerTransition } from '../../../router.animations';
 
 @Component({
   selector: 'app-add-user-data',
-  templateUrl: './campain-one.component.html',
-  styleUrls: ['./campain-one.component.scss'],
+  templateUrl: './rediferidos.component.html',
+  styleUrls: ['./rediferidos.component.scss'],
   animations: [routerTransition()]
 })
-export class CampainOneComponent implements OnInit {
+export class RediferidosComponent implements OnInit {
 
   constructor() {
 

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
-import { CampainOneRoutingModule } from './campain-one-routing.module';
+import { RediferidosRoutingModule } from './rediferidos-routing.module';
 import { environment } from '../../../../environments/environment';
 
 
@@ -18,7 +18,7 @@ import {
   TabViewModule
 } from 'primeng/primeng';
 
-import { CampainOneComponent } from './campain-one.component';
+import { RediferidosComponent } from './rediferidos.component';
 
 import {
    RediferidoComponent
@@ -35,7 +35,7 @@ import {PreguionComponent} from '../components';
     CommonModule,
     NgbCarouselModule,
     NgbAlertModule,
-    CampainOneRoutingModule,
+    RediferidosRoutingModule,
     StatModule,
     FormsModule,
     ReactiveFormsModule,
@@ -59,13 +59,13 @@ import {PreguionComponent} from '../components';
     ChartModule
   ],
   declarations: [
-    CampainOneComponent,
+    RediferidosComponent,
     RediferidoComponent,
     PreguionComponent
 
   ]
 })
-export class CampainOneModule {
+export class RediferidosModule {
 
 }
 

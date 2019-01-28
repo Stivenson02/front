@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CampainOneComponent} from './campain-one.component';
+import {RediferidosComponent} from './rediferidos.component';
 import {RediferidoComponent
 } from './components';
 import {PreguionComponent} from '../components';
@@ -8,7 +8,7 @@ import {PreguionComponent} from '../components';
 
 const routes: Routes = [
   {
-    path: '', component: CampainOneComponent,
+    path: '', component: RediferidosComponent,
     children: [
       { path: 'preguion', component: PreguionComponent},
       { path: 'rediferido', component: RediferidoComponent}
@@ -20,5 +20,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CampainOneRoutingModule {
+export class RediferidosRoutingModule {
 }
