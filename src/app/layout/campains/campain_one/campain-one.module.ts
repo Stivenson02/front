@@ -21,7 +21,7 @@ import {
 import { CampainOneComponent } from './campain-one.component';
 
 import {
-  ChatComponent, RediferidoComponent
+   RediferidoComponent
 } from './components';
 import {ToastModule} from 'primeng/toast';
 import {MatNativeDateModule, MatTableModule} from '@angular/material';
@@ -60,7 +60,6 @@ import {PreguionComponent} from '../components';
   ],
   declarations: [
     CampainOneComponent,
-    ChatComponent,
     RediferidoComponent,
     PreguionComponent
 
