@@ -4,14 +4,16 @@ import {CampainOneComponent} from './campain-one.component';
 import {
   ChatComponent, RediferidoComponent
 } from './components';
+import {PreguionComponent} from '../components';
 
 
 const routes: Routes = [
   {
     path: '', component: CampainOneComponent,
     children: [
-      { path:'guion', component: ChatComponent},
-      { path:'rediferido', component: RediferidoComponent},
+      { path: 'preguion', component: PreguionComponent},
+      { path: 'guion', component: ChatComponent},
+      { path: 'rediferido', component: RediferidoComponent}
     ]
   }
 ];
