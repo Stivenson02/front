@@ -1,4 +1,62 @@
 <p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
 
-<h2> Simulador</h2>
+<div class="row">
+	<div class="col-12">
+		<div class="card border-primary mb-3" >
+			<div class="card-header">
+				Simulador Compra Cartera
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<div class="col-5">
+						<div class="input-group input-group-sm mb-3">
+	  						<div class="input-group-prepend">
+	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-interes">Interes (%)</span>
+	  						</div>
+	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-cliente-interes">
+						</div>
+
+						<div class="input-group mb-3">
+	  						<div class="input-group-prepend">
+	    						<label class="input-group-text" for="inputGroupSelect01-cliente">Cuotas</label>
+	  						</div>
+							<select class="custom-select" id="inputGroupSelect01-cliente">
+							    <option value=1>1</option>
+							    <option value=2>2</option>
+							    <option value=3>3</option>
+							</select>
+						</div>
+						<div class="input-group input-group-sm mb-3">
+	  						<div class="input-group-prepend">
+	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-saldo">Saldo</span>
+	  						</div>
+	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+	  					</div>		
+					</div>
+							
+					<div class="col-5">
+						<div class="input-group input-group-sm mb-3">
+	  						<div class="input-group-prepend">
+	    						<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Interes (%)</span>
+	  						</div>
+	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes">
+						</div>
+
+						<div class="input-group mb-3">
+	  						<div class="input-group-prepend">
+	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
+	  						</div>
+							<select class="custom-select" id="inputGroupSelect01-otro">
+							    <option value=1>1</option>
+							    <option value=2>2</option>
+							    <option value=3>3</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary">Consultar</button>
+			</div>
+		</div>
+	</div>	
+</div>
 
