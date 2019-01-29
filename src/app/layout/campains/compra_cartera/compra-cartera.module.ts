@@ -5,6 +5,7 @@ import { CompraCarteraRoutingModule } from './compra-cartera-routing.module';
 import { environment } from '../../../../environments/environment';
 
 import { CompraCarteraComponent } from './compra-cartera.component';
+import { FormsModule } from '@angular/forms';
 
 //Scrips
 import {
@@ -18,7 +19,8 @@ import { ToastModule } from 'primeng/toast';
     NgbCarouselModule,
     NgbAlertModule,
     CompraCarteraRoutingModule,
-    ToastModule
+    ToastModule,
+    FormsModule
   ],
   declarations: [
     CompraCarteraComponent,

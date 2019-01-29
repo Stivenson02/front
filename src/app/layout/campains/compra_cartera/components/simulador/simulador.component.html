@@ -39,7 +39,7 @@
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Interes (%)</span>
 	  						</div>
-	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes">
+	  						<input [(ngModel)]="interesOtro" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" >
 						</div>
 
 						<div class="input-group mb-3">
@@ -54,9 +54,56 @@
 						</div>
 					</div>
 				</div>
-				<button type="button" class="btn btn-primary">Consultar</button>
+				<button type="button" class="btn btn-primary" (click) = "showHiddenTable()"> Consultar </button>
 			</div>
 		</div>
 	</div>	
+</div>
+
+<div class="row" *ngIf=showTableDavi>
+	<div class="col-12">
+		<table class="table table-striped table-dark">
+			<thead>
+				<h4>Tabla Amortización</h4>
+				<tr>
+					<th scope="col">Cuota</th>
+					<th scope="col">Saldo</th>
+					<th scope="col">Abono capital</th>
+					<th scope="col">Abono Intereses</th>
+					<th scope="col">Pago mínimo</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>{{interesOtro}}</td>
+					<td>{{numeroCuota[0]}}</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+					<td></td>
+				    <td></td>
+					<td></td>
+				</tr>
+				<tr>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				    <td></td>
+				</tr>	
+			</tbody>
+		</table>
+	</div>
 </div>
 
