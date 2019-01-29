@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 import {CookieService} from 'ngx-cookie-service';
+import { OfertaIniComponent } from './src/app/layout/campains/compra_cartera/components/oferta-ini/oferta-ini.component';
 
 // AoT requires an exported function for factories
 export const createTranslateLoader = (http: HttpClient) => {
@@ -37,7 +38,7 @@ export const createTranslateLoader = (http: HttpClient) => {
         }),
         AppRoutingModule
     ],
-    declarations: [AppComponent],
+    declarations: [AppComponent, OfertaIniComponent],
     providers: [
       AuthGuard,
       CookieService

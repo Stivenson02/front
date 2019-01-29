@@ -1,9 +1,9 @@
-<div [@routerTransition]>
-    <app-page-header [heading]="'Crear Nuevo Consumidor'" [icon]="'fa-bar-chart-o'"></app-page-header>
+<div [@routerTransition] >
+    <app-page-header [heading]="'Crear Nuevo Consumidor'" class="nuevo-consumidor-header" [icon]="'fa-bar-chart-o'"></app-page-header>
 </div>
 <div *ngIf=showInitialFrom>
 	<app-initial-form (showFormNewClientEvent)="receiveShowFormNewClient($event)" (showInitialFromEvent)= "receiveShowInitialFrom($events)"></app-initial-form>
-</div >
+</div>
 <div *ngIf=showFormNewClient>
 	<app-form-new-client></app-form-new-client>
 </div>
