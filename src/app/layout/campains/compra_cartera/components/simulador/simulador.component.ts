@@ -8,8 +8,17 @@ import {MessageService} from 'primeng/api';
   providers: [ MessageService ]
 })
 export class SimuladorComponent implements OnInit {
+
+  numeroCuota: number[];
+	showTableDavi: boolean = false;
+  interesOtro: number = 0;
+
+  constructor() {}
   
-  constructor() { }
+  showHiddenTable(){
+  	this.showTableDavi = true;
+  }
+
   ngOnInit() {
     
   }
