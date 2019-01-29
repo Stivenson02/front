@@ -10,13 +10,13 @@
   <div class="card-body">
     <div class="text-center card-header">
       <h5 class="card-title">
-       <strong> GUION REDIFERIDOS </strong>
+        <strong> GUION REDIFERIDOS </strong>
       </h5>
       <h6 class="card-subtitle mb-2 text-muted">(CLIENTES TOTALEROS)</h6>
     </div>
     <div class="card-body">
       <p class="card-text">
-        Buenos días/ Tardes, le habla <strong> ANDRES ALZATE</strong> en nombre del Banco Davivienda. ¿Cómo se encuentra el día de hoy?
+        Buenos días/ Tardes, le habla <strong> ANDRES ALZATE </strong> en nombre del Banco Davivienda. ¿Cómo se encuentra el día de hoy?
       </p>
       <p class="card-text">
         El motivo de la llamada es porque por el excelente manejo que usted le ha dado a sus productos, queremos beneficiarlo unificando el saldo de su(s) tarjeta(s) de crédito con un descuento del 30% sobre la tasa vigente de tarjeta de crédito.; es decir rediferir su saldo actual a una tasa preferencial de 1,56%mv; lo que representa un ahorro en intereses anual de $36.400 por cada millón de deuda, teniendo en cuenta que la tasa promedio de los últimos 3 meses fue del 2,25%mv
@@ -24,6 +24,36 @@
       <p class="card-text">
         Apoyarse en el simulador para decirle con números reales de su pago mínimo si toma el rediferido- Indicarle al cliente ejemplos con rediferido de su saldo a 12, 24 y 36 meses) Informarle que las cuotas no son fijas sino aproximadas, es obligatorio aclarar que la primera cuota no incluye intereses, estos serán cobrados en la segunda cuota. Revisar valores de la primera y segunda cuota en el simulador.
       </p>
+      <div class="mx-2 pt-3">
+        <div class="card border-primary" >
+          <div class="card-header bg-transparent border-primary"> <strong> Calculo de Cuotas</strong></div>
+          <div class="card-body text-primary">
+            <form>
+              <div class="form-row">
+                <div class="col-4 pt-3">
+                  <span class="ui-float-label">
+                  <input class="form-control" id="float-input" type="text" >
+                  <label for="float-input">Valor a Refinanciar</label>
+                  </span>
+                </div>
+                <div class="col-4 pt-3">
+                <span class="ui-float-label">
+                    <input id="float-input" type="text" size="30" value="1.53%" pInputText redonly>
+                    <label for="float-input">Tasa </label>
+                </span>
+                </div>
+                <div class="col-4 pt-3">
+                    <span class="ui-float-label">
+                    <input class="form-control" id="float-input" type="number" max="36"  min="2" >
+                    <label for="float-input">Cuotas Diferido</label>
+                  </span>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="card-footer bg-transparent border-primary">Footer</div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
