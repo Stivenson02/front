@@ -13,6 +13,8 @@
         <strong> GUION REDIFERIDOS </strong>
       </h5>
       <h6 class="card-subtitle mb-2 text-muted">(CLIENTES TOTALEROS)</h6>
+      <div>
+      </div>
     </div>
     <div class="card-body">
       <p class="card-text">
@@ -27,31 +29,58 @@
       <div class="mx-2 pt-3">
         <div class="card border-primary" >
           <div class="card-header bg-transparent border-primary"> <strong> Calculo de Cuotas</strong></div>
+          <div class="alert alert-success" *ngIf="valor">
+           Valor a refinanciar <strong class="pl-2">$ {{valor | number}}</strong>, diferido en  <strong>{{cuotas}} Cuotas</strong>
+          </div>
+          <div class="alert alert-danger" *ngIf="cuotas && cuotas <= 1 || cuotas >= 37">
+            No hay rango para las cuotas a diferir, seleccione un valor valido
+          </div>
+          <div class="alert alert-danger" *ngIf="show_alert_simulator">
+            Complete los campos del Formulario
+          </div>
           <div class="card-body text-primary">
-            <form>
+            <form #simulatorForm="ngForm" (ngSubmit)="simulator()">
               <div class="form-row">
                 <div class="col-4 pt-3">
-                  <span class="ui-float-label">
-                  <input class="form-control" id="float-input" type="text" >
-                  <label for="float-input">Valor a Refinanciar</label>
-                  </span>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <p class="mr-2"><strong>Valor a Refinanciar</strong></p>
+                      <span class="input-group-text">$</span>
+                    </div>
+                    <input [(ngModel)]="valor" name="valor" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  </div>
                 </div>
                 <div class="col-4 pt-3">
-                <span class="ui-float-label">
-                    <input id="float-input" type="text" size="30" value="1.53%" pInputText redonly>
-                    <label for="float-input">Tasa </label>
-                </span>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <p class="mr-2"><strong>Cuotas a Diferir</strong></p>
+                    </div>
+                    <input [(ngModel)]="cuotas" name="cuotas" type="number" class="form-control" aria-label="Amount (to the nearest dollar)" list="listacuotas" >
+                    <datalist id="listacuotas">
+                      <option value="2">
+                      <option value="3">
+                      <option value="4">
+                    </datalist>
+                  </div>
                 </div>
                 <div class="col-4 pt-3">
-                    <span class="ui-float-label">
-                    <input class="form-control" id="float-input" type="number" max="36"  min="2" >
-                    <label for="float-input">Cuotas Diferido</label>
-                  </span>
+                  <div class="input-group">
+                    <div class="input-group-prepend">
+                      <p class="mr-2"> <strong>Tasa</strong></p>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="{{tasa}}" readonly>
+                    <div class="input-group-append">
+                      <span class="input-group-text">%</span>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div class="col col-sm-12 pt-3" align="center">
+                  <input type="submit" class="btn btn-primary" value="Very Go">
                 </div>
               </div>
             </form>
           </div>
-          <div class="card-footer bg-transparent border-primary">Footer</div>
         </div>
       </div>
     </div>
