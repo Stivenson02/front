@@ -47,9 +47,9 @@ export class Guion1Component implements OnInit {
         this.data_simulator.saldo = saldo;
         this.data_simulator.abono_capital = this.abono_capital_calculo;
         this.data_simulator.abono_intereses = interes;
-        this.data_simulator.pago_minimo = this.abono_capital_calculo + interes;
+        this.data_simulator.pago_minimo =  this.data_simulator.abono_capital + this.data_simulator.abono_intereses ;
         this.data_simulator_array.push( this.data_simulator);
-        saldo = saldo - this.abono_capital_calculo;
+        saldo = this.data_simulator.saldo - this.abono_capital_calculo;
         }
       }
     }
