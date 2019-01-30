@@ -8,19 +8,20 @@
 			</div>
 			<div class="card-body">
 				<div class="row">
+					<!-- Entrada datos Davivienda  -->
 					<div class="col-5">
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-interes">Interes (%)</span>
 	  						</div>
-	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-cliente-interes">
+	  						<input [(ngModel)]="interesDavi" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-cliente-interes" (input) = "onInputFunction()">
 						</div>
 
 						<div class="input-group mb-3">
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01-cliente">Cuotas</label>
 	  						</div>
-							<select class="custom-select" id="inputGroupSelect01-cliente">
+							<select [(ngModel)]="totalCuotasDavi" class="custom-select" id="inputGroupSelect01-cliente" (input) = "onInputFunction()">
 							    <option value=1>1</option>
 							    <option value=2>2</option>
 							    <option value=3>3</option>
@@ -30,23 +31,24 @@
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-saldo">Saldo</span>
 	  						</div>
-	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+	  						<input [(ngModel)]="totalSaldo" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputFunction()">
 	  					</div>		
 					</div>
-							
+					
+					<!-- Entrada datos Otra entidad -->		
 					<div class="col-5">
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Interes (%)</span>
 	  						</div>
-	  						<input [(ngModel)]="interesOtro" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" >
+	  						<input [(ngModel)]="interesOtra" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" (input) = "onInputFunction()">
 						</div>
 
 						<div class="input-group mb-3">
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
 	  						</div>
-							<select class="custom-select" id="inputGroupSelect01-otro">
+							<select [(ngModel)]="totalCuotasOtra" class="custom-select" id="inputGroupSelect01-otro">
 							    <option value=1>1</option>
 							    <option value=2>2</option>
 							    <option value=3>3</option>
@@ -75,8 +77,8 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>{{interesOtro}}</td>
-					<td>{{numeroCuota[0]}}</td>
+					<td></td>
+					<td></td>
 					<td></td>
 					<td></td>
 					<td></td>
