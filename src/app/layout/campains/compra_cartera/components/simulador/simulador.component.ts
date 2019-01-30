@@ -9,49 +9,66 @@ import {MessageService} from 'primeng/api';
 })
 export class SimuladorComponent implements OnInit {
 
-  
+  //variables de entrada (Simulador compra cartera)
+
   interesDavi: number = 1;
-  totalCuotasDavi: number = 3;
+  cantidadCuotasDavi: number = 3;
   
   interesOtra: number = 6;
-  totalCuotasOtra: number = 8;
+  cantidadCuotasOtra: number = 8;
 
   totalSaldo: number = 100;
+  tasaDavi: number; 
 
-  total: number;
+  //Variables-arreglos para mostrar en las tablas de amortización 
+
+  numeroCuotaDavi = [];
+  saldoDavi = [];
+  abonoCapitalDavi: number;
+  abonoInteresDavi = [];
+  pagoMinimoDavi = [];
+
+  numeroCuotaOtra = [];
+  saldoOtra = [];
+  abonoCapitalOtra = [];
+  abonoInteresOtra = [];
+  pagoMinimoOtra = [];
   
-  numeroCuotaDavi: number[];
-	saldoDavi: number[];
-  abonoCapitalDavi: number[];
-  abonoInteresDavi: number[];
-  pagoMinimoDavi: number[];
-
-  numeroCuotaOtra: number[];
-  saldoOtra: number[];
-  abonoCapitalOtra: number[];
-  abonoInteresOtra: number[];
-  pagoMinimoOtra: number[];
-
+  //variable para ocultar/mostrar las tablas de amortización
   showTableDavi: boolean = false;
   
   constructor() {
-    //this.numeroCuotaDavi[0] = 1;
-    //this.numeroCuotaDavi[1] = 2;
-    //this.saldoDavi[0] = this.totalSaldo;
-    //this.abonoCapitalDavi[0] = this.totalSaldo / this.totalCuotasDavi;
-    //this.abonoInteresDavi[0] = this.totalSaldo * this.interesDavi;
-    //this.pagoMinimoDavi[0] = this.abonoCapitalDavi[0] + this.abonoInteresDavi[0];
+    
   }
 
   showHiddenTable(){
   	this.showTableDavi = true;
-  }
+    this.abonoCapitalDavi = Math.round( this.totalSaldo/this.cantidadCuotasDavi );
+    this.tasaDavi = this.interesDavi / 100; 
 
-  onInputFunction(){
+    //columna cuota: numeroCuotaDavi[]  
+    for (var i = 0; i< 4; i++) {
+      
+      if (i <= 1) {
+        this.numeroCuotaDavi[i] = i+1;
+        this.saldoDavi[i] = Math.round ( this.totalSaldo - (this.abonoCapitalDavi*i) );
+        this.abonoInteresDavi[i] = Math.round( (this.totalSaldo - (this.abonoCapitalDavi*i))*this.tasaDavi ) ;
+      }else{
+        this.numeroCuotaDavi[i] = Math.round( this.cantidadCuotasDavi - (3-i) );
+        this.saldoDavi[i] = Math.round(this.totalSaldo - (this.abonoCapitalDavi*(this.cantidadCuotasDavi - (3-i)))) ;
+        this.abonoInteresDavi[i] = Math.round( (this.totalSaldo - (this.abonoCapitalDavi*(this.cantidadCuotasDavi - (3-i))))*this.tasaDavi );
+      }
+      this.pagoMinimoDavi[i] = this.abonoCapitalDavi + this.abonoInteresDavi[i];
+    }
     
   }
 
-  ngOnInit() {
-   
+  onInputFunction(){
+    this.showHiddenTable();
+  }
+
+  ngOnInit(){
+    this.cantidadCuotasDavi = 4;
+    this.cantidadCuotasOtra = 4;
   }
 }

@@ -21,10 +21,12 @@
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01-cliente">Cuotas</label>
 	  						</div>
-							<select [(ngModel)]="totalCuotasDavi" class="custom-select" id="inputGroupSelect01-cliente" (input) = "onInputFunction()">
+							<select [(ngModel)]="cantidadCuotasDavi" class="custom-select" id="inputGroupSelect01-cliente" (input) = "onInputFunction()">
 							    <option value=1>1</option>
 							    <option value=2>2</option>
 							    <option value=3>3</option>
+							    <option value=4>4</option>
+							    <option value=9>9</option>
 							</select>
 						</div>
 						<div class="input-group input-group-sm mb-3">
@@ -48,10 +50,12 @@
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
 	  						</div>
-							<select [(ngModel)]="totalCuotasOtra" class="custom-select" id="inputGroupSelect01-otro">
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro">
 							    <option value=1>1</option>
 							    <option value=2>2</option>
 							    <option value=3>3</option>
+							    <option value=4>4</option>
+							    <option value=9>9</option>
 							</select>
 						</div>
 					</div>
@@ -77,32 +81,32 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{ numeroCuotaDavi[0] }}</td>
+					<td>{{ saldoDavi[0] }}</td>
+					<td>{{ abonoCapitalDavi }}</td>
+					<td>{{ abonoInteresDavi[0] }}</td>
+					<td>{{ pagoMinimoDavi[0] }}</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{ numeroCuotaDavi[1] }}</td>
+					<td>{{ saldoDavi[1] }}</td>
+					<td>{{ abonoCapitalDavi }}</td>
+					<td>{{ abonoInteresDavi[1] }}</td>
+					<td>{{ pagoMinimoDavi[1] }}</td>
 				</tr>
 				<tr>
-				    <td></td>
-				    <td></td>
-					<td></td>
-				    <td></td>
-					<td></td>
+				    <td>{{ numeroCuotaDavi[2] }}</td>
+				    <td>{{ saldoDavi[2] }}</td>
+					<td>{{ abonoCapitalDavi }}</td>
+				    <td>{{ abonoInteresDavi[2] }}</td>
+					<td>{{ pagoMinimoDavi[2] }}</td>
 				</tr>
 				<tr>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
+				    <td>{{ numeroCuotaDavi[3] }}</td>
+				    <td>{{ saldoDavi[3] }}</td>
+				    <td>{{ abonoCapitalDavi }}</td>
+				    <td>{{ abonoInteresDavi[3] }}</td>
+				    <td>{{ pagoMinimoDavi[3] }}</td>
 				</tr>	
 			</tbody>
 		</table>
