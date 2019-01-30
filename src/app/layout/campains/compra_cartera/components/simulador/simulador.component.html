@@ -8,48 +8,54 @@
 			</div>
 			<div class="card-body">
 				<div class="row">
+					<!-- Entrada datos Davivienda  -->
 					<div class="col-5">
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-interes">Interes (%)</span>
 	  						</div>
-	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-cliente-interes">
+	  						<input [(ngModel)]="interesDavi" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-cliente-interes" (input) = "onInputFunction()">
 						</div>
 
 						<div class="input-group mb-3">
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01-cliente">Cuotas</label>
 	  						</div>
-							<select class="custom-select" id="inputGroupSelect01-cliente">
+							<select [(ngModel)]="cantidadCuotasDavi" class="custom-select" id="inputGroupSelect01-cliente" (input) = "onInputFunction()">
 							    <option value=1>1</option>
 							    <option value=2>2</option>
 							    <option value=3>3</option>
+							    <option value=4>4</option>
+							    <option value=9>9</option>
 							</select>
 						</div>
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-saldo">Saldo</span>
 	  						</div>
-	  						<input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+	  						<input [(ngModel)]="totalSaldo" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputFunction()">
 	  					</div>		
 					</div>
-							
+					
+					<!-- Entrada datos Otra entidad -->		
 					<div class="col-5">
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Interes (%)</span>
 	  						</div>
-	  						<input [(ngModel)]="interesOtro" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" >
+	  						<input [(ngModel)]="interesOtra" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" (input) = "onInputFunction()">
 						</div>
 
 						<div class="input-group mb-3">
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
 	  						</div>
-							<select class="custom-select" id="inputGroupSelect01-otro">
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro">
 							    <option value=1>1</option>
 							    <option value=2>2</option>
 							    <option value=3>3</option>
+							    <option value=4>4</option>
+							    <option value=9>9</option>
 							</select>
 						</div>
 					</div>
@@ -75,32 +81,32 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td>{{interesOtro}}</td>
-					<td>{{numeroCuota[0]}}</td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{ numeroCuotaDavi[0] }}</td>
+					<td>{{ saldoDavi[0] }}</td>
+					<td>{{ abonoCapitalDavi }}</td>
+					<td>{{ abonoInteresDavi[0] }}</td>
+					<td>{{ pagoMinimoDavi[0] }}</td>
 				</tr>
 				<tr>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
+					<td>{{ numeroCuotaDavi[1] }}</td>
+					<td>{{ saldoDavi[1] }}</td>
+					<td>{{ abonoCapitalDavi }}</td>
+					<td>{{ abonoInteresDavi[1] }}</td>
+					<td>{{ pagoMinimoDavi[1] }}</td>
 				</tr>
 				<tr>
-				    <td></td>
-				    <td></td>
-					<td></td>
-				    <td></td>
-					<td></td>
+				    <td>{{ numeroCuotaDavi[2] }}</td>
+				    <td>{{ saldoDavi[2] }}</td>
+					<td>{{ abonoCapitalDavi }}</td>
+				    <td>{{ abonoInteresDavi[2] }}</td>
+					<td>{{ pagoMinimoDavi[2] }}</td>
 				</tr>
 				<tr>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
-				    <td></td>
+				    <td>{{ numeroCuotaDavi[3] }}</td>
+				    <td>{{ saldoDavi[3] }}</td>
+				    <td>{{ abonoCapitalDavi }}</td>
+				    <td>{{ abonoInteresDavi[3] }}</td>
+				    <td>{{ pagoMinimoDavi[3] }}</td>
 				</tr>	
 			</tbody>
 		</table>
