@@ -31,7 +31,7 @@
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-saldo">Saldo</span>
 	  						</div>
-	  						<input [(ngModel)]="totalSaldo" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputFunction()">
+	  						<input [(ngModel)]="totalSaldo" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputFunction()">
 	  					</div>		
 					</div>
 					
@@ -48,7 +48,7 @@
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
 	  						</div>
-							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro" (input) = "onInputFunction()">
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro" (change) = "onInputFunction()">
 							    <option *ngFor= "let cuotasSelect of cuotasSelects" value={{cuotasSelect}}>{{cuotasSelect}}</option>
 							</select>
 						</div>

@@ -21,7 +21,6 @@ export class SimuladorComponent implements OnInit {
 
   totalSaldo: number = 100;
   
-
   //Constantes para usar en las tablas
 
   cuotasSelects = Array.from(Array(35), (x, index) => index + 2);
