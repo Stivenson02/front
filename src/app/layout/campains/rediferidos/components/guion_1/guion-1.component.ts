@@ -16,6 +16,8 @@ export class Guion1Component implements OnInit {
   public abono_capital_calculo: number;
   public data_simulator_array: any;
   public data_simulator: DataCalculoCuotas;
+  public continue_first: number;
+  public continue_second: number;
 
   constructor(private messageService: MessageService) {
 
@@ -24,6 +26,8 @@ export class Guion1Component implements OnInit {
   ngOnInit() {
     this.tasa = "1.53";
     this.show_alert_simulator = false;
+    this.continue_first = 0;
+    this.continue_second = 0;
   }
 
   simulator() {
