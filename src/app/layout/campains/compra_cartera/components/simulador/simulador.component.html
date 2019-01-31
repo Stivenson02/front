@@ -82,25 +82,27 @@
 	</div>
 </div>
 
-<div class="row" *ngIf=showTables>
-	<div class="col-12">
-		<table class="table table-striped table-dark">
-			<thead>
-				<h4>Tabla Amortización Otra Entidad</h4>
-				<tr>
-					<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor = "let registrosTabla of registrosTablas">
-					<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
-					<td>{{ saldoOtra[registrosTabla] }}</td>
-					<td>{{ abonoCapitalOtra }}</td>
-					<td>{{ abonoInteresOtra[registrosTabla] }}</td>
-					<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
-				</tr>
-			</tbody>
-		</table>
+<div class="card border-success row" *ngIf=showTables>
+	<div class="card-header bg-transparent border-success col-12">
+		<div class="card-body text-success">
+			<table class="table table-striped table-dark">
+				<thead>
+					<h4>Tabla Amortización Otra Entidad</h4>
+					<tr>
+						<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor = "let registrosTabla of registrosTablas">
+						<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
+						<td>{{ saldoOtra[registrosTabla] }}</td>
+						<td>{{ abonoCapitalOtra }}</td>
+						<td>{{ abonoInteresOtra[registrosTabla] }}</td>
+						<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
 	</div>
 </div>
 
