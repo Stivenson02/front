@@ -10,25 +10,23 @@
 				<div class="row">
 					<!-- Entrada datos Davivienda  -->
 					<div class="col-5">
+						<!-- Captura de interés para davivienda  -->
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-interes">Interes (%)</span>
 	  						</div>
 	  						<input [(ngModel)]="interesDavi" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-cliente-interes" (input) = "onInputFunction()">
 						</div>
-
+						<!-- Captura de cuotas para las que se desea realizar la consulta -->
 						<div class="input-group mb-3">
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01-cliente">Cuotas</label>
 	  						</div>
-							<select [(ngModel)]="cantidadCuotasDavi" class="custom-select" id="inputGroupSelect01-cliente" (input) = "onInputFunction()">
-							    <option value=1>1</option>
-							    <option value=2>2</option>
-							    <option value=3>3</option>
-							    <option value=4>4</option>
-							    <option value=9>9</option>
+							<select [(ngModel)]="cantidadCuotasDavi"  class="custom-select" id="inputGroupSelect01-cliente" (change) = "onInputFunction()">
+							    <option *ngFor= "let cuotasSelect of cuotasSelects" value={{cuotasSelect}} >{{cuotasSelect}}</option>
 							</select>
 						</div>
+						<!-- Captura del saldo que se desea comprar -->
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-saldo">Saldo</span>
@@ -50,12 +48,8 @@
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
 	  						</div>
-							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro">
-							    <option value=1>1</option>
-							    <option value=2>2</option>
-							    <option value=3>3</option>
-							    <option value=4>4</option>
-							    <option value=9>9</option>
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro" (input) = "onInputFunction()">
+							    <option *ngFor= "let cuotasSelect of cuotasSelects" value={{cuotasSelect}}>{{cuotasSelect}}</option>
 							</select>
 						</div>
 					</div>
@@ -66,48 +60,45 @@
 	</div>	
 </div>
 
-<div class="row" *ngIf=showTableDavi>
+<div class="row" *ngIf=showTables>
 	<div class="col-12">
 		<table class="table table-striped table-dark">
 			<thead>
-				<h4>Tabla Amortización</h4>
+				<h4>Tabla Amortización Davivienda</h4>
 				<tr>
-					<th scope="col">Cuota</th>
-					<th scope="col">Saldo</th>
-					<th scope="col">Abono capital</th>
-					<th scope="col">Abono Intereses</th>
-					<th scope="col">Pago mínimo</th>
+					<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>{{ numeroCuotaDavi[0] }}</td>
-					<td>{{ saldoDavi[0] }}</td>
+				<tr *ngFor = "let registrosTabla of registrosTablas">
+					<td>{{ numeroCuotaDavi[registrosTabla] }}</td>
+					<td>{{ saldoDavi[registrosTabla] }}</td>
 					<td>{{ abonoCapitalDavi }}</td>
-					<td>{{ abonoInteresDavi[0] }}</td>
-					<td>{{ pagoMinimoDavi[0] }}</td>
+					<td>{{ abonoInteresDavi[registrosTabla] }}</td>
+					<td>{{ pagoMinimoDavi[registrosTabla] }}</td>
 				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="row" *ngIf=showTables>
+	<div class="col-12">
+		<table class="table table-striped table-dark">
+			<thead>
+				<h4>Tabla Amortización Otra Entidad</h4>
 				<tr>
-					<td>{{ numeroCuotaDavi[1] }}</td>
-					<td>{{ saldoDavi[1] }}</td>
-					<td>{{ abonoCapitalDavi }}</td>
-					<td>{{ abonoInteresDavi[1] }}</td>
-					<td>{{ pagoMinimoDavi[1] }}</td>
+					<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
 				</tr>
-				<tr>
-				    <td>{{ numeroCuotaDavi[2] }}</td>
-				    <td>{{ saldoDavi[2] }}</td>
-					<td>{{ abonoCapitalDavi }}</td>
-				    <td>{{ abonoInteresDavi[2] }}</td>
-					<td>{{ pagoMinimoDavi[2] }}</td>
+			</thead>
+			<tbody>
+				<tr *ngFor = "let registrosTabla of registrosTablas">
+					<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
+					<td>{{ saldoOtra[registrosTabla] }}</td>
+					<td>{{ abonoCapitalOtra }}</td>
+					<td>{{ abonoInteresOtra[registrosTabla] }}</td>
+					<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
 				</tr>
-				<tr>
-				    <td>{{ numeroCuotaDavi[3] }}</td>
-				    <td>{{ saldoDavi[3] }}</td>
-				    <td>{{ abonoCapitalDavi }}</td>
-				    <td>{{ abonoInteresDavi[3] }}</td>
-				    <td>{{ pagoMinimoDavi[3] }}</td>
-				</tr>	
 			</tbody>
 		</table>
 	</div>
