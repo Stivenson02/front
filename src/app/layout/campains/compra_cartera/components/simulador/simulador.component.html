@@ -60,14 +60,14 @@
 	</div>	
 </div>
 
-<div class="card border-success row" *ngIf=showTables>
+<div class="card border-primary mt-3 row" *ngIf=showTables>
 	<div class="card-header bg-transparent border-success col-12">
-		<div class="card-body text-success">
+		<div class="card-body text-success table-responsive">
 			<table class="table table-striped">
 				<thead>
 					<h4>Tabla Amortización Davivienda</h4>
 					<tr>
-						<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
+						<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -84,14 +84,14 @@
 	</div>
 </div>
 
-<div class="card border-success row" *ngIf=showTables>
+<div class="card border-primary mt-3 row" *ngIf=showTables>
 	<div class="card-header bg-transparent border-success col-12">
-		<div class="card-body text-success">
+		<div class="card-body text-success table-responsive">
 			<table class="table table-striped">
 				<thead>
 					<h4>Tabla Amortización Otra Entidad</h4>
-					<tr>
-						<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
+					<tr >
+						<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
 					</tr>
 				</thead>
 				<tbody>
