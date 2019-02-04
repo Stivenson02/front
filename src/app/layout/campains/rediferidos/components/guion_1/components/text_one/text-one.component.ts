@@ -4,11 +4,11 @@ import {DataCalculoCuotas} from '../../models/data-calculo-cuotas';
 
 @Component({
   selector: 'app-rediferido',
-  templateUrl: './guion-1.component.html',
-  styleUrls: ['./guion-1.component.scss'],
+  templateUrl: './text-one.component.html',
+  styleUrls: ['./text-one.component.scss'],
   providers: [ MessageService ]
 })
-export class Guion1Component implements OnInit {
+export class TextOneComponent implements OnInit {
   public valor: number;
   public cuotas: number;
   public show_alert_simulator: boolean;
