@@ -9,8 +9,14 @@ import {MessageService} from 'primeng/api';
 })
 export class EncuestaComponent implements OnInit {
   
-  constructor() { }
-  ngOnInit() {
+	cuotasSelects = Array.from(Array(35), (x, index) => index + 2);
+	listaRespuestasPregunta1 = ["Ha aumentado", "Permanece igual", "Ha disminuido"];
+	listaRespuestasPregunta2 = ["Muy buena", "Buena", "Regular", "Mala", "Muy mala"];
+	listaRespuestasPregunta3 = ["Obligacion financiera", "Ahorrar"];
+	listaRespuestasEnviar = ["si", "no"];
+
+  	constructor() { }
+  	ngOnInit() {
     
-  }
+ 	}
 }
