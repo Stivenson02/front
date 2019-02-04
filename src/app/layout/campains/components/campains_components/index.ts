@@ -1,1 +1,1 @@
-
+export * from './simulador/simulador.component';

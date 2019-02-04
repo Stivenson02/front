@@ -9,8 +9,12 @@ import { FormsModule } from '@angular/forms';
 
 //Scrips
 import {
-  Guion1Component, OfertaInicialComponent, DetalleOfertaComponent, SimuladorComponent, EncuestaComponent, ValidacionComponent, CierreComponent
+  Guion1Component, OfertaInicialComponent, DetalleOfertaComponent, EncuestaComponent, ValidacionComponent, CierreComponent
 } from './components';
+
+import { 
+  SimuladorComponent
+} from '../components/campains_components';
 import { ToastModule } from 'primeng/toast';
 
 @NgModule({
