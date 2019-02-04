@@ -18,6 +18,8 @@ export class Guion1Component implements OnInit {
   public data_simulator: DataCalculoCuotas;
   public continue_first: number;
   public continue_second: number;
+  public continue_tree: number;
+  public contestar_encuesta: number;
 
   types: SelectItem[];
 
@@ -69,6 +71,8 @@ export class Guion1Component implements OnInit {
     this.show_alert_simulator = false;
     this.continue_first = 0;
     this.continue_second = 0;
+    this.continue_tree = 0;
+    this.contestar_encuesta = 0;
   }
 
   simulator() {
