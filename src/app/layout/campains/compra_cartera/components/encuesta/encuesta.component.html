@@ -1,4 +1,65 @@
 <p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
 
-<h2> Encuesta</h2>
+<div class="row">
+	<div class="col-12">
+		<div class="card border-primary mb-3">
+	  		<div class="card-header">
+	  			Encuesta
+	  		</div>
+		  	<div class="card-body text-primary">
+		    	<h5 class="card-title"></h5>
+				<!-- Primer pregunta -->
+				<p class="card-text text-dark">En Davivienda trabajamos para apoyar activamente el crecimiento económico del país, por lo anterior nos gustaría conocer su opinión acerca del estado actual de la economía, contestando las siguientes preguntas. Agradecemos su colaboración:
+
+				Su nivel de confianza sobre la situación económica del país en relación con el que tenía el mes pasado:
+				</p>
+					<div class="input-group mt-3 mb-4">
+	  					<div class="input-group-prepend">
+	    					<label class="input-group-text" for="inputGroupSelect01">Respuesta</label>
+	  					</div>
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-respuesta1">
+							    <option *ngFor= "let listaRespuestasPregunta of listaRespuestasPregunta1" value={{listaRespuestasPregunta}}>{{listaRespuestasPregunta}}</option>
+							</select>
+					</div>
+				
+				<!-- Segunda Pregunta -->
+				<p class="text-dark">
+					Cuál es su percepción de la situación económica colombiana?
+				</p>
+					
+					<div class="input-group mt-3 mb-4">
+	  					<div class="input-group-prepend">
+	    					<label class="input-group-text" for="inputGroupSelect01">Contesta encuesta</label>
+	  					</div>
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-respuesta2">
+							    <option *ngFor= "let listaRespuestasPregunta of listaRespuestasPregunta2" value={{listaRespuestasPregunta}}>{{listaRespuestasPregunta}}</option>
+							</select>
+					</div>
+
+				<!-- Tercera pregunta -->
+				<p class="text-dark">
+					A la luz de la situación económica general, usted piensa que este es el momento propicio para ahorrar o para adquirir alguna obligación financiera? 
+				</p>
+					
+					<div class="input-group mt-3 mb-4">
+	  					<div class="input-group-prepend">
+	    					<label class="input-group-text" for="inputGroupSelect01">Respuesta</label>
+	  					</div>
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-respuesta3" >
+							    <option *ngFor= "let listaRespuestasPregunta of listaRespuestasPregunta3" value={{listaRespuestasPregunta}}>{{listaRespuestasPregunta}}</option>
+							</select>
+					</div>
+
+					<div class="input-group mt-3 mb-4">
+	  					<div class="input-group-prepend">
+	    					<label class="input-group-text" for="inputGroupSelect01">Contesta encuesta</label>
+	  					</div>
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-enviar" >
+							    <option *ngFor= "let listaRespuestasEnvia of listaRespuestasEnviar" value={{listaRespuestasEnvia}}>{{listaRespuestasEnvia}}</option>
+							</select>
+					</div>
+		  	</div>
+		</div>	
+	</div>
+</div>
 

@@ -31,7 +31,7 @@
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-saldo">Saldo</span>
 	  						</div>
-	  						<input [(ngModel)]="totalSaldo" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputFunction()">
+	  						<input [(ngModel)]="totalSaldo" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputFunction()">
 	  					</div>		
 					</div>
 					
@@ -48,7 +48,7 @@
 	  						<div class="input-group-prepend">
 	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
 	  						</div>
-							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro" (input) = "onInputFunction()">
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro" (change) = "onInputFunction()">
 							    <option *ngFor= "let cuotasSelect of cuotasSelects" value={{cuotasSelect}}>{{cuotasSelect}}</option>
 							</select>
 						</div>
@@ -60,47 +60,66 @@
 	</div>	
 </div>
 
-<div class="row" *ngIf=showTables>
-	<div class="col-12">
-		<table class="table table-striped table-dark">
-			<thead>
-				<h4>Tabla Amortización Davivienda</h4>
-				<tr>
-					<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor = "let registrosTabla of registrosTablas">
-					<td>{{ numeroCuotaDavi[registrosTabla] }}</td>
-					<td>{{ saldoDavi[registrosTabla] }}</td>
-					<td>{{ abonoCapitalDavi }}</td>
-					<td>{{ abonoInteresDavi[registrosTabla] }}</td>
-					<td>{{ pagoMinimoDavi[registrosTabla] }}</td>
-				</tr>
-			</tbody>
-		</table>
+<div class="card border-primary mt-3 mb-3 row" *ngIf=showTables>
+	
+	<div class="card-header bg-transparent border-success">
+		<div class="card-body text-success table-responsive">
+			
+			<table class="table table-striped col-5">
+				<thead>
+					<h4>Tabla Amortización Davivienda</h4>
+					<tr>
+						<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor = "let registrosTabla of registrosTablas">
+						<td>{{ numeroCuotaDavi[registrosTabla] }}</td>
+						<td>{{ saldoDavi[registrosTabla] }}</td>
+						<td>{{ abonoCapitalDavi }}</td>
+						<td>{{ abonoInteresDavi[registrosTabla] }}</td>
+						<td>{{ pagoMinimoDavi[registrosTabla] }}</td>
+					</tr>
+				</tbody>
+			</table>
+		
+			<table class="table table-striped col-5">
+				<thead>
+					<h4>Tabla Amortización Otra Entidad</h4>
+					<tr >
+						<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor = "let registrosTabla of registrosTablas">
+						<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
+						<td>{{ saldoOtra[registrosTabla] }}</td>
+						<td>{{ abonoCapitalOtra }}</td>
+						<td>{{ abonoInteresOtra[registrosTabla] }}</td>
+						<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table class="table table-striped">
+				<thead>
+					<h4>Tabla de diferencia de interéses</h4>
+					<tr>
+						<th> </th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			
+		</div>
 	</div>
 </div>
-
-<div class="row" *ngIf=showTables>
-	<div class="col-12">
-		<table class="table table-striped table-dark">
-			<thead>
-				<h4>Tabla Amortización Otra Entidad</h4>
-				<tr>
-					<th *ngFor="let campoTabla of camposTablas" scope="col">{{campoTabla}}</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr *ngFor = "let registrosTabla of registrosTablas">
-					<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
-					<td>{{ saldoOtra[registrosTabla] }}</td>
-					<td>{{ abonoCapitalOtra }}</td>
-					<td>{{ abonoInteresOtra[registrosTabla] }}</td>
-					<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
-				</tr>
-			</tbody>
-		</table>
-	</div>
-</div>
-
