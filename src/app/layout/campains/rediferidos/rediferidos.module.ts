@@ -4,7 +4,7 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule} from '@angular/forms';
 import { RediferidosRoutingModule } from './rediferidos-routing.module';
 import {
-  InputTextModule, MessageModule, MessagesModule,
+  AccordionModule, InputTextModule, MessageModule, MessagesModule, SelectButtonModule,
 
 } from 'primeng/primeng';
 
@@ -14,8 +14,8 @@ import {
   Guion1Component
 } from './components';
 import {ToastModule} from 'primeng/toast';
-
 import {PreguionComponent} from '../components';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   imports: [
@@ -24,10 +24,13 @@ import {PreguionComponent} from '../components';
     NgbAlertModule,
     RediferidosRoutingModule,
     FormsModule,
+    HttpClientModule,
     InputTextModule,
     MessagesModule,
     MessageModule,
     ToastModule,
+    SelectButtonModule,
+    AccordionModule
   ],
   declarations: [
     RediferidosComponent,

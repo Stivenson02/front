@@ -161,7 +161,7 @@
             </select>
           </div>
         </div>
-        <div *ngIf="continue_second == 1" class="card-footer bg-transparent border-dark" >
+        <div *ngIf="continue_second == 1 && continue_first == 1" class="card-footer bg-transparent border-dark" >
           <div class="col col-sm-12 pt-3" align="center">
             Sr(a) <strong>CAROLINA AREVALO RODRIGUEZ</strong> si usted cuenta con un pago mínimo pendiente por pagar es posible aplicar el rediferido a su tarjeta de crédito pero los valores que están pendientes por cubrir, como intereses corrientes y cobros administrativos (como la cuota de manejo), deben ser unificados al saldo total a rediferir; es decir, es necesario hacer una capitalización de los intereses corrientes antes mencionados.
           </div>
@@ -223,13 +223,95 @@
                 </tbody>
               </table>
             </div>
-            <div class="col-4 pt-3">
-              Hello
+            <div class="col-6 pt-3">
+              <p-accordion>
+                <p-accordionTab header="Rediferido Pesos" [selected]="true">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted">Meses</h6>
+                      <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+                    </div>
+                  </div>
+                </p-accordionTab>
+                <p-accordionTab header="Rediferido Dolares">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted">Meses</h6>
+                      <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+                    </div>
+                  </div>
+                </p-accordionTab>
+                <p-accordionTab header="Promocion Todo A">
+                  <div class="card">
+                    <div class="card-body">
+                      <h6 class="card-subtitle mb-2 text-muted">Meses</h6>
+                      <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+                    </div>
+                  </div>
+                </p-accordionTab>
+              </p-accordion>
+              <hr>
             </div>
-
             <hr>
-
           </div>
+          <!--VALIDA DOCUMENTO-->
+          <div  class="card border-dark ms-12 mt-2" >
+            <div class="card-header" align="center">
+              <div class="col col-sm-12">
+                <strong>VALIDACION DE DOCUMENTO</strong>
+              </div>
+              <div class="col col-sm-4 pt-2">
+                <div class="input-group">
+                  <div class="input-group-prepend">
+                    <p class="mr-2"> <strong>Cedula</strong></p>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">868</span>
+                  </div>
+                  <div class="input-group-append">
+                    <span class="input-group-text">(XXXX)</span>
+                  </div>
+                  <input placeholder="XXXX" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--END VALIDA DOCUMENTO-->
+          <!--PLANILLA-->
+          <div class="card border-dark ms-12 mt-2" >
+            <div class="card-header" align="center">
+              <div class="col col-sm-12">
+                Diligenciar en la planilla el plazo indicado por el cliente.
+              </div>
+            </div>
+            <div class="card-body text-dark">
+              <p class="card-text">
+                Sr(a) <strong> CARLOS EMILIO PONCE CABALLERO</strong> también es importante recordarle que al momento de hacer este rediferido, si usted tenía alguna tasa especial en alguna UTILIZACIÓN de su tarjeta de crédito esta será eliminada. Todo su saldo quedará a la tasa vigente del día, que es 1,58%
+              </p>
+              <p class="card-text">
+                De acuerdo Sr(a) <strong> CARLOS EMILIO PONCE CABALLERO</strong>, le confirmo que en el transcurso de los siguientes 3 días hábiles verá reflejado el rediferido en su tarjeta; esta solicitud se toma en este momento para la tarjeta de crédito terminada en _ _ _ _ a _ _ cuotas y es un proceso que después de tomado no es posible reversar. Recuerde que su próximo valor a pagar es ______ aproximadamente.
+              </p>
+            </div>
+            <div class="card-header" align="center">
+              <div class="col col-sm-12">
+                <strong>OFERTA OBLIGATORIA</strong>
+              </div>
+            </div>
+            <div class="card-body text-dark">
+              <p class="card-text">
+                Sr(a) <strong>CARLOS EMILIO PONCE CABALLERO</strong> adicional al rediferido aplicado a su tarjeta de crédito le gustaría que todas sus compras nacionales se difieran a un plazo automático que usted elija desde 12 hasta 36 meses? Este beneficio le va permitir mantener organizado su flujo de caja con anticipación.
+              </p>
+              <div align="center"  class="col col-sm-4 pt-2">
+                <p class="card-title">¿Está usted de acuerdo?</p>
+                <select name="continue" type="number" class="form-control custom-select" aria-label="Amount (to the nearest dollar)">
+                  <option value=0>¿Contestar Encuesta?</option>
+                  <option value=1>Si</option>
+                  <option value=2>No</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <!--END PLANILLA-->
         </div>
       </div>
       <!--END ARBOL DE DECICIONES-->
@@ -253,6 +335,22 @@
         </div>
       </div>
       <!--END ENCUESTA-->
+      <!--OPCION DE COMPRA-->
+      <div  class="card border-dark ms-12 mt-2" >
+        <div class="card-header" align="center">
+          <div class="col col-sm-12">
+            <strong>OPCION DE COMPRA</strong>
+          </div>
+          <div class="col col-sm-4 pt-2">
+            <select name="opcion_compra" class="form-control custom-select" aria-label="Amount (to the nearest dollar)">
+              <option value=''></option>
+              <option value='Cartera'>Realizar Compra de Cartera</option>
+              <option value='NoCartera'>No tiene compra de cartera</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <!--END OPCION DE COMPRA-->
     </div>
   </div>
 </div>
