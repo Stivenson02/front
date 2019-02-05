@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {MessageService, SelectItem} from 'primeng/api';
 import {DataCalculoCuotas} from '../../../../models/data-calculo-cuotas';
 
-@Component({
-  selector: 'app-rediferido',
+@Component ({
+  selector: 'app-text-one',
   templateUrl: './text-one.component.html',
   styleUrls: ['./text-one.component.scss'],
   providers: [ MessageService ]
