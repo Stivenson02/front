@@ -16,6 +16,7 @@ import {
 import {ToastModule} from 'primeng/toast';
 import {PreguionComponent} from '../components';
 import {HttpClientModule} from '@angular/common/http';
+import {SimuladorRediferidosComponent, TextoInicialComponent} from '../components/campains_components';
 
 @NgModule({
   imports: [
@@ -35,8 +36,9 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [
     RediferidosComponent,
     Guion1Component,
-    PreguionComponent
-
+    PreguionComponent,
+    TextoInicialComponent,
+    SimuladorRediferidosComponent
   ]
 })
 export class RediferidosModule {
