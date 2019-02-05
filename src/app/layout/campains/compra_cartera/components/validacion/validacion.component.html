@@ -6,8 +6,21 @@
 	  		<div class="card-header">
 	  			Validación
 	  		</div>
+		  	
+		  	
 		  	<div class="card-body text-dark">
 		    	<h5 class="card-title"></h5>
+					
+					<div class="input-group input-group-sm mb-3">
+	  					<div class="input-group-prepend">
+	    					<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Cédula( {{parcialCedula}}xxxx)</span>
+	  					</div>
+	  					<div class="input-group-prepend">
+    						<button class="btn btn-outline-secondary" type="button">Verificar</button>
+  						</div>
+	  					<input [(ngModel)]="interesOtra" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" (input) = "onInputFunction()">
+					</div>
+					
 				<p class="mb-4">Diligenciar todos los datos necesarios que suministra el cliente para el completo diligenciamiento de la planilla.</p>
 
 					<p class="mb-4 card-text">Señor le confirmo el proceso de la compra de cartera: </p>

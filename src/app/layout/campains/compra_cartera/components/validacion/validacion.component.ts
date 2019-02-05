@@ -9,8 +9,12 @@ import {MessageService} from 'primeng/api';
 })
 export class ValidacionComponent implements OnInit {
   
+  cedulaConsumidor: number;
+  parcialCedula: string;
   constructor() { }
+
   ngOnInit() {
-    
+  	this.cedulaConsumidor = 123456789;
+  	this.parcialCedula = this.cedulaConsumidor.toString().substr(1,4);
   }
 }

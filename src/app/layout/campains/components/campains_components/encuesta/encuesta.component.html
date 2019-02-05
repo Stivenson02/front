@@ -9,15 +9,24 @@
 		  	<div class="card-body text-primary">
 		    	<h5 class="card-title"></h5>
 				<!-- Primer pregunta -->
+				<div class="input-group mt-3 mb-4">
+	  				<div class="input-group-prepend">
+	    				<label class="input-group-text" for="inputGroupSelect-enviar">Contesta encuesta</label>
+	  				</div>
+						<select class="custom-select" id="inputGroupSelect-enviar" >
+					    	<option *ngFor= "let listaRespuestasEnvia of listaRespuestasEnviar" value={{listaRespuestasEnvia}}>{{listaRespuestasEnvia}}</option>
+						</select>
+				</div>
+
 				<p class="card-text text-dark">En Davivienda trabajamos para apoyar activamente el crecimiento económico del país, por lo anterior nos gustaría conocer su opinión acerca del estado actual de la economía, contestando las siguientes preguntas. Agradecemos su colaboración:
 
 				Su nivel de confianza sobre la situación económica del país en relación con el que tenía el mes pasado:
 				</p>
 					<div class="input-group mt-3 mb-4">
 	  					<div class="input-group-prepend">
-	    					<label class="input-group-text" for="inputGroupSelect01">Respuesta</label>
+	    					<label class="input-group-text" for="inputGroupSelect-respuesta1">Respuesta</label>
 	  					</div>
-							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-respuesta1">
+							<select  class="custom-select" id="inputGroupSelect-respuesta1">
 							    <option *ngFor= "let listaRespuestasPregunta of listaRespuestasPregunta1" value={{listaRespuestasPregunta}}>{{listaRespuestasPregunta}}</option>
 							</select>
 					</div>
@@ -29,9 +38,9 @@
 					
 					<div class="input-group mt-3 mb-4">
 	  					<div class="input-group-prepend">
-	    					<label class="input-group-text" for="inputGroupSelect01">Contesta encuesta</label>
+	    					<label class="input-group-text" for="inputGroupSelect-respuesta2">Contesta encuesta</label>
 	  					</div>
-							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-respuesta2">
+							<select  class="custom-select" id="inputGroupSelect-respuesta2">
 							    <option *ngFor= "let listaRespuestasPregunta of listaRespuestasPregunta2" value={{listaRespuestasPregunta}}>{{listaRespuestasPregunta}}</option>
 							</select>
 					</div>
@@ -43,19 +52,10 @@
 					
 					<div class="input-group mt-3 mb-4">
 	  					<div class="input-group-prepend">
-	    					<label class="input-group-text" for="inputGroupSelect01">Respuesta</label>
+	    					<label class="input-group-text" for="inputGroupSelect-respuesta3">Respuesta</label>
 	  					</div>
-							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-respuesta3" >
+							<select class="custom-select" id="inputGroupSelect-respuesta3" >
 							    <option *ngFor= "let listaRespuestasPregunta of listaRespuestasPregunta3" value={{listaRespuestasPregunta}}>{{listaRespuestasPregunta}}</option>
-							</select>
-					</div>
-
-					<div class="input-group mt-3 mb-4">
-	  					<div class="input-group-prepend">
-	    					<label class="input-group-text" for="inputGroupSelect01">Contesta encuesta</label>
-	  					</div>
-							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect-enviar" >
-							    <option *ngFor= "let listaRespuestasEnvia of listaRespuestasEnviar" value={{listaRespuestasEnvia}}>{{listaRespuestasEnvia}}</option>
 							</select>
 					</div>
 		  	</div>

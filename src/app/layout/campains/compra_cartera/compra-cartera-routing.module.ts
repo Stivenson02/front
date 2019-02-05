@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CompraCarteraComponent } from './compra-cartera.component';
-import { Guion1Component } from './components';
+import { Guion1Component } from './guion_1/guion-1.component';
 
 const routes: Routes = [
   {

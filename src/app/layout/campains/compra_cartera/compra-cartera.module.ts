@@ -8,9 +8,14 @@ import { CompraCarteraComponent } from './compra-cartera.component';
 import { FormsModule } from '@angular/forms';
 
 //Scrips
+import { Guion1Component } from './guion_1/guion-1.component';
 import {
-  Guion1Component, OfertaInicialComponent, DetalleOfertaComponent, SimuladorComponent, EncuestaComponent, ValidacionComponent, CierreComponent
+  OfertaInicialComponent, DetalleOfertaComponent, ValidacionComponent, CierreComponent
 } from './components';
+
+import { 
+  SimuladorComponent, EncuestaComponent
+} from '../components/campains_components';
 import { ToastModule } from 'primeng/toast';
 
 @NgModule({
