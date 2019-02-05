@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TextOneComponent } from './text-one.component';
+import { TextoInicialComponent } from './texto-inicial.component';
 
 describe('AddressComponent', () => {
-  let component: TextOneComponent;
-  let fixture: ComponentFixture<TextOneComponent>;
+  let component: TextoInicialComponent;
+  let fixture: ComponentFixture<TextoInicialComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextOneComponent ]
+      declarations: [ TextoInicialComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TextOneComponent);
+    fixture = TestBed.createComponent(TextoInicialComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,0 +1,101 @@
+<!--CUADRO SIMULADOR-->
+<div class="mx-2 pt-1">
+  <!--BORDE CUADRO-->
+  <div class="card border-primary" >
+    <div class="card-header bg-transparent border-primary"> <strong> Calculo de Cuotas</strong></div>
+    <!--VALORES DE VALIDACION-->
+    <div class="alert alert-success" *ngIf="valor">
+      Valor a refinanciar <strong class="pl-2">$ {{valor | number}}</strong>, diferido en  <strong>{{cuotas}} Cuotas</strong>
+    </div>
+    <div class="alert alert-danger" *ngIf="cuotas && cuotas <= 1 || cuotas >= 37">
+      No hay rango para las cuotas a diferir, seleccione un valor valido
+    </div>
+    <div class="alert alert-danger" *ngIf="show_alert_simulator">
+      Complete los campos del Formulario
+    </div>
+    <!--END VALORES DE VALIDACION-->
+    <div class="card-body text-primary">
+      <!--FORMULARIO DEL CUADRO-->
+      <form #simulatorForm="ngForm" (ngSubmit)="simulator()">
+        <div class="form-row">
+          <div class="col-4 pt-3">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <p class="mr-2"><strong>Valor a Refinanciar</strong></p>
+                <span class="input-group-text">$</span>
+              </div>
+              <input [(ngModel)]="valor" name="valor" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
+            </div>
+          </div>
+          <div class="col-4 pt-3">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <p class="mr-2"><strong>Cuotas a Diferir</strong></p>
+              </div>
+              <select [(ngModel)]="cuotas" name="cuotas" type="number" class="form-control custom-select" aria-label="Amount (to the nearest dollar)">
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+                <option value=6>6</option>
+                <option value=7>7</option>
+                <option value=8>8</option>
+                <option value=9>9</option>
+                <option value=10>10</option>
+                <option value=11>11</option>
+                <option value=12>12</option>
+                <option value=13>13</option>
+                <option value=14>14</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-4 pt-3">
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <p class="mr-2"> <strong>Tasa</strong></p>
+              </div>
+              <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="{{tasa}}" readonly>
+              <div class="input-group-append">
+                <span class="input-group-text">%</span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="col col-sm-12 pt-3" align="center">
+            <input type="submit" class="btn btn-primary" value="Very Go">
+          </div>
+        </div>
+      </form>
+      <!--END FORMULARIO DEL CUADRO-->
+      <!--TABLA RESULTADO CUADRO SIMULADOR-->
+      <div class="mt-2 card-footer bg-transparent border-primary">
+        <div class="table-responsive">
+          <table style="color: #2e6da4" class="table table-bordered">
+            <thead>
+            <tr>
+              <th>Cuota</th>
+              <th>Saldo</th>
+              <th>Abono Capital</th>
+              <th>Abono Interes</th>
+              <th>Pago Minimo</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let data of data_simulator_array">
+              <th scope="row">{{data._id}}</th>
+              <td>{{data.saldo | number}}</td>
+              <td>{{data.abono_capital | number}}</td>
+              <td>{{data.abono_intereses | number}}</td>
+              <td>{{data.pago_minimo | number}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!--END TABLA RESULTADO CUADRO SIMULADOR-->
+    </div>
+  </div>
+  <!--END BORDE CUADRO-->
+</div>
+<!--END CUADRO SIMULADOR-->
+
