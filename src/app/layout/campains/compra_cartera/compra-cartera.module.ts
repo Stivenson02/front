@@ -10,11 +10,11 @@ import { FormsModule } from '@angular/forms';
 //Scrips
 import { Guion1Component } from './guion_1/guion-1.component';
 import {
-  OfertaInicialComponent, DetalleOfertaComponent, ValidacionComponent, CierreComponent
+  OfertaInicialComponent, DetalleOfertaComponent, CierreComponent
 } from './components';
 
 import { 
-  SimuladorComponent, EncuestaComponent
+  SimuladorComponent, EncuestaComponent, ValidacionComponent
 } from '../components/campains_components';
 import { ToastModule } from 'primeng/toast';
 
