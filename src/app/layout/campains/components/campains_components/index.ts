@@ -1,2 +1,2 @@
-export * from './simulador/simulador.component';
+export * from './simulador_compra_cartera/simulador.component';
 export * from './encuesta/encuesta.component';
