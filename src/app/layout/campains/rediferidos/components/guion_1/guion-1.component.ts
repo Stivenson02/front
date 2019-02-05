@@ -9,9 +9,6 @@ import {MessageService, SelectItem} from 'primeng/api';
 })
 export class Guion1Component implements OnInit {
 
-  public show_alert_simulator: boolean;
-
-
   public continue_first: number;
   public continue_second: number;
   public continue_tree: number;
@@ -59,11 +56,9 @@ export class Guion1Component implements OnInit {
       {label: '35', value: '35', icon: 'fa fa-fw fa-child'},
       {label: '36', value: '36', icon: 'fa fa-fw fa-child'}
     ];
-
   }
 
   ngOnInit() {
-    this.show_alert_simulator = false;
     this.continue_first = 0;
     this.continue_second = 0;
     this.continue_tree = 0;
