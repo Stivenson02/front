@@ -14,12 +14,15 @@ export class SimuladorComponent implements OnInit {
   interesDavi: number = 1;
   cantidadCuotasDavi: number = 3;
   tasaDavi: number; 
+  totalInteresDavi: number = 0;
 
   interesOtra: number = 6;
   cantidadCuotasOtra: number = 8;
   tasaOtra: number;
+  totalInteresOtra: number = 0;
 
   totalSaldo: number = 100;
+  diferenciaInteresTotal: number=0;
   
   //Constantes para usar en las tablas
 
@@ -44,7 +47,8 @@ export class SimuladorComponent implements OnInit {
   showTables: boolean = false;
 
   consultarActive: boolean = false;
-  
+
+   
   constructor() {
     
   }
@@ -87,8 +91,13 @@ export class SimuladorComponent implements OnInit {
       this.pagoMinimoDavi[i] = Math.round( this.abonoCapitalDavi + this.abonoInteresDavi[i] );
       this.pagoMinimoOtra[i] = Math.round( this.abonoCapitalOtra + this.abonoInteresOtra[i] );
     }
+    this.totalInteresDavi = this.totalSaldo*this.tasaDavi*((this.cantidadCuotasDavi + 1)/2);
+    this.totalInteresOtra = this.totalSaldo*this.tasaOtra*((this.cantidadCuotasOtra + 1)/2);
+    this.diferenciaInteresTotal = this.totalInteresDavi - this.totalInteresOtra;
+
     this.abonoCapitalDavi = Math.round( this.abonoCapitalDavi);
     this.abonoCapitalOtra = Math.round( this.abonoCapitalOtra);
+
   }
 
   onInputFunction(){

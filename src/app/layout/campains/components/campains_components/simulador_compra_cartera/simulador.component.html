@@ -1,7 +1,7 @@
 <p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
 
-<div class="row">
-	<div class="col-12">
+<div class="row justify-content-center">
+	<div class="col-8">
 		<div class="card border-primary mb-3" >
 			<div class="card-header">
 				Simulador Compra Cartera
@@ -9,7 +9,7 @@
 			<div class="card-body">
 				<div class="row">
 					<!-- Entrada datos Davivienda  -->
-					<div class="col-5">
+					<div class="col-6">
 						<!-- Captura de interés para davivienda  -->
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
@@ -34,9 +34,10 @@
 	  						<input [(ngModel)]="totalSaldo" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputFunction()">
 	  					</div>		
 					</div>
+					<!-- Fin Entrada datos Davivienda  -->
 					
 					<!-- Entrada datos Otra entidad -->		
-					<div class="col-5">
+					<div class="col-6">
 						<div class="input-group input-group-sm mb-3">
 	  						<div class="input-group-prepend">
 	    						<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Interes (%)</span>
@@ -53,6 +54,8 @@
 							</select>
 						</div>
 					</div>
+					<!-- Fin datos otra entidad  -->
+
 				</div>
 				<button type="button" class="btn btn-primary" (click) = "showHiddenTable()"> Consultar </button>
 			</div>
@@ -60,66 +63,67 @@
 	</div>	
 </div>
 
-<div class="card border-primary mt-3 mb-3 row" *ngIf=showTables>
+<!-- Tablas con la información generada por la simulación -->	
+
+<div class="card border-primary mt-3 mb-3" *ngIf=showTables>
 	
 	<div class="card-header bg-transparent border-success">
 		<div class="card-body text-success table-responsive">
 			
-			<table class="table table-striped col-5">
-				<thead>
-					<h4>Tabla Amortización Davivienda</h4>
-					<tr>
-						<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr *ngFor = "let registrosTabla of registrosTablas">
-						<td>{{ numeroCuotaDavi[registrosTabla] }}</td>
-						<td>{{ saldoDavi[registrosTabla] }}</td>
-						<td>{{ abonoCapitalDavi }}</td>
-						<td>{{ abonoInteresDavi[registrosTabla] }}</td>
-						<td>{{ pagoMinimoDavi[registrosTabla] }}</td>
-					</tr>
-				</tbody>
-			</table>
-		
-			<table class="table table-striped col-5">
-				<thead>
-					<h4>Tabla Amortización Otra Entidad</h4>
-					<tr >
-						<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr *ngFor = "let registrosTabla of registrosTablas">
-						<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
-						<td>{{ saldoOtra[registrosTabla] }}</td>
-						<td>{{ abonoCapitalOtra }}</td>
-						<td>{{ abonoInteresOtra[registrosTabla] }}</td>
-						<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="row">
+				<div class="col-6 text-dark">
+					<!-- Tabla De amortización Davivienda -->
+					<h6>Tabla Amortización Davivienda</h6>
+					<table class="table table-striped text-center">
+						<thead>
+						
+							<tr>
+								<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor = "let registrosTabla of registrosTablas">
+								<td>{{ numeroCuotaDavi[registrosTabla] }}</td>
+								<td>{{ saldoDavi[registrosTabla] }}</td>
+								<td>{{ abonoCapitalDavi }}</td>
+								<td>{{ abonoInteresDavi[registrosTabla] }}</td>
+								<td>{{ pagoMinimoDavi[registrosTabla] }}</td>
+							</tr>
+						</tbody>
+					</table>
+			<!-- Fin Tabla De amortización Davivienda -->		
+				</div>
 
-			<table class="table table-striped">
-				<thead>
-					<h4>Tabla de diferencia de interéses</h4>
-					<tr>
-						<th> </th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-
-			
+				<div class="col-6 text-dark">
+					<!-- Tabla de Amortización para otra entidad -->
+					<h6>Tabla Amortización Otra Entidad</h6>
+					<table class="table table-striped text-center">
+						<thead>
+							<tr >
+								<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor = "let registrosTabla of registrosTablas">
+								<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
+								<td>{{ saldoOtra[registrosTabla] }}</td>
+								<td>{{ abonoCapitalOtra }}</td>
+								<td>{{ abonoInteresOtra[registrosTabla] }}</td>
+								<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
+							</tr>
+						</tbody>
+					</table>
+			<!-- Fin Tabla de Amortización para otra entidad -->	
+				</div>
+			</div>
+			<!-- Diferencia de intereses entre davivienda y otra entidad -->
+			<div class="row text-primary">
+				<strong class="h6 mr-4">Diferencia de interéses:   </strong>
+				<p>     {{ diferenciaInteresTotal }} </p>
+			</div>
 		</div>
 	</div>
 </div>
+<!-- Fin tablas de Amortización -->
+
+
