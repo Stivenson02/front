@@ -4,13 +4,17 @@ import { NgbCarouselModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { CompraCarteraRoutingModule } from './compra-cartera-routing.module';
 import { environment } from '../../../../environments/environment';
 
-
 import { CompraCarteraComponent } from './compra-cartera.component';
+import { FormsModule } from '@angular/forms';
 
 //Scrips
+import { Guion1Component } from './guion_1/guion-1.component';
 import {
-  Guion1Component
+  OfertaInicialComponent, DetalleOfertaComponent, CierreComponent, TextoValidacionComponent
 } from './components';
+import { 
+  SimuladorComponent, EncuestaComponent, ValidacionComponent
+} from '../components/campains_components';
 import { ToastModule } from 'primeng/toast';
 
 @NgModule({
@@ -19,11 +23,19 @@ import { ToastModule } from 'primeng/toast';
     NgbCarouselModule,
     NgbAlertModule,
     CompraCarteraRoutingModule,
-    ToastModule
+    ToastModule,
+    FormsModule
   ],
   declarations: [
     CompraCarteraComponent,
-    Guion1Component    
+    Guion1Component,
+    OfertaInicialComponent,
+    DetalleOfertaComponent, 
+    SimuladorComponent, 
+    EncuestaComponent, 
+    ValidacionComponent, 
+    CierreComponent,
+    TextoValidacionComponent
   ]
 })
 export class CompraCarteraModule {

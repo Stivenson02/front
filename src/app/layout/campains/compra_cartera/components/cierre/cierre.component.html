@@ -1,0 +1,25 @@
+<p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
+
+<div class="row">
+	<div class="col-12">
+		<div class="card border-primary mb-3">
+	  		<div class="card-header">
+	  			Cierre
+	  		</div>
+		  	<div class="card-body text-dark">
+		    	<h5 class="card-title"></h5>
+				
+				<div class="input-group mb-3">
+	  				<div class="input-group-prepend">
+	    				<label class="input-group-text" for="inputGroupSelect-motivo-cierre">Motivo no interés</label>
+	  				</div>
+					<select [(ngModel)]="motivoNoInteres"  class="custom-select" id="inputGroupSelect-motivo-cierre">
+					    <option *ngFor= "let motivoNoInteres of motivosNoInteres" value={{motivoNoInteres}} >{{motivoNoInteres}}</option>
+					</select>
+				</div>
+
+		  	</div>
+		</div>	
+	</div>
+</div>
+

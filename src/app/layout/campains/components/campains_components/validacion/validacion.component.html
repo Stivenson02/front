@@ -1,0 +1,21 @@
+<p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
+
+	  		<div class="card-header">
+	  			Validación
+	  		</div>
+		  			  	
+		  	<div class="card-body text-dark">
+		    	<h5 class="card-title"></h5>
+					
+					<div class="input-group input-group-sm mb-3">
+	  					<div class="input-group-prepend">
+	    					<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Cédula( {{parcialCedula}}xxxx)</span>
+	  					</div>
+	  					<div class="input-group-prepend">
+    						<button class="btn btn-outline-secondary" type="button">Verificar</button>
+  						</div>
+	  					<input [(ngModel)]="interesOtra" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" (input) = "onInputFunction()">
+					</div>
+			</div>
+		
+

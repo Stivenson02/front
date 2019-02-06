@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {RediferidosComponent} from './rediferidos.component';
-import {Guion1Component
-} from './components';
-import {PreguionComponent} from '../components';
 
+import {PreguionComponent} from '../components';
+import {Guion1Component} from './guion_1/guion-1.component';
 
 const routes: Routes = [
   {

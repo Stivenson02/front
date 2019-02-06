@@ -1,1 +1,1 @@
-export * from './guion_1/guion-1.component';
+export * from './planilla_cliente/planilla-cliente.component';

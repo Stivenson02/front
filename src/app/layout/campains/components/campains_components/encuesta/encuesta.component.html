@@ -1,0 +1,73 @@
+<p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
+
+<div class="row">
+	<div class="col-12">
+		<div class="card border-primary mb-3">
+	  		<div class="card-header">
+	  			Encuesta
+	  		</div>
+		  	<div class="card-body text-primary">
+		    	<h5 class="card-title"></h5>
+
+				<!-- Se valida si va a responder la encuesta  -->
+				<div class="input-group mt-3 mb-4">
+	  				<div class="input-group-prepend">
+	    				<label class="input-group-text" for="inputGroupSelect-enviar">Contesta encuesta</label>
+	  				</div>
+						<select [(ngModel)]="listaRespuestaEnvia" class="custom-select" id="inputGroupSelect-enviar" >
+					    	<option *ngFor= "let listaRespuestasEnvia of listaRespuestasEnviar" value={{listaRespuestasEnvia}}>{{listaRespuestasEnvia}}</option>
+						</select>
+				</div>
+				<!-- Primera pregunta -->
+				<div class="row" *ngIf="listaRespuestaEnvia == 'si'">
+					<div class="col-12">
+						
+						<p class="card-text text-dark">En Davivienda trabajamos para apoyar activamente el crecimiento económico del país, por lo anterior nos gustaría conocer su opinión acerca del estado actual de la economía, contestando las siguientes preguntas. Agradecemos su colaboración:
+
+						Su nivel de confianza sobre la situación económica del país en relación con el que tenía el mes pasado:
+						</p>
+							<div class="input-group mt-3 mb-4">
+			  					<div class="input-group-prepend">
+			    					<label class="input-group-text" for="inputGroupSelect-respuesta1">Respuesta</label>
+			  					</div>
+									<select  [(ngModel)]="listaRespuestaPregunta1" class="custom-select" id="inputGroupSelect-respuesta1">
+									    <option *ngFor= "let listaRespuestaPregunta1 of listaRespuestasPregunta1" value={{listaRespuestaPregunta1}}>{{listaRespuestaPregunta1}}</option>
+									</select>
+							</div>
+						<!-- Fin Primera pregunta -->
+						
+						<!-- Segunda Pregunta -->
+						<p class="text-dark">
+							Cuál es su percepción de la situación económica colombiana?
+						</p>
+							
+							<div class="input-group mt-3 mb-4">
+			  					<div class="input-group-prepend">
+			    					<label class="input-group-text" for="inputGroupSelect-respuesta2">Contesta encuesta</label>
+			  					</div>
+									<select  [(ngModel)]="listaRespuestaPregunta2" class="custom-select" id="inputGroupSelect-respuesta2">
+									    <option *ngFor= "let listaRespuestaPregunta2 of listaRespuestasPregunta2" value={{listaRespuestasPregunta}}>{{listaRespuestaPregunta2}}</option>
+									</select>
+							</div>
+						<!-- Fin Segunda Pregunta -->
+
+						<!-- Tercera pregunta -->
+						<p class="text-dark">
+							A la luz de la situación económica general, usted piensa que este es el momento propicio para ahorrar o para adquirir alguna obligación financiera? 
+						</p>
+							<div class="input-group mt-3 mb-4">
+			  					<div class="input-group-prepend">
+			    					<label class="input-group-text" for="inputGroupSelect-respuesta3">Respuesta</label>
+			  					</div>
+									<select [(ngModel)]="listaRespuestaPregunta3" class="custom-select" id="inputGroupSelect-respuesta3" >
+									    <option *ngFor= "let listaRespuestaPregunta3 of listaRespuestasPregunta3" value={{listaRespuestaPregunta3}}>{{listaRespuestaPregunta3}}</option>
+									</select>
+							</div>
+							<!--Fin Tercera pregunta -->
+					</div>
+				</div>
+		  	</div>
+		</div>	
+	</div>
+</div>
+

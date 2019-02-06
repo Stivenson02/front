@@ -1,0 +1,128 @@
+<p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
+
+<div class="row justify-content-center">
+	<div class="col-8">
+		<div class="card border-primary mb-3" >
+			<div class="card-header">
+				Simulador Compra Cartera
+			</div>
+			<div class="card-body">
+				<div class="row">
+					<!-- Entrada datos Davivienda  -->
+					<div class="col-6">
+						<!-- Captura de interés para davivienda  -->
+						<div class="input-group input-group-sm mb-3">
+	  						<div class="input-group-prepend">
+	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-interes">Interes (%)</span>
+	  						</div>
+	  						<input [(ngModel)]="interesDavi" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-cliente-interes" (input) = "onInputFunction()" >
+						</div>
+						<!-- Captura de cuotas para las que se desea realizar la consulta -->
+						<div class="input-group mb-3">
+	  						<div class="input-group-prepend">
+	    						<label class="input-group-text" for="inputGroupSelect01-cliente">Cuotas</label>
+	  						</div>
+							<select [(ngModel)]="cantidadCuotasDavi"  class="custom-select" id="inputGroupSelect01-cliente" (change) = "onInputFunction()">
+							    <option *ngFor= "let cuotasSelect of cuotasSelects" value={{cuotasSelect}} >{{cuotasSelect}}</option>
+							</select>
+						</div>
+						<!-- Captura del saldo que se desea comprar -->
+						<div class="input-group input-group-sm mb-3 justify-content-center">
+	  						<div class="input-group-prepend ">
+	    						<span class="input-group-text" id="inputGroup-sizing-sm-cliente-saldo">Saldo</span>
+	  						</div>
+	  						<input [(ngModel)]="totalSaldo" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" (input) = "onInputTotal()" [disabled] = enableTotalSaldo >
+	  					</div>		
+					</div>
+					<!-- Fin Entrada datos Davivienda  -->
+					
+					<!-- Entrada datos Otra entidad -->		
+					<div class="col-6">
+						<div class="input-group input-group-sm mb-3">
+	  						<div class="input-group-prepend">
+	    						<span class="input-group-text" id="inputGroup-sizing-sm-otro-interes">Interes (%)</span>
+	  						</div>
+	  						<input [(ngModel)]="interesOtra" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm-otro-interes" (input) = "onInputFunction()">
+						</div>
+
+						<div class="input-group mb-3">
+	  						<div class="input-group-prepend">
+	    						<label class="input-group-text" for="inputGroupSelect01">Cuotas</label>
+	  						</div>
+							<select [(ngModel)]="cantidadCuotasOtra" class="custom-select" id="inputGroupSelect01-otro" (change) = "onInputFunction()">
+							    <option *ngFor= "let cuotasSelect of cuotasSelects" value={{cuotasSelect}}>{{cuotasSelect}}</option>
+							</select>
+						</div>
+					</div>
+					<!-- Fin datos otra entidad  -->
+				</div>
+				<!-- <button type="button" class="btn btn-primary" (click) = "showHiddenTable()"> Consultar </button> -->
+			</div>
+		</div>
+	</div>	
+</div>
+
+<!-- Tablas con la información generada por la simulación -->	
+
+<div class="card border-primary mt-3 mb-3" *ngIf=showTables>
+	
+	<div class="card-header bg-transparent border-success">
+		<div class="card-body text-success table-responsive">
+			
+			<div class="row">
+				<div class="col-6 text-dark">
+					<!-- Tabla De amortización Davivienda -->
+					<h6>Tabla Amortización Davivienda</h6>
+					<table class="table table-striped text-center">
+						<thead>
+						
+							<tr>
+								<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor = "let registrosTabla of registrosTablas">
+								<td>{{ numeroCuotaDavi[registrosTabla] }}</td>
+								<td>{{ saldoDavi[registrosTabla] }}</td>
+								<td>{{ abonoCapitalDavi }}</td>
+								<td>{{ abonoInteresDavi[registrosTabla] }}</td>
+								<td>{{ pagoMinimoDavi[registrosTabla] }}</td>
+							</tr>
+						</tbody>
+					</table>
+			<!-- Fin Tabla De amortización Davivienda -->		
+				</div>
+
+				<div class="col-6 text-dark">
+					<!-- Tabla de Amortización para otra entidad -->
+					<h6>Tabla Amortización Otra Entidad</h6>
+					<table class="table table-striped text-center">
+						<thead>
+							<tr >
+								<th *ngFor="let campoTabla of camposTablas">{{campoTabla}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor = "let registrosTabla of registrosTablas">
+								<td>{{ numeroCuotaOtra[registrosTabla] }}</td>
+								<td>{{ saldoOtra[registrosTabla] }}</td>
+								<td>{{ abonoCapitalOtra }}</td>
+								<td>{{ abonoInteresOtra[registrosTabla] }}</td>
+								<td>{{ pagoMinimoOtra[registrosTabla] }}</td>
+							</tr>
+						</tbody>
+					</table>
+			<!-- Fin Tabla de Amortización para otra entidad -->	
+				</div>
+			</div>
+			<!-- Diferencia de intereses entre davivienda y otra entidad -->
+			<div class="row text-primary">
+				<strong class="h6 mr-4">Diferencia de interéses:   </strong>
+				<p>     {{ diferenciaInteresTotal }} </p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Fin tablas de Amortización -->
+
+

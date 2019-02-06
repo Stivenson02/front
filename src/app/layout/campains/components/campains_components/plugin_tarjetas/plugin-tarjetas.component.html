@@ -1,0 +1,90 @@
+
+<div class="row">
+  <div class="col-6 pt-3">
+    <table class="table">
+      <tbody>
+      <tr>
+        <th class="table-secondary" scope="row">Ultimos Digitos</th>
+        <td>4321</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Fecha Vencimiento</th>
+        <td>-</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Tipo Tarjeta</th>
+        <td>DINERS PREMIUM</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Fecha Corte</th>
+        <td>2018-07-13</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Ciclo Facturacion</th>
+        <td>34</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Pago Minimo</th>
+        <td>$0</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Fecha Ultima Actualizacion</th>
+        <td>0000-00-00</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Franquicia</th>
+        <td>Diners</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Cupo</th>
+        <td>$0</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Saldo Pesos</th>
+        <td>$324,900</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Saldo Dolares	</th>
+        <td>$0</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Fecha Pago</th>
+        <td>2017-07-03</td>
+      </tr>
+      <tr>
+        <th class="table-secondary" scope="row">Valor Ultimo Pago</th>
+        <td>$secondary</tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-6 pt-3">
+    <p-accordion>
+      <p-accordionTab header="Rediferido Pesos" [selected]="true">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Meses</h6>
+            <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+          </div>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Rediferido Dolares">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Meses</h6>
+            <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+          </div>
+        </div>
+      </p-accordionTab>
+      <p-accordionTab header="Promocion Todo A">
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-subtitle mb-2 text-muted">Meses</h6>
+            <p-selectButton [options]="types" [(ngModel)]="selectedType"></p-selectButton>
+          </div>
+        </div>
+      </p-accordionTab>
+    </p-accordion>
+    <hr>
+  </div>
+  <hr>
+</div>
