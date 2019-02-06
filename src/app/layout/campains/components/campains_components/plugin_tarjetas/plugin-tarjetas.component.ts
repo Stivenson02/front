@@ -1,24 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {MessageService, SelectItem} from 'primeng/api';
+import { SelectItem} from 'primeng/api';
 
-@Component({
-  selector: 'app-rediferido',
-  templateUrl: './guion-1.component.html',
-  styleUrls: ['./guion-1.component.scss'],
-  providers: [ MessageService ]
+@Component ({
+  selector: 'app-plugin-tarjetas',
+  templateUrl: './plugin-tarjetas.component.html',
+  styleUrls: ['./plugin-tarjetas.component.scss']
 })
-export class Guion1Component implements OnInit {
-
-  public continue_first: number;
-  public continue_second: number;
-  public continue_tree: number;
-  public contestar_encuesta: number;
-
+export class PluginTarjetasComponent implements OnInit {
   types: SelectItem[];
-
-  selectedType: string;
-
-  constructor(private messageService: MessageService) {
+  constructor() {
     this.types = [
       {label: '02', value: '02', icon: 'fa fa-fw fa-child'},
       {label: '03', value: '03', icon: 'fa fa-fw fa-child'},
@@ -57,15 +47,6 @@ export class Guion1Component implements OnInit {
       {label: '36', value: '36', icon: 'fa fa-fw fa-child'}
     ];
   }
-
   ngOnInit() {
-    this.continue_first = 0;
-    this.continue_second = 0;
-    this.continue_tree = 0;
-    this.contestar_encuesta = 0;
-  }
-
-  simulator() {
-    this.messageService.add({severity: 'info', summary: 'Calculo', detail: 'Efectivo'});
   }
 }
