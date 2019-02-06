@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component ({
   selector: 'app-planilla-cliente',
@@ -6,10 +6,11 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./planilla-cliente.component.scss'],
 })
 export class PlanillaClienteComponent implements OnInit {
-  public continue_tree: number;
+
+  public acuerdo: number;
 
   constructor() { }
   ngOnInit() {
-    this.continue_tree = 0;
+    this.acuerdo = 0;
   }
 }

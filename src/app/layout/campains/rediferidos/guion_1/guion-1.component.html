@@ -52,54 +52,6 @@
         <app-validacion></app-validacion>
         <!--PLANILLA-->
         <app-planilla-cliente></app-planilla-cliente>
-        <!--ACUERDO CLIENTE-->
-        <!--SIN INTERES-->
-        <div *ngIf="continue_tree != 1" class="card border-primary ms-12 mt-2" >
-          <div class="card-header" align="center">
-            <div class="col col-sm-12">
-              <b> Si el cliente dice que no está interesado</b>
-            </div>
-          </div>
-          <div class="card-body text-dark">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                Hacer un manejo de objeciones en donde se le mencione al cliente la ventaja de aliviar su flujo de caja al hacer pagos mensuales por un menor o mayor valor.
-              </li>
-              <li class="list-group-item"><i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                Recordarle al cliente que un rediferido no implica una deuda adicional sino que es la oportunidad de hacer menores pagos sobre la deuda actual.
-              </li>
-              <li class="list-group-item"><i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                Recordarle al cliente que puede hacer el pago total o abonos extraordinarios en cualquier momento sin ningún tipo de penalización.
-              </li>
-              <li class="list-group-item"><i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                Recordarle al cliente que aunque la tasa de interés es mayor a la del mes pasado; corresponde a la tasa promedio del último año; y adicionalmente la diferencia en intereses es sólo de 100 pesos por millón y a cambio recibirá como beneficio una cuota más cómoda que le permitirá mejorar su flujo de caja.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!--END SIN INTERES-->
-        <!--CON INTERES-->
-        <div *ngIf="continue_tree == 1 && continue_second == 1 && continue_tree == 1" class="card border-primary ms-12 mt-2" >
-          <div class="card-header" align="center">
-            <div class="col col-sm-12">
-              <b> Si el cliente dice que está interesado</b>
-            </div>
-          </div>
-          <div class="card-body text-dark">
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item"><i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                Señor(a): <strong>CARLOS EMILIO PONCE CABALLERO</strong> A qué plazo le gustaría que se difieran automáticamente sus compras nacionales? puede ser desde 12 hasta 36 meses (Seleccionar en el plugin)
-              </li>
-              <li class="list-group-item"><i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                Señor(a) <strong>CARLOS EMILIO PONCE CABALLERO</strong> le confirmo que la novedad quedará efectiva en 3 días hábiles a partir de la fecha. Por favor tenga en cuenta que si en el futuro desea que alguna de sus compras nacionales sea diferida a un plazo diferente al que acaba de mencionar, debe comunicarse con nuestro call center a desactivar la inscripción del diferido automático.  </li>
-              <li class="list-group-item"><i class="fa fa-chevron-right fa-fw" aria-hidden="true"></i>
-                Señor(a) <strong>CARLOS EMILIO PONCE CABALLERO</strong> le confirmo que la novedad quedará efectiva en 3 días hábiles a partir de la fecha.
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!--END CON INTERES-->
-        <!--END ACUERDO CLIENTE-->
       </div>
     </div>
     <!--END ARBOL DE DECICIONES-->
