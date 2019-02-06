@@ -11,6 +11,7 @@ export class ValidacionComponent implements OnInit {
   
   cedulaConsumidor: number;
   parcialCedula: string;
+
   constructor() { }
 
   ngOnInit() {
