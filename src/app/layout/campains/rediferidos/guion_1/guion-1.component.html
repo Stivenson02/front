@@ -1,0 +1,82 @@
+<p-toast [styleClass]="ui-toast-top-center" [style]="{marginTop: '80px'}"></p-toast>
+<div class="card card-default">
+  <div class="card-header">
+    <i class="fa fa-users fa-fw"></i>
+    Rediferidos
+  </div>
+  <!-- /.panel-heading -->
+  <div class="card-body">
+    <!--TEXTO INTRODUCTORIO-->
+    <app-texto-inicial></app-texto-inicial>
+    <!--CUADRO SIMULADOR-->
+    <app-simulador-redeferidos></app-simulador-redeferidos>
+    <!--IMAGENES -->
+    <div class="mx-2 pt-3" align="center">
+      <img class="col col-sm-12" src="assets/campains/rediferidos/informacion_1.jpg" />
+      <img class="col col-sm-6 pt-2" src="assets/campains/rediferidos/informacion_2.jpg" />
+    </div>
+    <!--ARBOL DE DECICIONES-->
+    <div class="card border-primary ms-12 mt-2" >
+      <div class="card-header" align="center">
+        <div class="col col-sm-12">
+          ¿Sr(a) <strong> CAROLINA AREVALO RODRIGUEZ </strong> se encuentra usted interesado en esta oferta?
+        </div>
+        <div class="col col-sm-4 pt-2">
+          <select [(ngModel)]="continue_first" name="continue" type="number" class="form-control custom-select" aria-label="Amount (to the nearest dollar)">
+            <option value=0>¿Se encuentra interesado?</option>
+            <option value=1>Si</option>
+            <option value=2>No</option>
+          </select>
+        </div>
+      </div>
+      <div *ngIf="continue_first == 1" class="card-body text-dark" align="center">
+        <p class="card-text">
+          Sr(a) <strong>CAROLINA AREVALO RODRIGUEZ</strong> si usted cuenta con un pago mínimo pendiente por pagar es posible aplicar el rediferido a su tarjeta de crédito pero los valores que están pendientes por cubrir, como intereses corrientes y cobros administrativos (como la cuota de manejo), deben ser unificados al saldo total a rediferir; es decir, es necesario hacer una capitalización de los intereses corrientes antes mencionados.
+        </p>
+        <div class="col col-sm-4 pt-2">
+          <p><strong>¿Está usted de acuerdo?</strong></p>
+          <select [(ngModel)]="continue_second" name="continue" type="number" class="form-control custom-select" aria-label="Amount (to the nearest dollar)">
+            <option value=0>¿Esta de acuerdo?</option>
+            <option value=1>Si</option>
+            <option value=2>No</option>
+          </select>
+        </div>
+      </div>
+      <div *ngIf="continue_second == 1 && continue_first == 1" class="card-footer bg-transparent border-primary" >
+        <div class="col col-sm-12 pt-3" align="center">
+          Sr(a) <strong>CAROLINA AREVALO RODRIGUEZ</strong> si usted cuenta con un pago mínimo pendiente por pagar es posible aplicar el rediferido a su tarjeta de crédito pero los valores que están pendientes por cubrir, como intereses corrientes y cobros administrativos (como la cuota de manejo), deben ser unificados al saldo total a rediferir; es decir, es necesario hacer una capitalización de los intereses corrientes antes mencionados.
+        </div>
+        <!--PLUGIN TARJETAS-->
+        <app-plugin-tarjetas></app-plugin-tarjetas>
+        <!--VALIDA DOCUMENTO-->
+        <app-validacion></app-validacion>
+        <!--PLANILLA-->
+        <app-planilla-cliente></app-planilla-cliente>
+      </div>
+    </div>
+    <!--END ARBOL DE DECICIONES-->
+    <!--ENCUESTA-->
+    <div *ngIf="continue_first != 0" class="ms-12 mt-2" >
+      <app-encuesta></app-encuesta>
+    </div>
+    <!--END ENCUESTA-->
+    <!--OPCION DE COMPRA-->
+    <div  class="card border-primary ms-12 mt-2" >
+      <div class="card-header" align="center">
+        <div class="col col-sm-12">
+          <strong>OPCION DE COMPRA</strong>
+        </div>
+        <div class="col col-sm-4 pt-2">
+          <select name="opcion_compra" class="form-control custom-select" aria-label="Amount (to the nearest dollar)">
+            <option value=''></option>
+            <option value='Cartera'>Realizar Compra de Cartera</option>
+            <option value='NoCartera'>No tiene compra de cartera</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!--END OPCION DE COMPRA-->
+
+  </div>
+</div>
+

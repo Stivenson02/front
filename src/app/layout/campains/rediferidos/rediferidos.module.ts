@@ -11,12 +11,19 @@ import {
 import { RediferidosComponent } from './rediferidos.component';
 
 import {
-  Guion1Component
+  PlanillaClienteComponent
 } from './components';
 import {ToastModule} from 'primeng/toast';
 import {PreguionComponent} from '../components';
 import {HttpClientModule} from '@angular/common/http';
-import {SimuladorRediferidosComponent, TextoInicialComponent} from '../components/campains_components';
+import {
+  EncuestaComponent,
+  PluginTarjetasComponent,
+  SimuladorRediferidosComponent,
+  TextoInicialComponent,
+  ValidacionComponent
+} from '../components/campains_components';
+import {Guion1Component} from './guion_1/guion-1.component';
 
 @NgModule({
   imports: [
@@ -38,7 +45,11 @@ import {SimuladorRediferidosComponent, TextoInicialComponent} from '../component
     Guion1Component,
     PreguionComponent,
     TextoInicialComponent,
-    SimuladorRediferidosComponent
+    SimuladorRediferidosComponent,
+    PluginTarjetasComponent,
+    ValidacionComponent,
+    EncuestaComponent,
+    PlanillaClienteComponent
   ]
 })
 export class RediferidosModule {
