@@ -11,18 +11,21 @@ export class SimuladorComponent implements OnInit {
 
   //variables de entrada (Simulador compra cartera)
 
-  interesDavi: number = 1;
-  cantidadCuotasDavi: number = 3;
+  interesDavi: number;
+  cantidadCuotasDavi: number;
   tasaDavi: number; 
   totalInteresDavi: number = 0;
 
-  interesOtra: number = 6;
-  cantidadCuotasOtra: number = 8;
+  interesOtra: number;
+  cantidadCuotasOtra: number;
   tasaOtra: number;
   totalInteresOtra: number = 0;
 
+  totalSaldoMin: number = 200000;
   totalSaldo: number = 100;
-  diferenciaInteresTotal: number=0;
+  diferenciaInteresTotal: number = 0;
+
+  enableTotalSaldo: boolean = true;
   
   //Constantes para usar en las tablas
 
@@ -52,7 +55,7 @@ export class SimuladorComponent implements OnInit {
   constructor() {
     
   }
-
+  // Esta función carga la información de la tabla y se llama cada vez qeu se actualizaalgun campo
   showHiddenTable(){
   	
     this.showTables = true;
@@ -97,11 +100,25 @@ export class SimuladorComponent implements OnInit {
 
     this.abonoCapitalDavi = Math.round( this.abonoCapitalDavi);
     this.abonoCapitalOtra = Math.round( this.abonoCapitalOtra);
-
   }
 
+  onInputTotal(){
+     if(!isNaN(this.totalSaldo) && this.totalSaldo >= this.totalSaldoMin ){
+       this.onInputFunction();
+     }else{
+       this.showTables = false;
+     }
+  }
+  // Eventos input en la entrada de datos para davivienda u otras entidades llama la función OnInputFunction
   onInputFunction(){
-    if (this.showTables) {
+    if (isNaN(this.interesDavi) || isNaN(this.interesOtra) || this.interesDavi == 0 || this.interesOtra == 0 ) {
+         this.showTables = false;
+         this.enableTotalSaldo = true;
+     }
+     else{
+      this.enableTotalSaldo = false;
+     }
+    if (this.enableTotalSaldo == false && this.totalSaldo >= this.totalSaldoMin ) {
       this.showHiddenTable();
     }
   }

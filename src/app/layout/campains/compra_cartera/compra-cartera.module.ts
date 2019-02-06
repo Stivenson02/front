@@ -10,9 +10,8 @@ import { FormsModule } from '@angular/forms';
 //Scrips
 import { Guion1Component } from './guion_1/guion-1.component';
 import {
-  OfertaInicialComponent, DetalleOfertaComponent, CierreComponent
+  OfertaInicialComponent, DetalleOfertaComponent, CierreComponent, TextoValidacionComponent
 } from './components';
-
 import { 
   SimuladorComponent, EncuestaComponent, ValidacionComponent
 } from '../components/campains_components';
@@ -35,7 +34,8 @@ import { ToastModule } from 'primeng/toast';
     SimuladorComponent, 
     EncuestaComponent, 
     ValidacionComponent, 
-    CierreComponent
+    CierreComponent,
+    TextoValidacionComponent
   ]
 })
 export class CompraCarteraModule {

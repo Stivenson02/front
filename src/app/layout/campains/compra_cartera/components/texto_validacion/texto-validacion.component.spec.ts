@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Guion1Component } from './guion-1.component';
+import { TextoValidacionComponent } from './texto-validacion.component';
 
 describe('AddressComponent', () => {
-  let component: Guion1Component;
-  let fixture: ComponentFixture<Guion1Component>;
+  let component: TextoValidacionComponent;
+  let fixture: ComponentFixture<TextoValidacionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Guion1Component ]
+      declarations: [ TextoValidacionComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Guion1Component);
+    fixture = TestBed.createComponent( TextoValidacionComponent );
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
