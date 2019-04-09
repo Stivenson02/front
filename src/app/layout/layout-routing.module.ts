@@ -12,7 +12,7 @@ const routes: Routes = [
         path: 'provider',
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-          { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilModule' },
+          { path: 'profile', loadChildren: './profile/profile.module#ProfileModule' },
           {
             path: 'workspace',
             children: [

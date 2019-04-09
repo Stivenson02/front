@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './form.component';
 import { FormModule } from './form.module';
 
-describe('PerfilComponent', () => {
+describe('ProfileComponent', () => {
   let component: FormComponent;
   let fixture: ComponentFixture<FormComponent>;
 

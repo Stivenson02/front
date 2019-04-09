@@ -2,19 +2,19 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { PerfilComponent } from './perfil.component';
-import {PerfilModule} from "./perfil.module";
+import { ProfileComponent } from './profile.component';
+import {ProfileModule} from "./profile.module";
 
 
 describe('ProfileComponent', () => {
-  let component: PerfilComponent;
-  let fixture: ComponentFixture<PerfilComponent>;
+  let component: ProfileComponent;
+  let fixture: ComponentFixture<ProfileComponent>;
 
   beforeEach(
       async(() => {
         TestBed.configureTestingModule({
           imports: [
-            PerfilModule,
+            ProfileModule,
             RouterTestingModule,
             BrowserAnimationsModule,
           ],
@@ -23,7 +23,7 @@ describe('ProfileComponent', () => {
   );
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(PerfilComponent);
+    fixture = TestBed.createComponent(ProfileComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
