@@ -5,8 +5,10 @@
 export const environment = {
   production: false,
   LOGOUT: 'http://localhost:4200/logout',
-  API_URL: 'https://10.130.51.54/api/v2/',
-  API_KEY_LDAP: '70b16962e328547500f1fc7c78b1ce40754cbe9b632956df112b5be2d71a8e61'
+  API_URL: 'http://192.168.0.38:8000/',
+  API_CLIENT_SECRET: 'hUXu8K0AiaDTLAhvLpsFiS4ZFAAH327hMeJeAJpY',
+  API_CLIENT_ID: '6',
+  API_GRANT_TYPE:'password'
 };
 
 /*

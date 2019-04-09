@@ -11,11 +11,11 @@ export class AuthGuard implements CanActivate {
   ) {}
 
   canActivate() {
-    if (this.cookie.get('X-Token-Mind')) {
+    if (localStorage.getItem('SF-Token')) {
       return true;
     }else {
-      //this.router.navigate(['/login']);
-      return true;
+      this.router.navigate(['/login']);
+      return false;
     }
   }
 }

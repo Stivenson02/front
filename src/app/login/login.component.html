@@ -1,23 +1,20 @@
-<!--<div class="login-page" [@routerTransition]>
+<div class="login-page" [@routerTransition]>
     <div class="row justify-content-md-center">
         <div class="col-md-4">
-            <img src="assets/images/logo.png" width="150px" class="user-avatar" />
-            <h1>SB Admin BS4 Angular7</h1>
-            <form role="form">
+            <img src="assets/images/SF.png" width="150px"/>
+            <h1>Super Fuds</h1>
+            <form  #loginForm="ngForm" role="form" >
                 <div class="form-content">
                     <div class="form-group">
-                        <input type="text" ng-model="name" class="form-control input-underline input-lg" id="" placeholder="{{ 'Email' | translate }}">
+                        <input type="email" #username="ngModel" [(ngModel)]="user.username"  class="form-control input-underline input-lg" placeholder="{{ 'Email' | translate }}" name="email">
                     </div>
-
                     <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="{{ 'Password' | translate }}">
+                        <input type="password" #password="ngModel" [(ngModel)]="user.password"  class="form-control input-underline input-lg" placeholder="{{ 'Password' | translate }}" name="pass">
                     </div>
                 </div>
-                <a class="btn rounded-btn" [routerLink]="['/dashboard']" (click)="onLoggedin()">{{ 'Log in' | translate }}</a>
-                &nbsp;
-                <a class="btn rounded-btn" [routerLink]="['/signup']">{{ 'Register' | translate }}</a>
+                <a class="btn rounded-btn" (click)="onSubmit()">{{ 'Log in' | translate }}</a>
             </form>
         </div>
     </div>
-</div>-->
+</div>
 

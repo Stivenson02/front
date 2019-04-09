@@ -7,9 +7,9 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', redirectTo: 'davivienda', pathMatch: 'full' },
+      { path: '', redirectTo: 'provider', pathMatch: 'full' },
       {
-        path: 'davivienda',
+        path: 'provider',
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
           {
