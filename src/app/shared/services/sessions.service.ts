@@ -23,7 +23,7 @@ export class SessionsService {
 
 
   getData(){
-    return this.http.get(this.API_URL+'api/user', httpOptions);
+    return this.http.get(this.API_URL+'api/user/detail', httpOptions);
   }
 
 

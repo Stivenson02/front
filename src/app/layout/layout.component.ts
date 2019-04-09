@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+
 
 @Component({
     selector: 'app-layout',
@@ -9,18 +10,14 @@ import {Router} from '@angular/router';
 export class LayoutComponent implements OnInit {
     sidebar: boolean;
     collapedSideBar: boolean;
+    user : any;
 
     constructor(
-     public router: Router
+        public router: Router
     ) {}
 
     ngOnInit() {
-      var url =  this.router.url.split('workspace');
-      if (url.length <= 1){
         this.sidebar = true;
-      } else {
-        this.sidebar = false;
-      }
     }
 
     receiveCollapsed($event) {

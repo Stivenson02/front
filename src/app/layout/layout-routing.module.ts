@@ -12,12 +12,7 @@ const routes: Routes = [
         path: 'provider',
         children: [
           { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-          {
-            path: 'administration',
-            children: [
-              { path: 'my_notes', loadChildren: './administrator/my_notes/my-notes.module#MyNotesModule' },
-            ]
-          },
+          { path: 'perfil', loadChildren: './perfil/perfil.module#PerfilModule' },
           {
             path: 'workspace',
             children: [

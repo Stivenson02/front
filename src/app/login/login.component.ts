@@ -36,7 +36,6 @@ export class LoginComponent implements OnInit {
         if (localStorage.getItem('SF-Token')){
             this.session_service.getData().subscribe(
                 result => {
-                    console.log(result);
                     this.router.navigate(['/']);
                 }, error => {
                     localStorage.clear();
