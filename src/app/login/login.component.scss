@@ -1,4 +1,35 @@
-$topnav-background-color: #222;
+input[type="email"], input[type="password"] {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.border-radius {
+    border: 2px solid #cccccc;
+    padding: 10px;
+    border-radius: 25px;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: #8C8C8C;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+    color: #8C8C8C;
+}
+
+::placeholder {
+    color: #8C8C8C;
+}
+
+/*
+$topnav-background-color: #f4f4f4;
 :host {
     display: block;
 }
@@ -71,12 +102,12 @@ $topnav-background-color: #222;
         }
 
         input:-moz-placeholder {
-            /* Firefox 18- */
+            !* Firefox 18- *!
             color: rgba(255, 255, 255, 0.6) !important;
         }
 
         input::-moz-placeholder {
-            /* Firefox 19+ */
+            !* Firefox 19+ *!
             color: rgba(255, 255, 255, 0.6) !important;
         }
 
@@ -93,3 +124,4 @@ $topnav-background-color: #222;
         border: 2px solid #fff;
     }
 }
+*/
