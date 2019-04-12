@@ -5,12 +5,12 @@
 
     <div class="container center">
         <div class="row justify-content-sm-center">
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-5 col-sm-12">
                 <div class="border-radius panel panel-default">
                     <div class="panel-body">
                         <div style="margin: 0% 8%">
-                            <button type="button" style="background: #4567B2; color: white" class="btn  btn-block"><i class="fa fa-facebook" aria-hidden="true"></i> Iniciar sesión con Facebook</button>
-                            <button type="button" class="btn btn-default  btn-block mt-4"><i class="fa fa-google" aria-hidden="true"></i> Iniciar sesión con Google</button>
+                            <button type="button" style="background: #4567B2; color: white" class="rounded-4 btn btn-block"><i class="fa fa-facebook" aria-hidden="true"></i> Iniciar sesión con Facebook</button>
+                            <button style="color: #8C8C8C" type="button" class="rounded-4 btn btn-default  btn-block mt-4"><i class="fa fa-google" aria-hidden="true"></i> Iniciar sesión con Google</button>
                             <div class="mt-4">
                                 <hr>
                             </div>
@@ -18,10 +18,10 @@
                             <form style="background: white;" #loginForm="ngForm" role="form" >
                                 <div class="form-content">
                                     <div class="form-group">
-                                        <input style="color: #cccccc" type="email" #username="ngModel" [(ngModel)]="user.username"  placeholder="Direccion de correo electronico" name="email">
+                                        <input style="color: #cccccc" type="email" #username="ngModel" [(ngModel)]="user.username"  placeholder="Direccion de correo electronico" name="email" required="">
                                     </div>
                                     <div class="form-group">
-                                        <input type="password" #password="ngModel" [(ngModel)]="user.password"   placeholder="{{ 'Password' | translate }}" name="pass">
+                                        <input type="password" #password="ngModel" [(ngModel)]="user.password"   placeholder="{{ 'Password' | translate }}" name="pass" required="">
                                     </div>
                                     <div class="form-group">
                                         <input type="checkbox" > <span style="color: #8C8C8C;" > Recordarme</span>
@@ -31,7 +31,7 @@
                                     <button style="background: #6BA973; color: white" (click)="onSubmit()" type="button" class="btn btn-block"> Iniciar sesión</button>
                                 </div>
                                 <div class="mt-4">
-                                    <p class="text-center" style="color: #6BA973">¿olvidaste la contraseña?</p>
+                                    <p class="text-center" style="color: #6BA973">¿olvidaste tu contraseña?</p>
                                     <p class="text-center" style="color: #8C8C8C">¿No tienes cuenta? <span style="color: #6BA973">Registrate</span></p>
                                 </div>
                             </form>
