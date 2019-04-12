@@ -13,17 +13,18 @@ const httpOptions = {
 @Injectable({
   providedIn: 'root'
 })
-export class SessionsService {
+export class GeneralService {
   public API_URL = environment.API_URL;
 
   constructor(
       private http: HttpClient) { }
 
-  getData(){
-    return this.http.get(this.API_URL+'api/user/detail', httpOptions);
+  getCity(id){
+    return this.http.get(this.API_URL+'api/general/cities/'+id, httpOptions);
   }
 
-  updateData(profile: ProfileUser): Observable<ProfileUser>{
-    return this.http.put<ProfileUser>(this.API_URL+'api/user/update',profile, httpOptions);
+  getDepartament(){
+    return this.http.get(this.API_URL+'api/general/departaments', httpOptions);
   }
+
 }

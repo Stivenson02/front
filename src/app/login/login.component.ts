@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { routerTransition } from '../router.animations';
 import { environment } from '../../environments/environment';
-import {LogSession} from "../global/models/log-session";
 import {User} from "../global/models/user";
 import {UsersService} from "../shared/services/users.service";
 import {SessionsService} from "../shared/services/sessions.service";
@@ -15,7 +14,7 @@ import {SessionsService} from "../shared/services/sessions.service";
     animations: [routerTransition()]
 })
 export class LoginComponent implements OnInit {
-    public log_session: LogSession;
+
     public  user: User;
 
     constructor(
@@ -24,7 +23,7 @@ export class LoginComponent implements OnInit {
         private translate: TranslateService,
         public router: Router
     ) {
-        this.log_session = new LogSession();
+
         this.user = new User();
         this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
         this.translate.setDefaultLang('en');
