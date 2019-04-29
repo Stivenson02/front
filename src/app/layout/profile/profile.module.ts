@@ -7,7 +7,8 @@ import { ProfileComponent } from './profile.component';
 
 import {FormsModule} from "@angular/forms";
 import {ToastModule} from "primeng/toast";
-import {DropdownModule} from "primeng/primeng";
+import {ButtonModule, ConfirmationService, ConfirmDialogModule, DropdownModule} from "primeng/primeng";
+import {UpdateAvatarComponent} from "./components";
 
 @NgModule({
     imports: [
@@ -17,7 +18,12 @@ import {DropdownModule} from "primeng/primeng";
         FormsModule,
         ToastModule,
         DropdownModule,
+        ButtonModule,
+        ConfirmDialogModule,
     ],
-    declarations: [ProfileComponent]
+    declarations: [
+        ProfileComponent,
+        UpdateAvatarComponent
+    ]
 })
 export class ProfileModule {}

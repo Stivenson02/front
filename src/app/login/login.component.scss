@@ -3,7 +3,6 @@ input[type="email"], input[type="password"] {
     outline: 0;
     background: transparent;
     border-bottom: 1px solid #ccc;
-    border-radius: 25px;
     width: 100%;
 }
 .center{
@@ -27,6 +26,54 @@ input[type="email"], input[type="password"] {
 
 ::placeholder {
     color: #8C8C8C;
+}
+
+
+.remind label:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.remind .cr{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+
+.remind .cr .cr-icon{
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.remind label input[type="checkbox"]{
+    display: none;
+}
+
+.remind label input[type="checkbox"] + .cr > .cr-icon{
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.remind label input[type="checkbox"]:checked + .cr > .cr-icon
+ {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.remind label input[type="checkbox"]:disabled + .cr
+ {
+    opacity: .5;
 }
 
 /*
