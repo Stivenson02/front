@@ -3,28 +3,30 @@ import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { routerTransition } from '../router.animations';
 import { environment } from '../../environments/environment';
-import {LogSession} from "../global/models/log-session";
 import {User} from "../global/models/user";
 import {UsersService} from "../shared/services/users.service";
 import {SessionsService} from "../shared/services/sessions.service";
+import {MessageService} from "primeng/api";
 
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
-    animations: [routerTransition()]
+    animations: [routerTransition()],
+    providers:[MessageService]
 })
 export class LoginComponent implements OnInit {
-    public log_session: LogSession;
+
     public  user: User;
 
     constructor(
+        private messageService: MessageService,
         private user_service: UsersService,
         private session_service: SessionsService,
         private translate: TranslateService,
-        public router: Router
+        public router: Router,
     ) {
-        this.log_session = new LogSession();
+
         this.user = new User();
         this.translate.addLangs(['en', 'fr', 'ur', 'es', 'it', 'fa', 'de', 'zh-CHS']);
         this.translate.setDefaultLang('en');
@@ -36,10 +38,10 @@ export class LoginComponent implements OnInit {
         if (localStorage.getItem('SF-Token')){
             this.session_service.getData().subscribe(
                 result => {
-                    console.log(result);
                     this.router.navigate(['/']);
                 }, error => {
                     localStorage.clear();
+                    this.messageService.add({severity:'error', summary: 'Error', detail:'El usuario y la contraseña no son validos'});
                     console.log(<any>error.error);
                 }
             );
@@ -54,8 +56,9 @@ export class LoginComponent implements OnInit {
             result => {
                 localStorage.setItem('SF-Token',result.access_token);
                 localStorage.setItem('SF-Username',this.user.username);
-                this.router.navigate(['/']);
+                window.location.reload();
             }, error => {
+                this.messageService.add({severity:'error', summary: 'Error', detail:'El usuario y la contraseña no son validos'});
                 console.log(<any>error.error);
             }
         );
