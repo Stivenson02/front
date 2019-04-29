@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   LOGOUT: 'http://localhost:4200/logout',
-  API_URL: 'http://192.168.0.38:8000/',
+  API_URL: 'http://192.168.0.44:8000/',
   API_CLIENT_SECRET: 'hUXu8K0AiaDTLAhvLpsFiS4ZFAAH327hMeJeAJpY',
   API_CLIENT_ID: '6',
   API_GRANT_TYPE:'password'

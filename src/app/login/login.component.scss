@@ -1,4 +1,83 @@
-$topnav-background-color: #222;
+input[type="email"], input[type="password"] {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+.center{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.border-radius {
+    box-shadow: 0 0 15px #cccccc;
+    padding: 10px;
+    border-radius: 25px;
+}
+::-webkit-input-placeholder { /* Edge */
+    color: #8C8C8C;
+}
+
+:-ms-input-placeholder { /* Internet Explorer */
+    color: #8C8C8C;
+}
+
+::placeholder {
+    color: #8C8C8C;
+}
+
+
+.remind label:after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.remind .cr{
+    position: relative;
+    display: inline-block;
+    border: 1px solid #a9a9a9;
+    border-radius: .25em;
+    width: 1.3em;
+    height: 1.3em;
+    float: left;
+    margin-right: .5em;
+}
+
+
+.remind .cr .cr-icon{
+    position: absolute;
+    font-size: .8em;
+    line-height: 0;
+    top: 50%;
+    left: 20%;
+}
+
+.remind label input[type="checkbox"]{
+    display: none;
+}
+
+.remind label input[type="checkbox"] + .cr > .cr-icon{
+    transform: scale(3) rotateZ(-20deg);
+    opacity: 0;
+    transition: all .3s ease-in;
+}
+
+.remind label input[type="checkbox"]:checked + .cr > .cr-icon
+ {
+    transform: scale(1) rotateZ(0deg);
+    opacity: 1;
+}
+
+.remind label input[type="checkbox"]:disabled + .cr
+ {
+    opacity: .5;
+}
+
+/*
+$topnav-background-color: #f4f4f4;
 :host {
     display: block;
 }
@@ -71,12 +150,12 @@ $topnav-background-color: #222;
         }
 
         input:-moz-placeholder {
-            /* Firefox 18- */
+            !* Firefox 18- *!
             color: rgba(255, 255, 255, 0.6) !important;
         }
 
         input::-moz-placeholder {
-            /* Firefox 19+ */
+            !* Firefox 19+ *!
             color: rgba(255, 255, 255, 0.6) !important;
         }
 
@@ -93,3 +172,4 @@ $topnav-background-color: #222;
         border: 2px solid #fff;
     }
 }
+*/

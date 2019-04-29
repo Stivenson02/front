@@ -1,0 +1,76 @@
+<p-toast [style]="{marginTop: '80px'}"></p-toast>
+<div [@routerTransition]>
+    <div class="row">
+        <div class="col-lg-5">
+            <form>
+                <fieldset class="form-group">
+                    <label>Nombre</label>
+                    <input type="text" name="name" #name="ngModel" [(ngModel)]="dataProfile.name" value="{{dataProfile.name}}" class="form-control">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Apellido</label>
+                    <input type="text" name="last_name" #last_name="ngModel" [(ngModel)]="dataProfile.last_name" value="{{dataProfile.last_name}}" class="form-control">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Numero de contacto</label>
+                    <input type="number" name="phone_contact" #phone_contact="ngModel" [(ngModel)]="dataProfile.phone_contact" value="{{dataProfile.phone_contact}}" class="form-control">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Numero movil</label>
+                    <input type="number" name="phone" #phone="ngModel" [(ngModel)]="dataProfile.phone" value="{{dataProfile.phone}}" class="form-control">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Departamento de envio</label>
+                    <p-dropdown name="departmen_send" (click)="getCityDepartamentSend(selectedSenddepartament)" [options]="departamentsend" [(ngModel)]="selectedSenddepartament" optionLabel="description" filter="true" class="form-control"> </p-dropdown>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label>Ciudad de envio</label>
+                    <p-dropdown name="send_city_id" #send_city_id="ngModel" (click)="updateCitySend(selectedSendCity)"   [options]="cities_send" [(ngModel)]="selectedSendCity" optionLabel="description" filter="true" class="form-control"> </p-dropdown>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Direccion de envio</label>
+                    <input type="number" name="address_send" #address_send="ngModel" [(ngModel)]="dataProfile.address_send" value="{{dataProfile.address_send}}" class="form-control">
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Departamento de factura</label>
+                    <p-dropdown name="departament_invoice" (click)="getCityDepartamentInvoice(selectedInvoiceDepartament)" [options]="departamentinvoice" [(ngModel)]="selectedInvoiceDepartament" optionLabel="description" filter="true" class="form-control"> </p-dropdown>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Ciudad de factura</label>
+                    <p-dropdown name="invoice_city_id" #invoice_city_id="ngModel" (click)="updateCityInvoice(selectedInvoiceCity)"   [options]="cities_invoice" [(ngModel)]="selectedInvoiceCity" optionLabel="description" filter="true" class="form-control"> </p-dropdown>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Direccion de factura</label>
+                    <input type="number" name="address_invoice" #address_invoice="ngModel" [(ngModel)]="dataProfile.address_invoice" value="{{dataProfile.address_invoice}}" class="form-control">
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-lg-6">
+            <form role="form" enctype="multipart/form-data">
+                <fieldset class="form-group">
+                    <label>Email</label>
+                    <input type="email"  name="email" #email="ngModel" [(ngModel)]="dataProfile.email" value="{{dataProfile.email}}" class="form-control" disabled>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Documento</label>
+                    <input type="number" name="document" #document="ngModel" [(ngModel)]="dataProfile.document" value="{{dataProfile.document}}" class="form-control" disabled>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Nombre comercial</label>
+                    <input type="text" name="business" #business="ngModel" [(ngModel)]="dataProfile.business" value="{{dataProfile.business}}" class="form-control" disabled>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label>Nombre negocio</label>
+                    <input type="text" name="business_name" #business_name="ngModel" [(ngModel)]="dataProfile.business_name" value="{{dataProfile.business_name}}" class="form-control" disabled>
+                </fieldset>
+
+                <app-update-avatar></app-update-avatar>
+
+                <a class="btn rounded-btn" (click)="onSubmit()">
+                    <button type="button" class="btn btn-primary">Actualizar</button>
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
